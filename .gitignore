@@ -1,0 +1,9 @@
+.vs
+*.sln
+*.meta
+JsonDotNet*
+Library
+Packages
+Temp
+ProjectSettings
+Assembly*

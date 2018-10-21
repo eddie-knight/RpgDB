@@ -1,0 +1,425 @@
+{ 
+  "1-hand Melee": 
+  [
+    {
+      "Type": "Flame",
+      "Name": "Starfire sword, Tactical",
+      "Level": 7,
+      "Price": 6120,
+      "Damage": "2d4 F",
+      "Critical": "Burn 1d8",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Flame",
+      "Name": "Starfire sword, inferno",
+      "Level": 17,
+      "Price": 246000,
+      "Damage": "7d8 F",
+      "Critical": "Burn 4d12",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma sword, Tactical",
+      "Level": 9,
+      "Price": 14550,
+      "Damage": "2d8 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma sword, red star",
+      "Level": 13,
+      "Price": 54300,
+      "Damage": "4d8 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 4)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma sword, yellow star",
+      "Level": 15,
+      "Price": 127000,
+      "Damage": "5d8 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 4)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma sword, white star",
+      "Level": 18,
+      "Price": 415600,
+      "Damage": "8d8 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 4)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma sword, blue star",
+      "Level": 20,
+      "Price": 920250,
+      "Damage": "10d8 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 4)"
+    },
+    {
+      "Type": "Shock",
+      "Name": "Shock truncheon, static",
+      "Level": 8,
+      "Price": 9150,
+      "Damage": "1d12 E",
+      "Critical": "Arc 1d4",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2), stun"
+    },
+    {
+      "Type": "Shock",
+      "Name": "Shock truncheon, aurora",
+      "Level": 11,
+      "Price": 23000,
+      "Damage": "2d12 E",
+      "Critical": "Arc 2d4",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2), stun"
+    },
+    {
+      "Type": "Shock",
+      "Name": "Shock truncheon, storm",
+      "Level": 16,
+      "Price": 80200,
+      "Damage": "3d12 E",
+      "Critical": "Arc 3d4",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 2), stun"
+    },
+    {
+      "Type": "Shock",
+      "Name": "Shock truncheon, tempest",
+      "Level": 19,
+      "Price": 545000,
+      "Damage": "6d12 E",
+      "Critical": "Arc 6d4",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 2), stun"
+    },
+    {
+      "Type": "Sonic",
+      "Name": "Pulse gauntlet, thunderstrike",
+      "Level": 2,
+      "Price": 475,
+      "Damage": "1d6 B & So",
+      "Critical": "Knockdown",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Sonic",
+      "Name": "Pulse gauntlet, LFD",
+      "Level": 7,
+      "Price": 7340,
+      "Damage": "2d6 B & So",
+      "Critical": "Knockdown",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Sonic",
+      "Name": "Pulse gauntlet, HFD",
+      "Level": 12,
+      "Price": 31300,
+      "Damage": "5d6 B & So",
+      "Critical": "Knockdown",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Sonic",
+      "Name": "Pulse gauntlet, banshee",
+      "Level": 16,
+      "Price": 148200,
+      "Damage": "10d6 B & So",
+      "Critical": "Knockdown",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Hammer, assault",
+      "Level": 1,
+      "Price": 95,
+      "Damage": "1d6 B",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword",
+      "Level": 1,
+      "Price": 375,
+      "Damage": "1d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Starknife, Tactical",
+      "Level": 1,
+      "Price": 110,
+      "Damage": "1d4 P",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Analog, thrown (20 ft.)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Taclash, standard",
+      "Level": 1,
+      "Price": 240,
+      "Damage": "1d4 S",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Analog, disarm, nonlethal, reach, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Injection glove",
+      "Level": 2,
+      "Price": 490,
+      "Damage": "1d4 P",
+      "Critical": "Injection DC +2",
+      "Bulk": "L",
+      "Special": "Analog, injection"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Xenolash, immature",
+      "Level": 4,
+      "Price": 2430,
+      "Damage": "2d4 A&S",
+      "Critical": "Corrode 1d4",
+      "Bulk": 1,
+      "Special": "Analog, disarm, entangle, reach, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Fangblade",
+      "Level": 7,
+      "Price": 5430,
+      "Damage": "1d12 S",
+      "Critical": "Bleed 1d8",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, sintered",
+      "Level": 7,
+      "Price": 8420,
+      "Damage": "2d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Starknife, sintered",
+      "Level": 8,
+      "Price": 9810,
+      "Damage": "4d4 P",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Analog, thrown (50 ft.)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, microserrated",
+      "Level": 9,
+      "Price": 12100,
+      "Damage": "2d10 S",
+      "Critical": "Bleed 2d6",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Hammer, comet",
+      "Level": 10,
+      "Price": 16900,
+      "Damage": "4d6 B",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Xenolash, mature",
+      "Level": 10,
+      "Price": 17000,
+      "Damage": "5d4 A&S",
+      "Critical": "Corrode 2d4",
+      "Bulk": 1,
+      "Special": "Analog, disarm, entangle, reach, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, ultrathin",
+      "Level": 11,
+      "Price": 26300,
+      "Damage": "4d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Taclash, numbing",
+      "Level": 11,
+      "Price": 24800,
+      "Damage": "5d4 S",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Disarm, powered (capacity 20, usage 2), reach, stun, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Starknife, accelerated",
+      "Level": 12,
+      "Price": 40400,
+      "Damage": "4d8 F & P",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Powered (capacity 20, usage 1), thrown (30 ft.)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Grindblade",
+      "Level": 13,
+      "Price": 45700,
+      "Damage": "4d10 S",
+      "Critical": "Bleed 2d8",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, zero-edge",
+      "Level": 14,
+      "Price": 79500,
+      "Damage": "7d8 S",
+      "Critical": "Severe wound",
+      "Bulk": "L",
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Xenolash, blooming",
+      "Level": 14,
+      "Price": 70000,
+      "Damage": "9d4 A&S",
+      "Critical": "Corrode 4d4",
+      "Bulk": 1,
+      "Special": "Analog, disarm, entangle, reach, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Monowhip",
+      "Level": 15,
+      "Price": 107000,
+      "Damage": "10d4 S",
+      "Critical": "Severe wound",
+      "Bulk": "L",
+      "Special": "Analog, disarm, reach, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Hammer, meteoric",
+      "Level": 16,
+      "Price": 164500,
+      "Damage": "11d6 B",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Starknife, lightspeed",
+      "Level": 16,
+      "Price": 183400,
+      "Damage": "8d8 F & P",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Powered (capacity 20, usage 2), thrown (50 ft.)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, molecular rift",
+      "Level": 17,
+      "Price": 245200,
+      "Damage": "10d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, ultraserrated",
+      "Level": 18,
+      "Price": 368100,
+      "Damage": "8d10 S",
+      "Critical": "Bleed 6d6",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Xenolash, seeded",
+      "Level": 18,
+      "Price": 409000,
+      "Damage": "9d4 A&S",
+      "Critical": "Corrode 6d4",
+      "Bulk": 1,
+      "Special": "Analog, disarm, entangle, reach, trip"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Hammer, gravity well",
+      "Level": 19,
+      "Price": 551000,
+      "Damage": "15d6 B",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Powered (capacity 40, usage 2)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Starknife, dimensional slice",
+      "Level": 19,
+      "Price": 602200,
+      "Damage": "8d12 P",
+      "Critical": "—",
+      "Bulk": "L",
+      "Special": "Analog, thrown (80 ft.)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Longsword, dimensional slice",
+      "Level": 20,
+      "Price": 727300,
+      "Damage": "14d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    }
+  ]
+}
