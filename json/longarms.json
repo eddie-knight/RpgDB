@@ -845,6 +845,19 @@
 	    "Usage": 1,
 	    "Bulk": 1,
 	    "Special": "Analog, injection"
-	  }
+	  },
+    {
+    "Type": "Uncategorized",
+    "Name": "Bow",
+    "Level": 1,
+    "Price": 255,
+    "Damage": "1d6 P",
+    "Range": "60 ft.",
+    "Critical": "—",
+    "Capacity": "Drawn",
+    "Usage": 1,
+    "Bulk": 1,
+    "Special": "Quick reload"
+    }
 	]
 }
