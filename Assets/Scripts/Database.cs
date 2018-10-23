@@ -25,7 +25,11 @@ namespace TextRPG
             return JObject.Parse(file_output);
         }
 
-        public static void LoadMeleeWeapons(JToken data, List<Weapon> Weapons)
+
+        // 
+        // Melee Weapons
+        //
+        public static void AddMeleeWeapons(JToken data, List<Weapon> Weapons)
         {
             Weapon weapon = new Weapon();
             weapon.Name = (string)data["Name"];
@@ -45,7 +49,35 @@ namespace TextRPG
             JToken jsonObject = Database.GetJsonFromFile(title);
             foreach (JToken data in jsonObject[title])
             {
-                Database.LoadMeleeItems(data, Weapons);
+                Database.AddMeleeWeapons(data, Weapons);
+            }
+        }
+        // 
+        // Ranged Weapons
+        //
+        public static void AddRangedWeapons(JToken data, List<Weapon> Weapons)
+        {
+            Weapon weapon = new Weapon();
+            weapon.Name = (string)data["Name"];
+            weapon.Type = (string)data["Type"];
+            weapon.Level = (int)data["Level"];
+            weapon.Price = (int)data["Price"];
+            weapon.Damage = (string)data["Damage"];
+            weapon.Critical = (string)data["Critical"]; ;
+            weapon.Capacity = (string)data["Capacity"]; ;
+            weapon.Usage = (string)data["Usage"]; ;
+            weapon.Bulk = (string)data["Bulk"];
+            weapon.Special = (string)data["Special"];
+
+            Weapons.Add(weapon);
+        }
+
+        public static void LoadRangedWeaponData(string title, List<Weapon> Weapons)
+        {
+            JToken jsonObject = Database.GetJsonFromFile(title);
+            foreach (JToken data in jsonObject[title])
+            {
+                Database.AddRangedWeapons(data, Weapons);
             }
         }
     }
