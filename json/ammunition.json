@@ -1,0 +1,173 @@
+{
+  "ammunition":
+  [
+    {
+      "Name": "Arrows",
+      "Level": 1,
+      "Price": 50,
+      "Charges/cartridges": 20,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Battery",
+      "Level": 1,
+      "Price": 60,
+      "Charges/cartridges": 20,
+      "Bulk": "—",
+      "Special": "—"
+    },
+    {
+      "Name": "Battery, high-capacity",
+      "Level": 4,
+      "Price": 330,
+      "Charges/cartridges": 40,
+      "Bulk": "—",
+      "Special": "—"
+    },
+    {
+      "Name": "Battery, super-capacity",
+      "Level": 4,
+      "Price": 390,
+      "Charges/cartridges": 80,
+      "Bulk": "—",
+      "Special": "—"
+    },
+    {
+      "Name": "Battery, ultra-capacity",
+      "Level": 5,
+      "Price": 445,
+      "Charges/cartridges": 100,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Darts",
+      "Level": 1,
+      "Price": 20,
+      "Charges/cartridges": 25,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Flare",
+      "Level": 1,
+      "Price": 5,
+      "Charges/cartridges": 1,
+      "Bulk": "—",
+      "Special": "—"
+    },
+    {
+      "Name": "Flechettes",
+      "Level": 1,
+      "Price": 75,
+      "Charges/cartridges": 25,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Mini-rockets",
+      "Level": 4,
+      "Price": 300,
+      "Charges/cartridges": 10,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Petrol tank, standard",
+      "Level": 1,
+      "Price": 60,
+      "Charges/cartridges": 20,
+      "Bulk": 1,
+      "Special": "—"
+    },
+    {
+      "Name": "Petrol tank, high-capacity",
+      "Level": 3,
+      "Price": 280,
+      "Charges/cartridges": 40,
+      "Bulk": 2,
+      "Special": "—"
+    },
+    {
+      "Name": "Rounds, small arm",
+      "Level": 1,
+      "Price": 40,
+      "Charges/cartridges": 30,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Rounds, longarm and sniper",
+      "Level": 1,
+      "Price": 75,
+      "Charges/cartridges": 25,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Rounds, heavy",
+      "Level": 2,
+      "Price": 90,
+      "Charges/cartridges": 20,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Scattergun shells",
+      "Level": 1,
+      "Price": 55,
+      "Charges/cartridges": 25,
+      "Bulk": "L",
+      "Special": "—"
+    },
+    {
+      "Name": "Grenade arrow I",
+      "Level": 6,
+      "Price": 875,
+      "Charges/cartridges": 1,
+      "Bulk": "—",
+      "Special": "As any 1st-level grenade"
+    },
+    {
+      "Name": "Grenade arrow II",
+      "Level": 10,
+      "Price": 5450,
+      "Charges/cartridges": 1,
+      "Bulk": "—",
+      "Special": "As any 5th- or lower-level grenade"
+    },
+    {
+      "Name": "Grenade arrow III",
+      "Level": 15,
+      "Price": 32050,
+      "Charges/cartridges": 1,
+      "Bulk": "—",
+      "Special": "As any 10th- or lower-level grenade"
+    },
+    {
+      "Name": "Grenade arrow IV",
+      "Level": 20,
+      "Price": 245000,
+      "Charges/cartridges": 1,
+      "Bulk": "—",
+      "Special": "As any 15th- or lower-level grenade"
+    },
+    {
+      "Name": "Tactical missile",
+      "Level": 10,
+      "Price": 5700,
+      "Charges/cartridges": 1,
+      "Bulk": 1,
+      "Special": "Explode 6d8 B & P (30 ft.)"
+    },
+    {
+      "Name": "Advanced missile",
+      "Level": 13,
+      "Price": 14600,
+      "Charges/cartridges": 1,
+      "Bulk": 1,
+      "Special": "13d8 B & F"
+    }
+  ]
+}
