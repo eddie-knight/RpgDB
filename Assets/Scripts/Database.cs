@@ -52,10 +52,10 @@ namespace TextRPG
                 Database.AddMeleeWeapons(data, Weapons);
             }
         }
+        
         // 
         // Ranged Weapons
         //
-
         public static void AddRangedWeapons(JToken data, List<Weapon> Weapons)
         {
             Weapon weapon = new Weapon();
