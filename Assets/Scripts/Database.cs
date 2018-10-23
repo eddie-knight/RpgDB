@@ -8,10 +8,13 @@ namespace TextRPG
 {
     public class Database : MonoBehaviour
     {
+        // The JsonHome path may change
+        private string JsonHome = 'json/';
+
         public static JObject GetJsonFromFile(string file_path)
         {
             string file_output = "";
-            using (StreamReader file = new StreamReader(file_path))
+            using (StreamReader file = new StreamReader(JsonHome + file_path + '.json'))
             {
                 string line;
                 while ((line = file.ReadLine()) != null)
@@ -22,19 +25,28 @@ namespace TextRPG
             return JObject.Parse(file_output);
         }
 
-        public static void LoadMeleeItems(JToken data, List<Weapon> Weapons)
+        public static void AddMeleeWeapons(JToken data, List<Weapon> Weapons)
         {
             Weapon weapon = new Weapon();
             weapon.Name = (string)data["Name"];
             weapon.Type = (string)data["Type"];
             weapon.Level = (int)data["Level"];
-            weapon.Price = (string)data["Price"];
+            weapon.Price = (int)data["Price"];
             weapon.Damage = (string)data["Damage"];
             weapon.Critical = (string)data["Critical"]; ;
             weapon.Bulk = (string)data["Bulk"];
             weapon.Special = (string)data["Special"];
 
             Weapons.Add(weapon);
+        }
+
+        public static void LoadMeleeWeaponData(string title, List<Weapon> Weapons)
+        {
+            JToken jsonObject = Database.GetJsonFromFile(title);
+            foreach (JToken data in jsonObject[title])
+            {
+                Database.AddMeleeWeapons(data, Weapons);
+            }
         }
     }
 }
