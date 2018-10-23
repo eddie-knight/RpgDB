@@ -10,12 +10,13 @@ namespace TextRPG
     public class WeaponDatabase : Database
     {
         public List<Weapon> MeleeWeapons;
+        public List<Weapon> RangedWeapons;
 
         public void Start()
         {
             Database.LoadMeleeWeaponData("1h_melee", MeleeWeapons)
             Database.LoadMeleeWeaponData("2h_melee", MeleeWeapons)
-            Database.LoadRangedWeaponData("small_arms", MeleeWeapons)
+            Database.LoadRangedWeaponData("small_arms", RangedWeapons)
         }
     }
 }
