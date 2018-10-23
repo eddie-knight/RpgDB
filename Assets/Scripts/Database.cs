@@ -25,7 +25,7 @@ namespace TextRPG
             return JObject.Parse(file_output);
         }
 
-        public static void LoadMeleeWeapons(JToken data, List<Weapon> Weapons)
+        public static void AddMeleeWeapons(JToken data, List<Weapon> Weapons)
         {
             Weapon weapon = new Weapon();
             weapon.Name = (string)data["Name"];
@@ -45,7 +45,7 @@ namespace TextRPG
             JToken jsonObject = Database.GetJsonFromFile(title);
             foreach (JToken data in jsonObject[title])
             {
-                Database.LoadMeleeItems(data, Weapons);
+                Database.AddMeleeWeapons(data, Weapons);
             }
         }
     }
