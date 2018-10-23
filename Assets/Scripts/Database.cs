@@ -25,7 +25,16 @@ namespace TextRPG
             return JObject.Parse(file_output);
         }
 
-
+        // TODO: Test and refine this, then delete the others
+        // public static void AddWeapons(Jtoken data, List<Weapon> Weapons)
+        // {
+        //    Weapon weapon = new Weapon();
+        //    foreach (KeyValuePair<string, dynamic> info in data)
+        //    {
+        //        weapon.GetMethod(key) = value;
+        //    }
+        //    Weapons.Add(weapon);
+        // }
         // 
         // Melee Weapons
         //
