@@ -1,0 +1,320 @@
+{
+	"grenades":
+  [
+    {
+      "Name": "Frag grenade I",
+      "Level": 1,
+      "Price": 35,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (1d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Shock grenade I",
+      "Level": 1,
+      "Price": 130,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (1d8 E, 15 ft.)"
+    },
+    {
+      "Name": "Smoke grenade",
+      "Level": 1,
+      "Price": 40,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (smoke cloud 1 minute, 20 ft.)"
+    },
+    {
+      "Name": "Stickybomb grenade I",
+      "Level": 1,
+      "Price": 170,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (entangled 2d4 rounds, 10 ft.)"
+    },
+    {
+      "Name": "Flash grenade I",
+      "Level": 2,
+      "Price": 275,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (blinded 1d4 rounds, 5 ft.)"
+    },
+    {
+      "Name": "Incendiary grenade I",
+      "Level": 2,
+      "Price": 375,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (1d6 F, 1d4 burn, 5 ft.)"
+    },
+    {
+      "Name": "Frag grenade II",
+      "Level": 4,
+      "Price": 700,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (2d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Screamer grenade I",
+      "Level": 4,
+      "Price": 725,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (1d10 So, deafened 1d4 minutes, 15 ft.)"
+    },
+    {
+      "Name": "Shock grenade II",
+      "Level": 4,
+      "Price": 650,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (1d12 E, 15 ft.)"
+    },
+    {
+      "Name": "Stickybomb grenade II",
+      "Level": 4,
+      "Price": 675,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (entangled 2d4 rounds, 15 ft.)"
+    },
+    {
+      "Name": "Cryo grenade I",
+      "Level": 6,
+      "Price": 1220,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (1d8 C, staggered, 10 ft.)"
+    },
+    {
+      "Name": "Flash grenade II",
+      "Level": 6,
+      "Price": 1350,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (blinded 1d4 rounds, 10 ft.)"
+    },
+    {
+      "Name": "Incendiary grenade II",
+      "Level": 6,
+      "Price": 1040,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (2d6 F, 1d6 burn, 10 ft.)"
+    },
+    {
+      "Name": "Frag grenade III",
+      "Level": 8,
+      "Price": 2560,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (4d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Incendiary grenade III",
+      "Level": 8,
+      "Price": 2800,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (3d6 F, 1d6 burn, 10 ft.)"
+    },
+    {
+      "Name": "Screamer grenade II",
+      "Level": 8,
+      "Price": 2720,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (2d10 So, deafened 1d4 minutes, 20 ft.)"
+    },
+    {
+      "Name": "Cryo grenade II",
+      "Level": 10,
+      "Price": 5000,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (2d8 C, staggered, 15 ft.)"
+    },
+    {
+      "Name": "Frag grenade IV",
+      "Level": 10,
+      "Price": 5750,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (6d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Shock grenade III",
+      "Level": 10,
+      "Price": 5380,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (3d12 E, 15 ft.)"
+    },
+    {
+      "Name": "Stickybomb grenade III",
+      "Level": 10,
+      "Price": 5410,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (entangled 2d4 rounds, 20 ft.)"
+    },
+    {
+      "Name": "Flash grenade III",
+      "Level": 12,
+      "Price": 10400,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (blinded 1d6 rounds, 15 ft.)"
+    },
+    {
+      "Name": "Incendiary grenade IV",
+      "Level": 12,
+      "Price": 9380,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (5d6 F, 3d6 burn, 15 ft.)"
+    },
+    {
+      "Name": "Screamer grenade III",
+      "Level": 12,
+      "Price": 11300,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (4d10 So, deafened 1d4 minutes, 25 ft.)"
+    },
+    {
+      "Name": "Cryo grenade III",
+      "Level": 14,
+      "Price": 21100,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (4d8 C, staggered, 20 ft.)"
+    },
+    {
+      "Name": "Frag grenade V",
+      "Level": 14,
+      "Price": 18750,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (10d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Shock grenade IV",
+      "Level": 14,
+      "Price": 23600,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (6d12 E, 15 ft.)"
+    },
+    {
+      "Name": "Flash grenade IV",
+      "Level": 16,
+      "Price": 53000,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (blinded 1d8 rounds, 20 ft.)"
+    },
+    {
+      "Name": "Frag grenade VI",
+      "Level": 16,
+      "Price": 44600,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (12d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Incendiary grenade V",
+      "Level": 16,
+      "Price": 44000,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (10d6 F, 5d6 burn, 15 ft.)"
+    },
+    {
+      "Name": "Screamer grenade IV",
+      "Level": 16,
+      "Price": 43500,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (7d10 So, deafened 1d4 minutes, 30 ft.)"
+    },
+    {
+      "Name": "Cryo grenade IV",
+      "Level": 18,
+      "Price": 108500,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (6d8 C, staggered, 20 ft.)"
+    },
+    {
+      "Name": "Frag grenade VII",
+      "Level": 18,
+      "Price": 96900,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (16d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Incendiary grenade VI",
+      "Level": 18,
+      "Price": 108800,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (12d6 F, 6d6 burn, 15 ft.)"
+    },
+    {
+      "Name": "Frag grenade VIII",
+      "Level": 20,
+      "Price": 216000,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (20d6 P, 15 ft.)"
+    },
+    {
+      "Name": "Shock grenade V",
+      "Level": 20,
+      "Price": 110000,
+      "Range": "20 ft.",
+      "Capacity": "Drawn",
+      "Bulk": "L",
+      "Special": "Explode (9d12 E, 15 ft.)"
+    }
+  ]
+}
