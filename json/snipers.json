@@ -1,0 +1,122 @@
+{
+  "snipers":
+  [
+    {
+      "Type": "Projectile",
+      "Name": "Shobhad horizon striker, tactical",
+      "Level": 1,
+      "Price": 440,
+      "Damage": "2d4 P",
+      "Range": "100 ft.",
+      "Critical": "—",
+      "Capacity": "2 rounds",
+      "Usage": 1,
+      "Bulk": 2,
+      "Special": "Analog, sniper (500 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shirren-eye rifle, tactical",
+      "Level": 2,
+      "Price": 755,
+      "Damage": "1d10 P",
+      "Range": "70 ft.",
+      "Critical": "—",
+      "Capacity": "1 round",
+      "Usage": 1,
+      "Bulk": 1,
+      "Special": "Analog, sniper (250 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shobhad horizon striker, advanced",
+      "Level": 6,
+      "Price": "4,750",
+      "Damage": "3d4 P",
+      "Range": "120 ft.",
+      "Critical": "—",
+      "Capacity": "2 rounds",
+      "Usage": 1,
+      "Bulk": 2,
+      "Special": "Analog, sniper (1,000 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shirren-eye rifle, advanced",
+      "Level": 8,
+      "Price": "9,350",
+      "Damage": "2d10 P",
+      "Range": "70 ft.",
+      "Critical": "—",
+      "Capacity": "4 rounds",
+      "Usage": 1,
+      "Bulk": 2,
+      "Special": "Analog, sniper (500 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shobhad horizon striker, elite",
+      "Level": 11,
+      "Price": "27,300",
+      "Damage": "6d4 P",
+      "Range": "140 ft.",
+      "Critical": "—",
+      "Capacity": "2 rounds",
+      "Usage": 1,
+      "Bulk": 2,
+      "Special": "Analog, sniper (1,250 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shirren-eye rifle, elite",
+      "Level": 13,
+      "Price": "54,000",
+      "Damage": "4d10 P",
+      "Range": "80 ft.",
+      "Critical": "—",
+      "Capacity": "6 rounds",
+      "Usage": 1,
+      "Bulk": 2,
+      "Special": "Analog, sniper (750 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shirren-eye rifle, paragon",
+      "Level": 16,
+      "Price": "147,200",
+      "Damage": "6d10 P",
+      "Range": "80 ft.",
+      "Critical": "—",
+      "Capacity": "6 rounds",
+      "Usage": 1,
+      "Bulk": 1,
+      "Special": "Analog, sniper (1,000 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shobhad horizon striker, paragon",
+      "Level": 16,
+      "Price": "185,000",
+      "Damage": "8d8 P",
+      "Range": "160 ft.",
+      "Critical": "—",
+      "Capacity": "2 rounds",
+      "Usage": 1,
+      "Bulk": 2,
+      "Special": "Analog, sniper (1,500 ft.), unwieldy"
+    },
+    {
+      "Type": "Projectile",
+      "Name": "Shirren-eye rifle, warpshot",
+      "Level": 20,
+      "Price": "740,800",
+      "Damage": "10d10 P",
+      "Range": "80 ft.",
+      "Critical": "—",
+      "Capacity": "4 rounds",
+      "Usage": 1,
+      "Bulk": 1,
+      "Special": "Analog, sniper (1,000 ft.), unwieldy"
+    }
+  ]
+}
