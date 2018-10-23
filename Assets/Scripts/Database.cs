@@ -55,6 +55,7 @@ namespace TextRPG
         // 
         // Ranged Weapons
         //
+
         public static void AddRangedWeapons(JToken data, List<Weapon> Weapons)
         {
             Weapon weapon = new Weapon();
@@ -63,9 +64,10 @@ namespace TextRPG
             weapon.Level = (int)data["Level"];
             weapon.Price = (int)data["Price"];
             weapon.Damage = (string)data["Damage"];
+            weapon.Range = (string)data["Range"];
             weapon.Critical = (string)data["Critical"]; ;
             weapon.Capacity = (string)data["Capacity"]; ;
-            weapon.Usage = (string)data["Usage"]; ;
+            weapon.Usage = (int)data["Usage"]; ;
             weapon.Bulk = (string)data["Bulk"];
             weapon.Special = (string)data["Special"];
 
