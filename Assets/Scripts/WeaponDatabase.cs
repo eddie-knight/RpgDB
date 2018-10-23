@@ -14,11 +14,13 @@ namespace TextRPG
 
         public void Start()
         {
-            Database.LoadMeleeWeaponData("1h_melee", MeleeWeapons)
-            Database.LoadMeleeWeaponData("2h_melee", MeleeWeapons)
-            Database.LoadRangedWeaponData("small_arms", RangedWeapons)
-            Database.LoadRangedWeaponData("longarms", RangedWeapons)
-            Database.LoadRangedWeaponData("snipers", RangedWeapons)
+            Database.LoadMeleeWeaponData("1h_melee", MeleeWeapons);
+            Database.LoadMeleeWeaponData("2h_melee", MeleeWeapons);
+
+            Database.LoadRangedWeaponData("small_arms", RangedWeapons);
+            Database.LoadRangedWeaponData("longarms", RangedWeapons);
+            Database.LoadRangedWeaponData("snipers", RangedWeapons);
+            Database.LoadRangedWeaponData("heavy_weapons", RangedWeapons);
         }
     }
 }
