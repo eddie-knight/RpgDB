@@ -18,6 +18,7 @@ namespace TextRPG
             Database.LoadMeleeWeaponData("2h_melee", MeleeWeapons)
             Database.LoadRangedWeaponData("small_arms", RangedWeapons)
             Database.LoadRangedWeaponData("longarms", RangedWeapons)
+            Database.LoadRangedWeaponData("snipers", RangedWeapons)
         }
     }
 }
