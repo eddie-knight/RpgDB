@@ -4,24 +4,37 @@ using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.Linq;
 
 namespace TextRPG
 {
     public class WeaponDatabase : Database
     {
         public List<Weapon> MeleeWeapons;
-        public string[] meleeCategories = { "1h_melee", "2h_melee" };
+        public static List<Weapon> MeleeWeaponsList;
+
+        public static string[] meleeCategories = { "1h_melee", "2h_melee" };
 
         public List<Weapon> RangedWeapons;
-        public string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+        public static List<Weapon> RangedWeaponsList;
+        public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+
+        public static List<Weapon> AllWeaponsList;
 
         public void Start()
         {
             // Weapon data is only loaded on first instantiation of Prefabs
-            if(MeleeWeapons.Count == 0)
+            if (MeleeWeapons.Count == 0)
+            {
                 LoadWeaponData(meleeCategories, MeleeWeapons);
+                MeleeWeaponsList = MeleeWeapons;
+            }
             if (RangedWeapons.Count == 0)
+            {
                 LoadWeaponData(rangedCategories, RangedWeapons);
+                RangedWeaponsList = RangedWeapons;
+            }
+            AllWeaponsList = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
         }
 
         // Convert JToken object to Weapon object
@@ -68,6 +81,49 @@ namespace TextRPG
             {
                 LoadWeaponData(type, list);
             }
+        }
+
+
+        // SEARCH FUNCTIONALITY
+        // These functions will return a List with any appropriate responses.
+        // TODO: Fix case-sensitivity on all search functions
+
+        // If provided category exists, find all weapons with category
+        public static List<Weapon> SearchWeaponsByCategory(string category)
+        {
+            return meleeCategories.Contains(category) || rangedCategories.Contains(category)
+                                  ? AllWeaponsList.FindAll(x => x.Category.Contains(category))
+                                      : null;
+        }
+
+        // Return one weapon with exact name
+        public static List<Weapon> FindWeaponByName(string text)
+        {
+            return AllWeaponsList.FindAll(x => x.Name.Equals(text));
+        }
+
+        // Return all melee weapons with text in name
+        public static List<Weapon> SearchMeleeWeaponsByName(string text)
+        {
+            return MeleeWeaponsList.FindAll(x => x.Name.Contains(text));
+        }
+
+        // Return all ranged weapons with text in name
+        public static List<Weapon> SearchRangedWeaponsByName(string text)
+        {
+            return RangedWeaponsList.FindAll(x => x.Name.Contains(text));
+        }
+
+        // Return all weapons with text in name
+        public static List<Weapon> SearchWeaponsByName(string text)
+        {
+            return AllWeaponsList.FindAll(x => x.Name.Contains(text));
+        }
+
+        // Return all weapons with text in type
+        public static List<Weapon> SearchWeaponsByType(string text)
+        {
+            return AllWeaponsList.FindAll(x => x.Type.Contains(text));
         }
 
     }
