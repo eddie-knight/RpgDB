@@ -10,9 +10,12 @@ namespace TextRPG
         public string Name;
         public string Type;
         public int Level;
-        public string Price;
+        public int Price;
+        public string Range;
+        public string Capacity;
         public string Damage;
         public string Critical;
+        public int Usage;
         public string Bulk;
         public string Special;
     }

@@ -8,13 +8,12 @@ namespace TextRPG
 {
     public class Database : MonoBehaviour
     {
-        // The JsonHome path may change
-        private string JsonHome = 'json/';
+        public static string JsonHome = @"json/";
 
         public static JObject GetJsonFromFile(string file_path)
         {
             string file_output = "";
-            using (StreamReader file = new StreamReader(JsonHome + file_path + '.json'))
+            using (StreamReader file = new StreamReader(JsonHome + file_path + ".json"))
             {
                 string line;
                 while ((line = file.ReadLine()) != null)
@@ -25,7 +24,17 @@ namespace TextRPG
             return JObject.Parse(file_output);
         }
 
+        // TODO: Test and refine this, then delete the others
+        //public static void AddWeapons(JToken data, List<Weapon> Weapons)
+        //{
+        //Weapon weapon = new Weapon();
 
+        //foreach (var info in data)
+        //{
+        //    Debug.Log(info);
+        //}
+        //Weapons.Add(weapon);
+        //}
         // 
         // Melee Weapons
         //

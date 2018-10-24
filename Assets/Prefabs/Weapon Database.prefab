@@ -1,0 +1,2761 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1813381215359398}
+  m_IsPrefabAsset: 1
+--- !u!1 &1813381215359398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4904652126329786}
+  - component: {fileID: 114924369431688338}
+  m_Layer: 0
+  m_Name: Weapon Database
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4904652126329786
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813381215359398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114924369431688338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1813381215359398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd461d291183461db5f76aa9bd44a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeleeWeapons:
+  - Name: Starfire sword, Tactical
+    Type: Flame
+    Level: 7
+    Price: 6120
+    Range: 
+    Capacity: 
+    Damage: 2d4 F
+    Critical: Burn 1d8
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Starfire sword, inferno
+    Type: Flame
+    Level: 17
+    Price: 246000
+    Range: 
+    Capacity: 
+    Damage: 7d8 F
+    Critical: Burn 4d12
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Plasma sword, Tactical
+    Type: Plasma
+    Level: 9
+    Price: 14550
+    Range: 
+    Capacity: 
+    Damage: 2d8 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Plasma sword, red star
+    Type: Plasma
+    Level: 13
+    Price: 54300
+    Range: 
+    Capacity: 
+    Damage: 4d8 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 4)
+  - Name: Plasma sword, yellow star
+    Type: Plasma
+    Level: 15
+    Price: 127000
+    Range: 
+    Capacity: 
+    Damage: 5d8 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 4)
+  - Name: Plasma sword, white star
+    Type: Plasma
+    Level: 18
+    Price: 415600
+    Range: 
+    Capacity: 
+    Damage: 8d8 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 4)
+  - Name: Plasma sword, blue star
+    Type: Plasma
+    Level: 20
+    Price: 920250
+    Range: 
+    Capacity: 
+    Damage: 10d8 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 4)
+  - Name: Shock truncheon, static
+    Type: Shock
+    Level: 8
+    Price: 9150
+    Range: 
+    Capacity: 
+    Damage: 1d12 E
+    Critical: Arc 1d4
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2), stun
+  - Name: Shock truncheon, aurora
+    Type: Shock
+    Level: 11
+    Price: 23000
+    Range: 
+    Capacity: 
+    Damage: 2d12 E
+    Critical: Arc 2d4
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2), stun
+  - Name: Shock truncheon, storm
+    Type: Shock
+    Level: 16
+    Price: 80200
+    Range: 
+    Capacity: 
+    Damage: 3d12 E
+    Critical: Arc 3d4
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 2), stun
+  - Name: Shock truncheon, tempest
+    Type: Shock
+    Level: 19
+    Price: 545000
+    Range: 
+    Capacity: 
+    Damage: 6d12 E
+    Critical: Arc 6d4
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 2), stun
+  - Name: Pulse gauntlet, thunderstrike
+    Type: Sonic
+    Level: 2
+    Price: 475
+    Range: 
+    Capacity: 
+    Damage: 1d6 B & So
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Pulse gauntlet, LFD
+    Type: Sonic
+    Level: 7
+    Price: 7340
+    Range: 
+    Capacity: 
+    Damage: 2d6 B & So
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Pulse gauntlet, HFD
+    Type: Sonic
+    Level: 12
+    Price: 31300
+    Range: 
+    Capacity: 
+    Damage: 5d6 B & So
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Pulse gauntlet, banshee
+    Type: Sonic
+    Level: 16
+    Price: 148200
+    Range: 
+    Capacity: 
+    Damage: 10d6 B & So
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Hammer, assault
+    Type: Uncategorized
+    Level: 1
+    Price: 95
+    Range: 
+    Capacity: 
+    Damage: 1d6 B
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Longsword
+    Type: Uncategorized
+    Level: 1
+    Price: 375
+    Range: 
+    Capacity: 
+    Damage: 1d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Starknife, Tactical
+    Type: Uncategorized
+    Level: 1
+    Price: 110
+    Range: 
+    Capacity: 
+    Damage: 1d4 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Analog, thrown (20 ft.)
+  - Name: Taclash, standard
+    Type: Uncategorized
+    Level: 1
+    Price: 240
+    Range: 
+    Capacity: 
+    Damage: 1d4 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Analog, disarm, nonlethal, reach, trip
+  - Name: Injection glove
+    Type: Uncategorized
+    Level: 2
+    Price: 490
+    Range: 
+    Capacity: 
+    Damage: 1d4 P
+    Critical: Injection DC +2
+    Usage: 0
+    Bulk: L
+    Special: Analog, injection
+  - Name: Xenolash, immature
+    Type: Uncategorized
+    Level: 4
+    Price: 2430
+    Range: 
+    Capacity: 
+    Damage: 2d4 A&S
+    Critical: Corrode 1d4
+    Usage: 0
+    Bulk: 1
+    Special: Analog, disarm, entangle, reach, trip
+  - Name: Fangblade
+    Type: Uncategorized
+    Level: 7
+    Price: 5430
+    Range: 
+    Capacity: 
+    Damage: 1d12 S
+    Critical: Bleed 1d8
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Longsword, sintered
+    Type: Uncategorized
+    Level: 7
+    Price: 8420
+    Range: 
+    Capacity: 
+    Damage: 2d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Starknife, sintered
+    Type: Uncategorized
+    Level: 8
+    Price: 9810
+    Range: 
+    Capacity: 
+    Damage: 4d4 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Analog, thrown (50 ft.)
+  - Name: Longsword, microserrated
+    Type: Uncategorized
+    Level: 9
+    Price: 12100
+    Range: 
+    Capacity: 
+    Damage: 2d10 S
+    Critical: Bleed 2d6
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Hammer, comet
+    Type: Uncategorized
+    Level: 10
+    Price: 16900
+    Range: 
+    Capacity: 
+    Damage: 4d6 B
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Xenolash, mature
+    Type: Uncategorized
+    Level: 10
+    Price: 17000
+    Range: 
+    Capacity: 
+    Damage: 5d4 A&S
+    Critical: Corrode 2d4
+    Usage: 0
+    Bulk: 1
+    Special: Analog, disarm, entangle, reach, trip
+  - Name: Longsword, ultrathin
+    Type: Uncategorized
+    Level: 11
+    Price: 26300
+    Range: 
+    Capacity: 
+    Damage: 4d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Taclash, numbing
+    Type: Uncategorized
+    Level: 11
+    Price: 24800
+    Range: 
+    Capacity: 
+    Damage: 5d4 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Disarm, powered (capacity 20, usage 2), reach, stun, trip
+  - Name: Starknife, accelerated
+    Type: Uncategorized
+    Level: 12
+    Price: 40400
+    Range: 
+    Capacity: 
+    Damage: 4d8 F & P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Powered (capacity 20, usage 1), thrown (30 ft.)
+  - Name: Grindblade
+    Type: Uncategorized
+    Level: 13
+    Price: 45700
+    Range: 
+    Capacity: 
+    Damage: 4d10 S
+    Critical: Bleed 2d8
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Longsword, zero-edge
+    Type: Uncategorized
+    Level: 14
+    Price: 79500
+    Range: 
+    Capacity: 
+    Damage: 7d8 S
+    Critical: Severe wound
+    Usage: 0
+    Bulk: L
+    Special: Analog
+  - Name: Xenolash, blooming
+    Type: Uncategorized
+    Level: 14
+    Price: 70000
+    Range: 
+    Capacity: 
+    Damage: 9d4 A&S
+    Critical: Corrode 4d4
+    Usage: 0
+    Bulk: 1
+    Special: Analog, disarm, entangle, reach, trip
+  - Name: Monowhip
+    Type: Uncategorized
+    Level: 15
+    Price: 107000
+    Range: 
+    Capacity: 
+    Damage: 10d4 S
+    Critical: Severe wound
+    Usage: 0
+    Bulk: L
+    Special: Analog, disarm, reach, trip
+  - Name: Hammer, meteoric
+    Type: Uncategorized
+    Level: 16
+    Price: 164500
+    Range: 
+    Capacity: 
+    Damage: 11d6 B
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Starknife, lightspeed
+    Type: Uncategorized
+    Level: 16
+    Price: 183400
+    Range: 
+    Capacity: 
+    Damage: 8d8 F & P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Powered (capacity 20, usage 2), thrown (50 ft.)
+  - Name: Longsword, molecular rift
+    Type: Uncategorized
+    Level: 17
+    Price: 245200
+    Range: 
+    Capacity: 
+    Damage: 10d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Longsword, ultraserrated
+    Type: Uncategorized
+    Level: 18
+    Price: 368100
+    Range: 
+    Capacity: 
+    Damage: 8d10 S
+    Critical: Bleed 6d6
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Xenolash, seeded
+    Type: Uncategorized
+    Level: 18
+    Price: 409000
+    Range: 
+    Capacity: 
+    Damage: 9d4 A&S
+    Critical: Corrode 6d4
+    Usage: 0
+    Bulk: 1
+    Special: Analog, disarm, entangle, reach, trip
+  - Name: Hammer, gravity well
+    Type: Uncategorized
+    Level: 19
+    Price: 551000
+    Range: 
+    Capacity: 
+    Damage: 15d6 B
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 40, usage 2)
+  - Name: Starknife, dimensional slice
+    Type: Uncategorized
+    Level: 19
+    Price: 602200
+    Range: 
+    Capacity: 
+    Damage: 8d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: L
+    Special: Analog, thrown (80 ft.)
+  - Name: Longsword, dimensional slice
+    Type: Uncategorized
+    Level: 20
+    Price: 727300
+    Range: 
+    Capacity: 
+    Damage: 14d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Cryopike, Tactical
+    Type: Cryo
+    Level: 5
+    Price: 3360
+    Range: 
+    Capacity: 
+    Damage: 1d8 C
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 2
+    Special: Powered (capacity 40, usage 2), reach
+  - Name: Cryopike, advanced
+    Type: Cryo
+    Level: 12
+    Price: 34800
+    Range: 
+    Capacity: 
+    Damage: 2d8 C
+    Critical: Staggered
+    Usage: 0
+    Bulk: 2
+    Special: Powered (capacity 40, usage 2), reach
+  - Name: Flame doshko, ember
+    Type: Flame
+    Level: 2
+    Price: 750
+    Range: 
+    Capacity: 
+    Damage: 1d8 F
+    Critical: Wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Flame doshko, blaze
+    Type: Flame
+    Level: 8
+    Price: 8500
+    Range: 
+    Capacity: 
+    Damage: 2d8 F
+    Critical: Wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Flame doshko, inferno
+    Type: Flame
+    Level: 13
+    Price: 53200
+    Range: 
+    Capacity: 
+    Damage: 5d8 F
+    Critical: Wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Flame doshko, Solar flare
+    Type: Flame
+    Level: 19
+    Price: 595000
+    Range: 
+    Capacity: 
+    Damage: 10d8 F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1)
+  - Name: Plasma doshko, red star
+    Type: Plasma
+    Level: 6
+    Price: 4650
+    Range: 
+    Capacity: 
+    Damage: 1d10 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Plasma doshko, yellow star
+    Type: Plasma
+    Level: 10
+    Price: 17000
+    Range: 
+    Capacity: 
+    Damage: 2d10 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Plasma doshko, white star
+    Type: Plasma
+    Level: 15
+    Price: 126800
+    Range: 
+    Capacity: 
+    Damage: 5d10 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Plasma doshko, blue star
+    Type: Plasma
+    Level: 18
+    Price: 364100
+    Range: 
+    Capacity: 
+    Damage: 7d10 E & F
+    Critical: Severe wound
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 2)
+  - Name: Doshko, Tactical
+    Type: Uncategorized
+    Level: 1
+    Price: 240
+    Range: 
+    Capacity: 
+    Damage: 1d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog, unwieldy
+  - Name: Pike, Tactical
+    Type: Uncategorized
+    Level: 2
+    Price: 475
+    Range: 
+    Capacity: 
+    Damage: 1d8 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 2
+    Special: Analog, reach
+  - Name: Curve blade, carbon steel
+    Type: Uncategorized
+    Level: 4
+    Price: 2230
+    Range: 
+    Capacity: 
+    Damage: 1d10 S
+    Critical: Bleed 1d6
+    Usage: 0
+    Bulk: 2
+    Special: Analog
+  - Name: Swoop hammer, Tactical
+    Type: Uncategorized
+    Level: 5
+    Price: 3360
+    Range: 
+    Capacity: 
+    Damage: 1d10 B
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 2
+    Special: Analog, reach, unwieldy
+  - Name: Devastation blade, wrack
+    Type: Uncategorized
+    Level: 7
+    Price: 5500
+    Range: 
+    Capacity: 
+    Damage: 2d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Doshko, advanced
+    Type: Uncategorized
+    Level: 7
+    Price: 5300
+    Range: 
+    Capacity: 
+    Damage: 2d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog, unwieldy
+  - Name: Staff, sentinel
+    Type: Uncategorized
+    Level: 7
+    Price: 6320
+    Range: 
+    Capacity: 
+    Damage: 1d10 B
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Block, powered (capacity 20, usage 1), stun
+  - Name: Pike, advanced
+    Type: Uncategorized
+    Level: 9
+    Price: 12200
+    Range: 
+    Capacity: 
+    Damage: 2d8 P
+    Critical: Bleed 1d8
+    Usage: 0
+    Bulk: 2
+    Special: Analog, reach
+  - Name: Swoop hammer, advanced
+    Type: Uncategorized
+    Level: 9
+    Price: 14300
+    Range: 
+    Capacity: 
+    Damage: 3d10 B
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 2
+    Special: Analog, reach, unwieldy
+  - Name: Curve blade, ultrathin
+    Type: Uncategorized
+    Level: 10
+    Price: 18100
+    Range: 
+    Capacity: 
+    Damage: 3d10 S
+    Critical: Bleed 2d6
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Doshko, ultrathin
+    Type: Uncategorized
+    Level: 11
+    Price: 24600
+    Range: 
+    Capacity: 
+    Damage: 4d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog, unwieldy
+  - Name: Devastation blade, ruin
+    Type: Uncategorized
+    Level: 13
+    Price: 43900
+    Range: 
+    Capacity: 
+    Damage: 5d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Staff, repeller
+    Type: Uncategorized
+    Level: 13
+    Price: 45200
+    Range: 
+    Capacity: 
+    Damage: 3d8 B
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 1
+    Special: Block, powered (capacity 20, usage 1), stun
+  - Name: Swoop hammer, mach I
+    Type: Uncategorized
+    Level: 13
+    Price: 44100
+    Range: 
+    Capacity: 
+    Damage: 5d10 B
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 2
+    Special: Powered (capacity 40, usage 4), reach, unwieldy
+  - Name: Doshko, zero-edge
+    Type: Uncategorized
+    Level: 14
+    Price: 71500
+    Range: 
+    Capacity: 
+    Damage: 7d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog, unwieldy
+  - Name: Pike, elite
+    Type: Uncategorized
+    Level: 15
+    Price: 95700
+    Range: 
+    Capacity: 
+    Damage: 7d8 P
+    Critical: Bleed 3d8
+    Usage: 0
+    Bulk: 2
+    Special: Analog, reach
+  - Name: Curve blade, buzzblade
+    Type: Uncategorized
+    Level: 16
+    Price: 184300
+    Range: 
+    Capacity: 
+    Damage: 8d10 S
+    Critical: Bleed 5d6
+    Usage: 0
+    Bulk: 2
+    Special: Powered (capacity 40, usage 2)
+  - Name: Doshko, molecular rift
+    Type: Uncategorized
+    Level: 17
+    Price: 248000
+    Range: 
+    Capacity: 
+    Damage: 10d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Powered (capacity 20, usage 1), unwieldy
+  - Name: Swoop hammer, mach II
+    Type: Uncategorized
+    Level: 17
+    Price: 273000
+    Range: 
+    Capacity: 
+    Damage: 10d10 B
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 2
+    Special: Analog, reach, unwieldy
+  - Name: Devastation blade, apocalypse
+    Type: Uncategorized
+    Level: 18
+    Price: 410200
+    Range: 
+    Capacity: 
+    Damage: 12d8 S
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog
+  - Name: Doshko, dimensional blade
+    Type: Uncategorized
+    Level: 19
+    Price: 546100
+    Range: 
+    Capacity: 
+    Damage: 13d12 P
+    Critical: "\u2014"
+    Usage: 0
+    Bulk: 1
+    Special: Analog, unwieldy
+  - Name: Curve blade, dimensional slice
+    Type: Uncategorized
+    Level: 20
+    Price: 815000
+    Range: 
+    Capacity: 
+    Damage: 12d10 S
+    Critical: Bleed 6d6
+    Usage: 0
+    Bulk: 2
+    Special: Powered (capacity 40, usage 2)
+  - Name: Swoop hammer, mach III
+    Type: Uncategorized
+    Level: 20
+    Price: 905700
+    Range: 
+    Capacity: 
+    Damage: 14d10 B & F
+    Critical: Knockdown
+    Usage: 0
+    Bulk: 2
+    Special: Powered (capacity 40, usage 4), reach, unwieldy
+  RangedWeapons:
+  - Name: Zero pistol, frostbite-class
+    Type: Cryo
+    Level: 5
+    Price: 3060
+    Range: 60 ft.
+    Capacity: 20 charges
+    Damage: 1d6 C
+    Critical: Staggered
+    Usage: 1
+    Bulk: L
+    Special: "\u2014"
+  - Name: Zero pistol, hailstorm-class
+    Type: Cryo
+    Level: 10
+    Price: 16900
+    Range: 60 ft.
+    Capacity: 40 charges
+    Damage: 2d6 C
+    Critical: Staggered
+    Usage: 2
+    Bulk: L
+    Special: "\u2014"
+  - Name: Zero pistol, blizzard-class
+    Type: Cryo
+    Level: 15
+    Price: 94500
+    Range: 60 ft.
+    Capacity: 40 charges
+    Damage: 4d6 C
+    Critical: Staggered
+    Usage: 2
+    Bulk: L
+    Special: "\u2014"
+  - Name: Zero pistol, avalanche-class
+    Type: Cryo
+    Level: 19
+    Price: 492900
+    Range: 60 ft.
+    Capacity: 80 charges
+    Damage: 6d6 C
+    Critical: Staggered
+    Usage: 4
+    Bulk: L
+    Special: "\u2014"
+  - Name: Flare gun, survival
+    Type: Flame
+    Level: 1
+    Price: 90
+    Range: 30 ft.
+    Capacity: 1 flare
+    Damage: 1d3 F
+    Critical: Burn 1d6
+    Usage: 1
+    Bulk: L
+    Special: Analog, bright
+  - Name: Flame pistol
+    Type: Flame
+    Level: 2
+    Price: 470
+    Range: 20 ft.
+    Capacity: 20 petrol
+    Damage: 1d4 F
+    Critical: Burn 1d4
+    Usage: 4
+    Bulk: L
+    Special: Line, unwieldy
+  - Name: Laser pistol, azimuth
+    Type: Laser
+    Level: 1
+    Price: 350
+    Range: 80 ft.
+    Capacity: 20 charges
+    Damage: 1d4 F
+    Critical: Burn 1d4
+    Usage: 1
+    Bulk: L
+    Special: "\u2014"
+  - Name: Laser pistol, corona
+    Type: Laser
+    Level: 6
+    Price: 4270
+    Range: 90 ft.
+    Capacity: 20 charges
+    Damage: 2d4 F
+    Critical: Burn 1d4
+    Usage: 1
+    Bulk: L
+    Special: "\u2014"
+  - Name: Laser pistol, aphelion
+    Type: Laser
+    Level: 9
+    Price: 14820
+    Range: 90 ft.
+    Capacity: 40 charges
+    Damage: 3d4 F
+    Critical: Burn 1d4
+    Usage: 2
+    Bulk: L
+    Special: Boost 1d4
+  - Name: Laser pistol, perihelion
+    Type: Laser
+    Level: 12
+    Price: 40200
+    Range: 90 ft.
+    Capacity: 40 charges
+    Damage: 4d4 F
+    Critical: Burn 2d4
+    Usage: 2
+    Bulk: L
+    Special: "\u2014"
+  - Name: Laser pistol, parallax
+    Type: Laser
+    Level: 14
+    Price: 82000
+    Range: 90 ft.
+    Capacity: 80 charges
+    Damage: 5d4 F
+    Critical: Burn 3d4
+    Usage: 4
+    Bulk: L
+    Special: Boost 2d4
+  - Name: Laser pistol, zenith
+    Type: Laser
+    Level: 17
+    Price: 245200
+    Range: 100 ft.
+    Capacity: 80 charges
+    Damage: 8d4 F
+    Critical: Burn 4d4
+    Usage: 4
+    Bulk: L
+    Special: "\u2014"
+  - Name: Plasma pistol, red star
+    Type: Plasma
+    Level: 7
+    Price: 7200
+    Range: 20 ft.
+    Capacity: 20 charges
+    Damage: 1d8 E & F
+    Critical: Burn 1d8
+    Usage: 4
+    Bulk: L
+    Special: Line, unwieldy
+  - Name: Plasma pistol, yellow star
+    Type: Plasma
+    Level: 12
+    Price: 40300
+    Range: 25 ft.
+    Capacity: 40 charges
+    Damage: 2d8 E & F
+    Critical: Burn 1d8
+    Usage: 8
+    Bulk: L
+    Special: Line, unwieldy
+  - Name: Plasma pistol, white star
+    Type: Plasma
+    Level: 15
+    Price: 107500
+    Range: 30 ft.
+    Capacity: 100 charges
+    Damage: 3d8 E & F
+    Critical: Burn 2d8
+    Usage: 20
+    Bulk: L
+    Special: Line, unwieldy
+  - Name: Plasma pistol, blue star
+    Type: Plasma
+    Level: 19
+    Price: 565000
+    Range: 40 ft.
+    Capacity: 100 charges
+    Damage: 5d8 E & F
+    Critical: Burn 3d8
+    Usage: 20
+    Bulk: L
+    Special: Line, unwieldy
+  - Name: Semi-auto pistol, Tactical
+    Type: Projectile
+    Level: 1
+    Price: 260
+    Range: 30 ft.
+    Capacity: 9 rounds
+    Damage: 1d6 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Semi-auto pistol, advanced
+    Type: Projectile
+    Level: 7
+    Price: 5500
+    Range: 60 ft.
+    Capacity: 12 rounds
+    Damage: 2d6 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Semi-auto pistol, elite
+    Type: Projectile
+    Level: 10
+    Price: 18200
+    Range: 60 ft.
+    Capacity: 12 rounds
+    Damage: 3d6 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Semi-auto pistol, paragon
+    Type: Projectile
+    Level: 13
+    Price: 45200
+    Range: 60 ft.
+    Capacity: 16 rounds
+    Damage: 4d6 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Gyrojet pistol, tactical
+    Type: Projectile
+    Level: 15
+    Price: 91500
+    Range: 80 ft.
+    Capacity: 8 mini-rockets
+    Damage: 3d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Gyrojet pistol, advanced
+    Type: Projectile
+    Level: 17
+    Price: 212700
+    Range: 80 ft.
+    Capacity: 8 mini-rockets
+    Damage: 4d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Gyrojet pistol, elite
+    Type: Projectile
+    Level: 20
+    Price: 715800
+    Range: 80 ft.
+    Capacity: 8 mini-rockets
+    Damage: 5d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: L
+    Special: Analog
+  - Name: Pulsecaster pistol
+    Type: Shock
+    Level: 1
+    Price: 250
+    Range: 30 ft.
+    Capacity: 20 charges
+    Damage: 1d4 E
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: L
+    Special: Nonlethal
+  - Name: Arc pistol, static
+    Type: Shock
+    Level: 2
+    Price: 750
+    Range: 50 ft.
+    Capacity: 20 charges
+    Damage: 1d6 E
+    Critical: Arc 2
+    Usage: 2
+    Bulk: L
+    Special: Stun
+  - Name: Arc pistol, aurora
+    Type: Shock
+    Level: 13
+    Price: 45700
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 3d6 E
+    Critical: Arc 2d6
+    Usage: 2
+    Bulk: L
+    Special: Stun
+  - Name: Arc pistol, storm
+    Type: Shock
+    Level: 18
+    Price: 365500
+    Range: 50 ft.
+    Capacity: 100 charges
+    Damage: 3d12 E
+    Critical: Arc 4d6
+    Usage: 10
+    Bulk: L
+    Special: Stun
+  - Name: Sonic pistol, thunderstrike
+    Type: Sonic
+    Level: 4
+    Price: 2300
+    Range: 40 ft.
+    Capacity: 20 charges
+    Damage: 1d8 So
+    Critical: Deafen
+    Usage: 2
+    Bulk: L
+    Special: "\u2014"
+  - Name: Sonic pistol, LFD
+    Type: Sonic
+    Level: 11
+    Price: 26200
+    Range: 40 ft.
+    Capacity: 40 charges
+    Damage: 2d8 So
+    Critical: Deafen
+    Usage: 4
+    Bulk: L
+    Special: Boost 1d6
+  - Name: Sonic pistol, HFD
+    Type: Sonic
+    Level: 14
+    Price: 71300
+    Range: 40 ft.
+    Capacity: 60 charges
+    Damage: 3d8 So
+    Critical: Deafen
+    Usage: 6
+    Bulk: L
+    Special: "\u2014"
+  - Name: Sonic pistol, banshee
+    Type: Sonic
+    Level: 16
+    Price: 191000
+    Range: 40 ft.
+    Capacity: 80 charges
+    Damage: 4d8 So
+    Critical: Deafen
+    Usage: 8
+    Bulk: L
+    Special: Boost 1d10
+  - Name: Needler pistol
+    Type: Uncategorized
+    Level: 1
+    Price: 105
+    Range: 30 ft.
+    Capacity: 6 darts
+    Damage: 1d4 P
+    Critical: Injection DC +2
+    Usage: 1
+    Bulk: L
+    Special: Analog, injection
+  - Name: Nightarch needler; tactical
+    Type: Uncategorized
+    Level: 3
+    Price: 1650
+    Range: 30 ft.
+    Capacity: 5 darts
+    Damage: 1d6 P
+    Critical: Injection DC +2
+    Usage: 1
+    Bulk: L
+    Special: Analog, injection
+  - Name: Nightarch needler; advanced
+    Type: Uncategorized
+    Level: 8
+    Price: 6720
+    Range: 30 ft.
+    Capacity: 5 darts
+    Damage: 2d6 P
+    Critical: Injection DC +2
+    Usage: 1
+    Bulk: L
+    Special: Analog, injection
+  - Name: Nightarch needler; elite
+    Type: Uncategorized
+    Level: 13
+    Price: 44980
+    Range: 30 ft.
+    Capacity: 5 darts
+    Damage: 4d6 P
+    Critical: Injection DC +2
+    Usage: 1
+    Bulk: L
+    Special: Analog, injection
+  - Name: Nightarch needler; paragon
+    Type: Uncategorized
+    Level: 18
+    Price: 369000
+    Range: 30 ft.
+    Capacity: 5 darts
+    Damage: 8d6 P
+    Critical: Injection DC +2
+    Usage: 1
+    Bulk: L
+    Special: Analog, injection
+  - Name: 
+    Type: Cryo
+    Level: 4
+    Price: 2330
+    Range: 60 ft.
+    Capacity: 40 charges
+    Damage: 1d8 C
+    Critical: Staggered
+    Usage: 2
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Cryo
+    Level: 8
+    Price: 10100
+    Range: 60 ft.
+    Capacity: 40 charges
+    Damage: 2d8 C
+    Critical: Staggered
+    Usage: 2
+    Bulk: 2
+    Special: "\u2014"
+  - Name: 
+    Type: Cryo
+    Level: 14
+    Price: 79800
+    Range: 60 ft.
+    Capacity: 80 charges
+    Damage: 4d8 C
+    Critical: Staggered
+    Usage: 4
+    Bulk: 2
+    Special: "\u2014"
+  - Name: 
+    Type: Cryo
+    Level: 18
+    Price: 410200
+    Range: 60 ft.
+    Capacity: 100 charges
+    Damage: 7d8 C
+    Critical: Staggered
+    Usage: 5
+    Bulk: 2
+    Special: "\u2014"
+  - Name: 
+    Type: Flame
+    Level: 2
+    Price: 490
+    Range: 25 ft.
+    Capacity: 20 petrol
+    Damage: 1d6 F
+    Critical: Burn 1d6
+    Usage: 5
+    Bulk: 1
+    Special: Line, unwieldy
+  - Name: 
+    Type: Laser
+    Level: 1
+    Price: 425
+    Range: 120 ft.
+    Capacity: 20 charges
+    Damage: 1d8 F
+    Critical: Burn 1d6
+    Usage: 1
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Laser
+    Level: 6
+    Price: 4650
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 2d6 F
+    Critical: Burn 1d6
+    Usage: 1
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Laser
+    Level: 9
+    Price: 14300
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 3d6 F
+    Critical: Burn 1d6
+    Usage: 1
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Laser
+    Level: 11
+    Price: 26900
+    Range: 60 ft.
+    Capacity: 40 charges
+    Damage: 5d4 F
+    Critical: Burn 2d4
+    Usage: 4
+    Bulk: 2
+    Special: Automatic
+  - Name: 
+    Type: Laser
+    Level: 13
+    Price: 53800
+    Range: 130 ft.
+    Capacity: 100 charges
+    Damage: 5d6 F
+    Critical: Burn 2d6
+    Usage: 2
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Laser
+    Level: 15
+    Price: 95500
+    Range: 60 ft.
+    Capacity: 100 charges
+    Damage: 7d4 F
+    Critical: Burn 3d4
+    Usage: 10
+    Bulk: 2
+    Special: Automatic
+  - Name: 
+    Type: Laser
+    Level: 17
+    Price: 248000
+    Range: 150 ft.
+    Capacity: 100 charges
+    Damage: 8d6 F
+    Critical: Burn 4d6
+    Usage: 2
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Laser
+    Level: 19
+    Price: 548100
+    Range: 60 ft.
+    Capacity: 100 charges
+    Damage: 12d4 F
+    Critical: Burn 5d4
+    Usage: 5
+    Bulk: 2
+    Special: Automatic
+  - Name: 
+    Type: Laser
+    Level: 20
+    Price: 722000
+    Range: 150 ft.
+    Capacity: 100 charges
+    Damage: 11d6 F
+    Critical: Burn 5d6
+    Usage: 2
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Plasma
+    Level: 6
+    Price: 4600
+    Range: 40 ft.
+    Capacity: 40 charges
+    Damage: 1d10 E & F
+    Critical: Burn 1d4
+    Usage: 4
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: 
+    Type: Plasma
+    Level: 10
+    Price: 16800
+    Range: 40 ft.
+    Capacity: 40 charges
+    Damage: 2d10 E & F
+    Critical: Burn 1d8
+    Usage: 4
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: 
+    Type: Plasma
+    Level: 13
+    Price: 49100
+    Range: 80 ft.
+    Capacity: 100 charges
+    Damage: 3d10 E & F
+    Critical: Burn 1d10
+    Usage: 5
+    Bulk: 2
+    Special: Boost 1d10
+  - Name: 
+    Type: Plasma
+    Level: 15
+    Price: 126600
+    Range: 60 ft.
+    Capacity: 40 charges
+    Damage: 4d10 E & F
+    Critical: Burn 2d8
+    Usage: 4
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: 
+    Type: Plasma
+    Level: 17
+    Price: 275000
+    Range: 80 ft.
+    Capacity: 200 charges
+    Damage: 5d10 E & F
+    Critical: Burn 2d10
+    Usage: 10
+    Bulk: 2
+    Special: Boost 2d10
+  - Name: 
+    Type: Plasma
+    Level: 20
+    Price: 935000
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 8d10 E & F
+    Critical: Burn 4d8
+    Usage: 10
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: 
+    Type: Projectile
+    Level: 1
+    Price: 240
+    Range: 90 ft.
+    Capacity: 6 rounds
+    Damage: 1d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 1
+    Price: 235
+    Range: 15 ft.
+    Capacity: 4 shells
+    Damage: 1d4 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog, blast
+  - Name: 
+    Type: Projectile
+    Level: 2
+    Price: 485
+    Range: 80 ft.
+    Capacity: 10 Darts
+    Damage: 1d8 A & P
+    Critical: Corrode 1d4
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 2
+    Price: 755
+    Range: 60 ft.
+    Capacity: 10 rounds
+    Damage: 1d6 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: 
+    Type: Projectile
+    Level: 2
+    Price: 475
+    Range: 70 ft.
+    Capacity: 1 arrow
+    Damage: 1d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Unwieldy
+  - Name: 
+    Type: Projectile
+    Level: 3
+    Price: 1610
+    Range: 30 ft.
+    Capacity: 8 flechettes
+    Damage: 1d6 S
+    Critical: Bleed 1d4
+    Usage: 1
+    Bulk: 1
+    Special: Analog, automatic, underwater
+  - Name: 
+    Type: Projectile
+    Level: 7
+    Price: 6900
+    Range: 90 ft.
+    Capacity: 24 darts
+    Damage: 2d8 A & P
+    Critical: Corrode 2d4
+    Usage: 2
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 7
+    Price: 6630
+    Range: 40 ft.
+    Capacity: 18 flechettes
+    Damage: 2d6 S
+    Critical: Bleed 1d6
+    Usage: 1
+    Bulk: 1
+    Special: Analog, automatic, underwater
+  - Name: 
+    Type: Projectile
+    Level: 7
+    Price: 6030
+    Range: 100 ft.
+    Capacity: 8 rounds
+    Damage: 2d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 8
+    Price: 8250
+    Range: 70 ft.
+    Capacity: 4 arrows
+    Damage: 2d10 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Unwieldy
+  - Name: 
+    Type: Projectile
+    Level: 8
+    Price: 8300
+    Range: 15 ft.
+    Capacity: 8 shells
+    Damage: 1d12 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog, blast
+  - Name: 
+    Type: Projectile
+    Level: 9
+    Price: 11800
+    Range: 60 ft.
+    Capacity: 18 rounds
+    Damage: 2d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: 
+    Type: Projectile
+    Level: 10
+    Price: 16500
+    Range: 90 ft.
+    Capacity: 12 rounds
+    Damage: 3d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 11
+    Price: 26700
+    Range: 40 ft
+    Capacity: 24 flechettes
+    Damage: 4d6 S
+    Critical: Bleed 3d4
+    Usage: 1
+    Bulk: 1
+    Special: Analog, automatic, underwater
+  - Name: 
+    Type: Projectile
+    Level: 12
+    Price: 39200
+    Range: 90 ft.
+    Capacity: 48 darts
+    Damage: 4d8 A & P
+    Critical: Corrode 4d4
+    Usage: 4
+    Bulk: 2
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 12
+    Price: 30400
+    Range: 15 ft.
+    Capacity: 12 shells
+    Damage: 2d12 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, blast
+  - Name: 
+    Type: Projectile
+    Level: 13
+    Price: 54000
+    Range: 100 ft.
+    Capacity: 12 mini-rockets
+    Damage: 3d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: 2
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 13
+    Price: 53700
+    Range: 60 ft.
+    Capacity: 24 rounds
+    Damage: 4d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: 
+    Type: Projectile
+    Level: 14
+    Price: 74300
+    Range: 60 ft
+    Capacity: 36 flechettes
+    Damage: 6d6 S
+    Critical: Bleed 4d4
+    Usage: 1
+    Bulk: 1
+    Special: Analog, automatic, underwater
+  - Name: 
+    Type: Projectile
+    Level: 14
+    Price: 72300
+    Range: 100 ft.
+    Capacity: 18 rounds
+    Damage: 6d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 15
+    Price: 122800
+    Range: 120 ft.
+    Capacity: 12 mini-rockets
+    Damage: 5d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: 2
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 15
+    Price: 91900
+    Range: 30 ft.
+    Capacity: 12 shells
+    Damage: 3d12 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, blast
+  - Name: 
+    Type: Projectile
+    Level: 16
+    Price: 185100
+    Range: 120 ft.
+    Capacity: 36 rounds
+    Damage: 6d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: 
+    Type: Projectile
+    Level: 17
+    Price: 245600
+    Range: 120 ft.
+    Capacity: 12 mini-rockets
+    Damage: 6d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: 2
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 17
+    Price: 784000
+    Range: 60 ft
+    Capacity: 48 flechettes
+    Damage: 12d6 S
+    Critical: Bleed 4d6
+    Usage: 1
+    Bulk: 1
+    Special: Analog, automatic, underwater
+  - Name: 
+    Type: Projectile
+    Level: 17
+    Price: 242500
+    Range: 100 ft.
+    Capacity: 18 rounds
+    Damage: 9d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 18
+    Price: 331000
+    Range: 30 ft.
+    Capacity: 12 shells
+    Damage: 4d12 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, blast
+  - Name: 
+    Type: Projectile
+    Level: 19
+    Price: 612600
+    Range: 120 ft.
+    Capacity: 48 rounds
+    Damage: 8d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: 
+    Type: Projectile
+    Level: 20
+    Price: 723500
+    Range: 120 ft.
+    Capacity: 12 mini-rockets
+    Damage: 8d12 B
+    Critical: Knockdown
+    Usage: 1
+    Bulk: 2
+    Special: Analog
+  - Name: 
+    Type: Projectile
+    Level: 20
+    Price: 809200
+    Range: 100 ft.
+    Capacity: 24 rounds
+    Damage: 12d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog
+  - Name: 
+    Type: Shock
+    Level: 1
+    Price: 100
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 1d6 E
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 1
+    Special: Nonlethal
+  - Name: 
+    Type: Shock
+    Level: 2
+    Price: 750
+    Range: 15 ft.
+    Capacity: 20 charges
+    Damage: 1d4 E
+    Critical: "\u2014"
+    Usage: 4
+    Bulk: 1
+    Special: Blast, stun, unwieldy
+  - Name: 
+    Type: Shock
+    Level: 6
+    Price: 4200
+    Range: 70 ft.
+    Capacity: 40 charges
+    Damage: 1d12 E
+    Critical: Arc 1d6
+    Usage: 1
+    Bulk: 2
+    Special: Stun
+  - Name: 
+    Type: Shock
+    Level: 9
+    Price: 13200
+    Range: 30 ft.
+    Capacity: 40 charges
+    Damage: 2d4 E
+    Critical: "\u2014"
+    Usage: 10
+    Bulk: 1
+    Special: Blast, stun, unwieldy
+  - Name: 
+    Type: Shock
+    Level: 11
+    Price: 24500
+    Range: 70 ft.
+    Capacity: 40 charges
+    Damage: 2d12 E
+    Critical: Arc 2d6
+    Usage: 1
+    Bulk: 2
+    Special: Stun
+  - Name: 
+    Type: Shock
+    Level: 16
+    Price: 190300
+    Range: 80 ft.
+    Capacity: 80 charges
+    Damage: 4d12 E
+    Critical: Arc 4d6
+    Usage: 2
+    Bulk: 2
+    Special: Stun
+  - Name: 
+    Type: Shock
+    Level: 19
+    Price: 622000
+    Range: 80 ft.
+    Capacity: 100 charges
+    Damage: 6d12 E
+    Critical: Arc 6d6
+    Usage: 2
+    Bulk: 2
+    Special: Stun
+  - Name: 
+    Type: Sonic
+    Level: 5
+    Price: 3400
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 1d10 So
+    Critical: Deafen
+    Usage: 2
+    Bulk: 1
+    Special: "\u2014"
+  - Name: 
+    Type: Sonic
+    Level: 7
+    Price: 7150
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 1d10 So
+    Critical: Knockdown
+    Usage: 5
+    Bulk: 2
+    Special: Boost 1d6
+  - Name: 
+    Type: Sonic
+    Level: 10
+    Price: 17000
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 2d10 So
+    Critical: Deafen
+    Usage: 2
+    Bulk: 2
+    Special: "\u2014"
+  - Name: 
+    Type: Sonic
+    Level: 12
+    Price: 39300
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 3d10 So
+    Critical: Knockdown
+    Usage: 5
+    Bulk: 2
+    Special: Boost 1d8
+  - Name: 
+    Type: Sonic
+    Level: 14
+    Price: 80200
+    Range: 50 ft.
+    Capacity: 80 charges
+    Damage: 4d10 So
+    Critical: Deafen
+    Usage: 4
+    Bulk: 2
+    Special: "\u2014"
+  - Name: 
+    Type: Sonic
+    Level: 16
+    Price: 195000
+    Range: 50 ft.
+    Capacity: 40 charges
+    Damage: 5d10 So
+    Critical: Knockdown
+    Usage: 5
+    Bulk: 2
+    Special: Boost 1d10
+  - Name: 
+    Type: Sonic
+    Level: 18
+    Price: 364500
+    Range: 50 ft.
+    Capacity: 100 charges
+    Damage: 6d10 So
+    Critical: Deafen
+    Usage: 5
+    Bulk: 2
+    Special: "\u2014"
+  - Name: 
+    Type: Uncategorized
+    Level: 1
+    Price: 110
+    Range: 60 ft.
+    Capacity: 12 darts
+    Damage: 1d6 P
+    Critical: Injection DC +2
+    Usage: 1
+    Bulk: 1
+    Special: Analog, injection
+  - Name: Bow
+    Type: Uncategorized
+    Level: 1
+    Price: 255
+    Range: 60 ft.
+    Capacity: Drawn
+    Damage: 1d6 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Quick reload
+  - Name: Shobhad horizon striker, tactical
+    Type: Projectile
+    Level: 1
+    Price: 440
+    Range: 100 ft.
+    Capacity: 2 rounds
+    Damage: 2d4 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, sniper (500 ft.), unwieldy
+  - Name: Shirren-eye rifle, tactical
+    Type: Projectile
+    Level: 2
+    Price: 755
+    Range: 70 ft.
+    Capacity: 1 round
+    Damage: 1d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog, sniper (250 ft.), unwieldy
+  - Name: Shobhad horizon striker, advanced
+    Type: Projectile
+    Level: 6
+    Price: 4750
+    Range: 120 ft.
+    Capacity: 2 rounds
+    Damage: 3d4 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, sniper (1,000 ft.), unwieldy
+  - Name: Shirren-eye rifle, advanced
+    Type: Projectile
+    Level: 8
+    Price: 9350
+    Range: 70 ft.
+    Capacity: 4 rounds
+    Damage: 2d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, sniper (500 ft.), unwieldy
+  - Name: Shobhad horizon striker, elite
+    Type: Projectile
+    Level: 11
+    Price: 27300
+    Range: 140 ft.
+    Capacity: 2 rounds
+    Damage: 6d4 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, sniper (1,250 ft.), unwieldy
+  - Name: Shirren-eye rifle, elite
+    Type: Projectile
+    Level: 13
+    Price: 54000
+    Range: 80 ft.
+    Capacity: 6 rounds
+    Damage: 4d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, sniper (750 ft.), unwieldy
+  - Name: Shirren-eye rifle, paragon
+    Type: Projectile
+    Level: 16
+    Price: 147200
+    Range: 80 ft.
+    Capacity: 6 rounds
+    Damage: 6d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog, sniper (1,000 ft.), unwieldy
+  - Name: Shobhad horizon striker, paragon
+    Type: Projectile
+    Level: 16
+    Price: 185000
+    Range: 160 ft.
+    Capacity: 2 rounds
+    Damage: 8d8 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog, sniper (1,500 ft.), unwieldy
+  - Name: Shirren-eye rifle, warpshot
+    Type: Projectile
+    Level: 20
+    Price: 740800
+    Range: 80 ft.
+    Capacity: 4 rounds
+    Damage: 10d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: Analog, sniper (1,000 ft.), unwieldy
+  - Name: Zero cannon, Tactical
+    Type: Cryo
+    Level: 11
+    Price: 23000
+    Range: 60 ft.
+    Capacity: 80 charges
+    Damage: 3d8 C
+    Critical: Staggered
+    Usage: 4
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: Zero cannon, advanced
+    Type: Cryo
+    Level: 14
+    Price: 81400
+    Range: 60 ft.
+    Capacity: 100 charges
+    Damage: 5d8 C
+    Critical: Staggered
+    Usage: 5
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: Zero cannon, elite
+    Type: Cryo
+    Level: 18
+    Price: 412800
+    Range: 80 ft.
+    Capacity: 100 charges
+    Damage: 8d8 C
+    Critical: Staggered
+    Usage: 5
+    Bulk: 2
+    Special: Line, unwieldy
+  - Name: Flamethrower, ifrit-class
+    Type: Flame
+    Level: 2
+    Price: 780
+    Range: 15 ft.
+    Capacity: 20 petrol
+    Damage: 1d6 F
+    Critical: Burn 1d6
+    Usage: 4
+    Bulk: 2
+    Special: Analog, blast, unwieldy
+  - Name: Flamethrower, salamander-class
+    Type: Flame
+    Level: 8
+    Price: 8600
+    Range: 30 ft.
+    Capacity: 20 petrol
+    Damage: 2d6 F
+    Critical: Burn 2d6
+    Usage: 5
+    Bulk: 2
+    Special: Analog, blast, unwieldy
+  - Name: Flamethrower, hellhound-class
+    Type: Flame
+    Level: 12
+    Price: 35100
+    Range: 30 ft.
+    Capacity: 40 petrol
+    Damage: 4d6 F
+    Critical: Burn 4d6
+    Usage: 8
+    Bulk: 2
+    Special: Analog, blast, unwieldy
+  - Name: Flamethrower, firedrake-class
+    Type: Flame
+    Level: 15
+    Price: 128000
+    Range: 30 ft.
+    Capacity: 40 petrol
+    Damage: 6d6 F
+    Critical: Burn 6d6
+    Usage: 10
+    Bulk: 2
+    Special: Analog, blast, unwieldy
+  - Name: Flamethrower, phoenix-class
+    Type: Flame
+    Level: 18
+    Price: 367500
+    Range: 30 ft.
+    Capacity: 40 petrol
+    Damage: 9d6 F
+    Critical: Burn 9d6
+    Usage: 10
+    Bulk: 2
+    Special: Analog, blast, unwieldy
+  - Name: Artillery laser, azimuth
+    Type: Laser
+    Level: 1
+    Price: 425
+    Range: 120 ft.
+    Capacity: 20 charges
+    Damage: 1d10 F
+    Critical: Burn 1d6
+    Usage: 2
+    Bulk: 3
+    Special: Penetrating
+  - Name: Artillery laser, corona
+    Type: Laser
+    Level: 6
+    Price: 4650
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 2d8 F
+    Critical: Burn 1d6
+    Usage: 4
+    Bulk: 3
+    Special: Penetrating
+  - Name: Artillery laser, aphelion
+    Type: Laser
+    Level: 9
+    Price: 14300
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 3d8 F
+    Critical: Burn 1d6
+    Usage: 4
+    Bulk: 3
+    Special: Penetrating
+  - Name: Autobeam artillery, Tactical
+    Type: Laser
+    Level: 10
+    Price: 19400
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 2d8 F
+    Critical: Burn 1d8
+    Usage: 1
+    Bulk: 2
+    Special: Automatic
+  - Name: Artillery laser, perihelion
+    Type: Laser
+    Level: 13
+    Price: 53800
+    Range: 130 ft.
+    Capacity: 100 charges
+    Damage: 4d8 F
+    Critical: Burn 2d6
+    Usage: 5
+    Bulk: 3
+    Special: Penetrating
+  - Name: Autobeam artillery, advanced
+    Type: Laser
+    Level: 16
+    Price: 145700
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 4d8 F
+    Critical: Burn 2d8
+    Usage: 1
+    Bulk: 2
+    Special: Automatic
+  - Name: Artillery laser, parallax
+    Type: Laser
+    Level: 17
+    Price: 248000
+    Range: 150 ft.
+    Capacity: 100 charges
+    Damage: 7d8 F
+    Critical: Burn 4d6
+    Usage: 5
+    Bulk: 3
+    Special: Penetrating
+  - Name: Autobeam artillery, elite
+    Type: Laser
+    Level: 19
+    Price: 543300
+    Range: 120 ft.
+    Capacity: 40 charges
+    Damage: 6d8 F
+    Critical: Burn 2d10
+    Usage: 1
+    Bulk: 2
+    Special: Automatic
+  - Name: Artillery laser, zenith
+    Type: Laser
+    Level: 20
+    Price: 722000
+    Range: 150 ft.
+    Capacity: 100 charges
+    Damage: 9d8 F
+    Critical: Burn 5d6
+    Usage: 5
+    Bulk: 3
+    Special: Penetrating
+  - Name: Stearheart cannon, red star
+    Type: Plasma
+    Level: 3
+    Price: 1300
+    Range: 100 ft.
+    Capacity: 40 charges
+    Damage: 1d6 E & F
+    Critical: Blind
+    Usage: 5
+    Bulk: 2
+    Special: Bright, explode (5 ft.), unwieldy
+  - Name: Plasma cannon, red star
+    Type: Plasma
+    Level: 8
+    Price: 8650
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 2d10 E & F
+    Critical: Blind
+    Usage: 5
+    Bulk: 2
+    Special: Explode (5 ft.), unwieldy
+  - Name: Starheart cannon, yellow star
+    Type: Plasma
+    Level: 8
+    Price: 9050
+    Range: 100 ft.
+    Capacity: 40 charges
+    Damage: 3d6 E & F
+    Critical: Blind
+    Usage: 5
+    Bulk: 2
+    Special: Bright, explode (10 ft.), unwieldy
+  - Name: Starheart cannon, white star
+    Type: Plasma
+    Level: 13
+    Price: 48100
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 2d10 E & F
+    Critical: Blind
+    Usage: 5
+    Bulk: 2
+    Special: Bright, explode (10 ft.), unwieldy
+  - Name: Plasma cannon, yellow star
+    Type: Plasma
+    Level: 14
+    Price: 62800
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 4d10 E & F
+    Critical: Burn 2d8
+    Usage: 5
+    Bulk: 2
+    Special: Explode (5 ft.), unwieldy
+  - Name: Plasma cannon, white star
+    Type: Plasma
+    Level: 16
+    Price: 189200
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 6d10 E & F
+    Critical: Burn 3d8
+    Usage: 5
+    Bulk: 2
+    Special: Explode (5 ft.), unwieldy
+  - Name: Starheart cannon, blue star
+    Type: Plasma
+    Level: 18
+    Price: 360000
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 9d6 E & F
+    Critical: Blind
+    Usage: 10
+    Bulk: 2
+    Special: Bright, explode (15 ft.), unwieldy
+  - Name: Plasma cannon, blue star
+    Type: Plasma
+    Level: 20
+    Price: 950000
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 8d10 E & F
+    Critical: Burn 4d8
+    Usage: 10
+    Bulk: 2
+    Special: Explode (10 ft.), unwieldy
+  - Name: Reaction cannon, light
+    Type: Projectile
+    Level: 1
+    Price: 250
+    Range: 90 ft.
+    Capacity: 6 rounds
+    Damage: 1d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Penetrating
+  - Name: Machine gun, squad
+    Type: Projectile
+    Level: 4
+    Price: 2060
+    Range: 60 ft.
+    Capacity: 40 rounds
+    Damage: 1d10 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: X-gen gun, Tactical
+    Type: Projectile
+    Level: 6
+    Price: 4240
+    Range: 120 ft.
+    Capacity: 80 rounds
+    Damage: 1d12 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Automatic
+  - Name: Reaction cannon, Tactical
+    Type: Projectile
+    Level: 7
+    Price: 6100
+    Range: 90 ft.
+    Capacity: 6 rounds
+    Damage: 2d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Penetrating
+  - Name: Machine gun, light
+    Type: Projectile
+    Level: 8
+    Price: 8600
+    Range: 60 ft.
+    Capacity: 60 rounds
+    Damage: 2d10 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: X-gen gun, advanced
+    Type: Projectile
+    Level: 9
+    Price: 13100
+    Range: 120 ft.
+    Capacity: 100 rounds
+    Damage: 2d12 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Automatic
+  - Name: Reaction cannon, heavy
+    Type: Projectile
+    Level: 10
+    Price: 16750
+    Range: 100 ft.
+    Capacity: 6 rounds
+    Damage: 3d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Penetrating
+  - Name: Stellar cannon, light
+    Type: Projectile
+    Level: 10
+    Price: 19200
+    Range: 30 ft.
+    Capacity: 18 shells
+    Damage: 2d12 P
+    Critical: Wound
+    Usage: 6
+    Bulk: 2
+    Special: Blast
+  - Name: Crossbolter, advanced
+    Type: Projectile
+    Level: 11
+    Price: 21900
+    Range: 70 ft.
+    Capacity: 12 arrows
+    Damage: 4d10 P
+    Critical: "\u2014"
+    Usage: 4
+    Bulk: 2
+    Special: Unwieldy
+  - Name: Machine gun, medium
+    Type: Projectile
+    Level: 11
+    Price: 23100
+    Range: 60 ft.
+    Capacity: 60 rounds
+    Damage: 3d10 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: X-gen gun, elite
+    Type: Projectile
+    Level: 13
+    Price: 53700
+    Range: 120 ft.
+    Capacity: 100 rounds
+    Damage: 4d12 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Automatic
+  - Name: Crossbolter, elite
+    Type: Projectile
+    Level: 14
+    Price: 71400
+    Range: 60 ft.
+    Capacity: 30 arrows
+    Damage: 6d10 P
+    Critical: "\u2014"
+    Usage: 6
+    Bulk: 2
+    Special: Unwieldy
+  - Name: Reaction cannon, advanced
+    Type: Projectile
+    Level: 14
+    Price: 73000
+    Range: 100 ft.
+    Capacity: 6 rounds
+    Damage: 6d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Penetrating
+  - Name: Stellar cannon, heavy
+    Type: Projectile
+    Level: 15
+    Price: 122800
+    Range: 30 ft.
+    Capacity: 32 shells
+    Damage: 4d12 P
+    Critical: Wound
+    Usage: 8
+    Bulk: 2
+    Special: Blast
+  - Name: Machine gun, heavy
+    Type: Projectile
+    Level: 17
+    Price: 220300
+    Range: 120 ft.
+    Capacity: 100 rounds
+    Damage: 7d10 P
+    Critical: "\u2014"
+    Usage: 4
+    Bulk: 2
+    Special: Analog, automatic
+  - Name: Reaction cannon, elite
+    Type: Projectile
+    Level: 17
+    Price: 244000
+    Range: 100 ft.
+    Capacity: 6 rounds
+    Damage: 8d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Penetrating
+  - Name: Crossbolter, paragon
+    Type: Projectile
+    Level: 18
+    Price: 327200
+    Range: 60 ft.
+    Capacity: 40 arrows
+    Damage: 10d10 P
+    Critical: "\u2014"
+    Usage: 8
+    Bulk: 2
+    Special: Unwieldy
+  - Name: Reaction cannon, paragon
+    Type: Projectile
+    Level: 20
+    Price: 810000
+    Range: 100 ft.
+    Capacity: 6 rounds
+    Damage: 12d10 P
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Penetrating
+  - Name: X-gen gun, paragon
+    Type: Projectile
+    Level: 20
+    Price: 826000
+    Range: 120 ft.
+    Capacity: 100 rounds
+    Damage: 9d12 P
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Automatic
+  - Name: Anacite ion cannon, static
+    Type: Shock
+    Level: 3
+    Price: 1550
+    Range: 20 ft.
+    Capacity: 20 charges
+    Damage: 1d10 E
+    Critical: Staggered
+    Usage: 2
+    Bulk: 2
+    Special: Line, lockdown, unwieldy
+  - Name: Shock caster, static
+    Type: Shock
+    Level: 6
+    Price: 4620
+    Range: 40 ft.
+    Capacity: 40 charges
+    Damage: 1d12 E
+    Critical: "\u2014"
+    Usage: 2
+    Bulk: 2
+    Special: Explode (10 ft.), unwieldy
+  - Name: Anacite ion cannon, aurora
+    Type: Shock
+    Level: 8
+    Price: 10900
+    Range: 45 ft.
+    Capacity: 40 charges
+    Damage: 2d10 E
+    Critical: Staggered
+    Usage: 4
+    Bulk: 2
+    Special: Line, lockdown, unwieldy
+  - Name: Shock caster, aurora
+    Type: Shock
+    Level: 10
+    Price: 19100
+    Range: 40 ft.
+    Capacity: 40 charges
+    Damage: 2d12 E
+    Critical: "\u2014"
+    Usage: 4
+    Bulk: 2
+    Special: Explode (15 ft.), unwieldy
+  - Name: Anacite ion cannon, storm
+    Type: Shock
+    Level: 13
+    Price: 52900
+    Range: 75 ft.
+    Capacity: 80 charges
+    Damage: 4d10 E
+    Critical: Staggered
+    Usage: 5
+    Bulk: 2
+    Special: Line, lockdown, unwieldy
+  - Name: Shock caster, storm
+    Type: Shock
+    Level: 16
+    Price: 164800
+    Range: 40 ft.
+    Capacity: 100 charges
+    Damage: 5d12 E
+    Critical: "\u2014"
+    Usage: 10
+    Bulk: 2
+    Special: Explode (20 ft.), unwieldy
+  - Name: Anacite ion cannon, tempest
+    Type: Shock
+    Level: 18
+    Price: 441000
+    Range: 100 ft.
+    Capacity: 100 charges
+    Damage: 6d10 E
+    Critical: Staggered
+    Usage: 10
+    Bulk: 2
+    Special: Line, lockdown, unwieldy
+  - Name: Shock caster, tempest
+    Type: Shock
+    Level: 20
+    Price: 735000
+    Range: 40 ft.
+    Capacity: 100 charges
+    Damage: 7d12 E
+    Critical: "\u2014"
+    Usage: 10
+    Bulk: 2
+    Special: Explode (20 ft.), unwieldy
+  - Name: Screamer, thunderstrike
+    Type: Sonic
+    Level: 5
+    Price: 3350
+    Range: 30 ft.
+    Capacity: 40 charges
+    Damage: 1d10 So
+    Critical: Deafen
+    Usage: 4
+    Bulk: 2
+    Special: Blast, unwieldy
+  - Name: Screamer, LFD
+    Type: Sonic
+    Level: 9
+    Price: 14000
+    Range: 60 ft.
+    Capacity: 80 charges
+    Damage: 2d10 So
+    Critical: Deafen
+    Usage: 8
+    Bulk: 2
+    Special: Blast, unwieldy
+  - Name: Screamer, HFD
+    Type: Sonic
+    Level: 15
+    Price: 107500
+    Range: 60 ft.
+    Capacity: 100 charges
+    Damage: 4d10 So
+    Critical: Deafen
+    Usage: 10
+    Bulk: 2
+    Special: Blast, unwieldy
+  - Name: NIL grenade launcher, merc
+    Type: Uncategorized
+    Level: 1
+    Price: 280
+    Range: 60 ft.
+    Capacity: 6 grenades
+    Damage: By grenade
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: Analog
+  - Name: NIL grenade launcher, squad
+    Type: Uncategorized
+    Level: 8
+    Price: 9400
+    Range: 70 ft.
+    Capacity: 12 grenades
+    Damage: By grenade
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 3
+    Special: Analog
+  - Name: IMDS missile launcher
+    Type: Uncategorized
+    Level: 10
+    Price: 18200
+    Range: 80 ft.
+    Capacity: 1 missile
+    Damage: "\u2014"
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 2
+    Special: "\u2014"
+  - Name: Carbonedge shuriken (10)
+    Type: Uncategorized
+    Level: 1
+    Price: 85
+    Range: 10 ft.
+    Capacity: Drawn
+    Damage: 1d4 P
+    Critical: bleed 1d4
+    Usage: 1
+    Bulk: "\u2014"
+    Special: Quick reload, thrown
+  - Name: Nyfiber net
+    Type: Uncategorized
+    Level: 2
+    Price: 460
+    Range: 10 ft.
+    Capacity: Drawn
+    Damage: "\u2014"
+    Critical: "\u2014"
+    Usage: 1
+    Bulk: 1
+    Special: 

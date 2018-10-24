@@ -10,7 +10,7 @@
       "Range": "10 ft.",
       "Critical": "bleed 1d4",
       "Capacity": "Drawn",
-      "Usage": "—",
+      "Usage": 1,
       "Bulk": "—",
       "Special": "Quick reload, thrown"
     },
@@ -23,7 +23,7 @@
       "Range": "10 ft.",
       "Critical": "—",
       "Capacity": "Drawn",
-      "Usage": "—",
+      "Usage": 1,
       "Bulk": 1,
       "Special": ""
     }
