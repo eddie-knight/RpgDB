@@ -294,9 +294,9 @@
 	    "Price": 485,
 	    "Damage": "1d8 A & P",
 	    "Range": "80 ft.",
-	    "Critical": "Corrode",
-	    "Capacity": "1d4",
-	    "Usage": "10 darts",
+	    "Critical": "Corrode 1d4",
+	    "Capacity": "10 Darts",
+	    "Usage": 1,
 	    "Bulk": 1,
 	    "Special": "Analog"
 	  },
