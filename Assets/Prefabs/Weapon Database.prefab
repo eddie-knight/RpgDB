@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1813381215359398}
+  m_RootGameObject: {fileID: 1894373033244550}
   m_IsPrefabAsset: 1
---- !u!1 &1813381215359398
+--- !u!1 &1894373033244550
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4904652126329786}
-  - component: {fileID: 114924369431688338}
+  - component: {fileID: 4239541540962640}
+  - component: {fileID: 114644425200559858}
   m_Layer: 0
   m_Name: Weapon Database
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4904652126329786
+--- !u!4 &4239541540962640
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1813381215359398}
+  m_GameObject: {fileID: 1894373033244550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114924369431688338
+--- !u!114 &114644425200559858
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1813381215359398}
+  m_GameObject: {fileID: 1894373033244550}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcd461d291183461db5f76aa9bd44a83, type: 3}
@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MeleeWeapons:
   - Name: Starfire sword, Tactical
+    Category: 1h_melee
     Type: Flame
     Level: 7
     Price: 6120
@@ -64,6 +65,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Starfire sword, inferno
+    Category: 1h_melee
     Type: Flame
     Level: 17
     Price: 246000
@@ -75,6 +77,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Plasma sword, Tactical
+    Category: 1h_melee
     Type: Plasma
     Level: 9
     Price: 14550
@@ -86,6 +89,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma sword, red star
+    Category: 1h_melee
     Type: Plasma
     Level: 13
     Price: 54300
@@ -97,6 +101,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Plasma sword, yellow star
+    Category: 1h_melee
     Type: Plasma
     Level: 15
     Price: 127000
@@ -108,6 +113,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Plasma sword, white star
+    Category: 1h_melee
     Type: Plasma
     Level: 18
     Price: 415600
@@ -119,6 +125,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Plasma sword, blue star
+    Category: 1h_melee
     Type: Plasma
     Level: 20
     Price: 920250
@@ -130,6 +137,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Shock truncheon, static
+    Category: 1h_melee
     Type: Shock
     Level: 8
     Price: 9150
@@ -141,6 +149,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2), stun
   - Name: Shock truncheon, aurora
+    Category: 1h_melee
     Type: Shock
     Level: 11
     Price: 23000
@@ -152,6 +161,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2), stun
   - Name: Shock truncheon, storm
+    Category: 1h_melee
     Type: Shock
     Level: 16
     Price: 80200
@@ -163,6 +173,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 2), stun
   - Name: Shock truncheon, tempest
+    Category: 1h_melee
     Type: Shock
     Level: 19
     Price: 545000
@@ -174,6 +185,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 2), stun
   - Name: Pulse gauntlet, thunderstrike
+    Category: 1h_melee
     Type: Sonic
     Level: 2
     Price: 475
@@ -185,6 +197,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Pulse gauntlet, LFD
+    Category: 1h_melee
     Type: Sonic
     Level: 7
     Price: 7340
@@ -196,6 +209,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Pulse gauntlet, HFD
+    Category: 1h_melee
     Type: Sonic
     Level: 12
     Price: 31300
@@ -207,6 +221,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Pulse gauntlet, banshee
+    Category: 1h_melee
     Type: Sonic
     Level: 16
     Price: 148200
@@ -218,6 +233,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Hammer, assault
+    Category: 1h_melee
     Type: Uncategorized
     Level: 1
     Price: 95
@@ -229,6 +245,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Longsword
+    Category: 1h_melee
     Type: Uncategorized
     Level: 1
     Price: 375
@@ -240,6 +257,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Starknife, Tactical
+    Category: 1h_melee
     Type: Uncategorized
     Level: 1
     Price: 110
@@ -251,6 +269,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, thrown (20 ft.)
   - Name: Taclash, standard
+    Category: 1h_melee
     Type: Uncategorized
     Level: 1
     Price: 240
@@ -262,6 +281,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, disarm, nonlethal, reach, trip
   - Name: Injection glove
+    Category: 1h_melee
     Type: Uncategorized
     Level: 2
     Price: 490
@@ -273,6 +293,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Xenolash, immature
+    Category: 1h_melee
     Type: Uncategorized
     Level: 4
     Price: 2430
@@ -284,6 +305,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Fangblade
+    Category: 1h_melee
     Type: Uncategorized
     Level: 7
     Price: 5430
@@ -295,6 +317,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Longsword, sintered
+    Category: 1h_melee
     Type: Uncategorized
     Level: 7
     Price: 8420
@@ -306,6 +329,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Starknife, sintered
+    Category: 1h_melee
     Type: Uncategorized
     Level: 8
     Price: 9810
@@ -317,6 +341,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, thrown (50 ft.)
   - Name: Longsword, microserrated
+    Category: 1h_melee
     Type: Uncategorized
     Level: 9
     Price: 12100
@@ -328,6 +353,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Hammer, comet
+    Category: 1h_melee
     Type: Uncategorized
     Level: 10
     Price: 16900
@@ -339,6 +365,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Xenolash, mature
+    Category: 1h_melee
     Type: Uncategorized
     Level: 10
     Price: 17000
@@ -350,6 +377,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Longsword, ultrathin
+    Category: 1h_melee
     Type: Uncategorized
     Level: 11
     Price: 26300
@@ -361,6 +389,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Taclash, numbing
+    Category: 1h_melee
     Type: Uncategorized
     Level: 11
     Price: 24800
@@ -372,6 +401,7 @@ MonoBehaviour:
     Bulk: L
     Special: Disarm, powered (capacity 20, usage 2), reach, stun, trip
   - Name: Starknife, accelerated
+    Category: 1h_melee
     Type: Uncategorized
     Level: 12
     Price: 40400
@@ -383,6 +413,7 @@ MonoBehaviour:
     Bulk: L
     Special: Powered (capacity 20, usage 1), thrown (30 ft.)
   - Name: Grindblade
+    Category: 1h_melee
     Type: Uncategorized
     Level: 13
     Price: 45700
@@ -394,6 +425,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Longsword, zero-edge
+    Category: 1h_melee
     Type: Uncategorized
     Level: 14
     Price: 79500
@@ -405,6 +437,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Xenolash, blooming
+    Category: 1h_melee
     Type: Uncategorized
     Level: 14
     Price: 70000
@@ -416,6 +449,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Monowhip
+    Category: 1h_melee
     Type: Uncategorized
     Level: 15
     Price: 107000
@@ -427,6 +461,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, disarm, reach, trip
   - Name: Hammer, meteoric
+    Category: 1h_melee
     Type: Uncategorized
     Level: 16
     Price: 164500
@@ -438,6 +473,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Starknife, lightspeed
+    Category: 1h_melee
     Type: Uncategorized
     Level: 16
     Price: 183400
@@ -449,6 +485,7 @@ MonoBehaviour:
     Bulk: L
     Special: Powered (capacity 20, usage 2), thrown (50 ft.)
   - Name: Longsword, molecular rift
+    Category: 1h_melee
     Type: Uncategorized
     Level: 17
     Price: 245200
@@ -460,6 +497,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Longsword, ultraserrated
+    Category: 1h_melee
     Type: Uncategorized
     Level: 18
     Price: 368100
@@ -471,6 +509,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Xenolash, seeded
+    Category: 1h_melee
     Type: Uncategorized
     Level: 18
     Price: 409000
@@ -482,6 +521,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Hammer, gravity well
+    Category: 1h_melee
     Type: Uncategorized
     Level: 19
     Price: 551000
@@ -493,6 +533,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 2)
   - Name: Starknife, dimensional slice
+    Category: 1h_melee
     Type: Uncategorized
     Level: 19
     Price: 602200
@@ -504,6 +545,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, thrown (80 ft.)
   - Name: Longsword, dimensional slice
+    Category: 1h_melee
     Type: Uncategorized
     Level: 20
     Price: 727300
@@ -515,6 +557,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Cryopike, Tactical
+    Category: 2h_melee
     Type: Cryo
     Level: 5
     Price: 3360
@@ -526,6 +569,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2), reach
   - Name: Cryopike, advanced
+    Category: 2h_melee
     Type: Cryo
     Level: 12
     Price: 34800
@@ -537,6 +581,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2), reach
   - Name: Flame doshko, ember
+    Category: 2h_melee
     Type: Flame
     Level: 2
     Price: 750
@@ -548,6 +593,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Flame doshko, blaze
+    Category: 2h_melee
     Type: Flame
     Level: 8
     Price: 8500
@@ -559,6 +605,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Flame doshko, inferno
+    Category: 2h_melee
     Type: Flame
     Level: 13
     Price: 53200
@@ -570,6 +617,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Flame doshko, Solar flare
+    Category: 2h_melee
     Type: Flame
     Level: 19
     Price: 595000
@@ -581,6 +629,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Plasma doshko, red star
+    Category: 2h_melee
     Type: Plasma
     Level: 6
     Price: 4650
@@ -592,6 +641,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma doshko, yellow star
+    Category: 2h_melee
     Type: Plasma
     Level: 10
     Price: 17000
@@ -603,6 +653,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma doshko, white star
+    Category: 2h_melee
     Type: Plasma
     Level: 15
     Price: 126800
@@ -614,6 +665,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma doshko, blue star
+    Category: 2h_melee
     Type: Plasma
     Level: 18
     Price: 364100
@@ -625,6 +677,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Doshko, Tactical
+    Category: 2h_melee
     Type: Uncategorized
     Level: 1
     Price: 240
@@ -636,6 +689,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Pike, Tactical
+    Category: 2h_melee
     Type: Uncategorized
     Level: 2
     Price: 475
@@ -647,6 +701,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach
   - Name: Curve blade, carbon steel
+    Category: 2h_melee
     Type: Uncategorized
     Level: 4
     Price: 2230
@@ -658,6 +713,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Swoop hammer, Tactical
+    Category: 2h_melee
     Type: Uncategorized
     Level: 5
     Price: 3360
@@ -669,6 +725,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach, unwieldy
   - Name: Devastation blade, wrack
+    Category: 2h_melee
     Type: Uncategorized
     Level: 7
     Price: 5500
@@ -680,6 +737,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Doshko, advanced
+    Category: 2h_melee
     Type: Uncategorized
     Level: 7
     Price: 5300
@@ -691,6 +749,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Staff, sentinel
+    Category: 2h_melee
     Type: Uncategorized
     Level: 7
     Price: 6320
@@ -702,6 +761,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Block, powered (capacity 20, usage 1), stun
   - Name: Pike, advanced
+    Category: 2h_melee
     Type: Uncategorized
     Level: 9
     Price: 12200
@@ -713,6 +773,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach
   - Name: Swoop hammer, advanced
+    Category: 2h_melee
     Type: Uncategorized
     Level: 9
     Price: 14300
@@ -724,6 +785,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach, unwieldy
   - Name: Curve blade, ultrathin
+    Category: 2h_melee
     Type: Uncategorized
     Level: 10
     Price: 18100
@@ -735,6 +797,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Doshko, ultrathin
+    Category: 2h_melee
     Type: Uncategorized
     Level: 11
     Price: 24600
@@ -746,6 +809,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Devastation blade, ruin
+    Category: 2h_melee
     Type: Uncategorized
     Level: 13
     Price: 43900
@@ -757,6 +821,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Staff, repeller
+    Category: 2h_melee
     Type: Uncategorized
     Level: 13
     Price: 45200
@@ -768,6 +833,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Block, powered (capacity 20, usage 1), stun
   - Name: Swoop hammer, mach I
+    Category: 2h_melee
     Type: Uncategorized
     Level: 13
     Price: 44100
@@ -779,6 +845,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 4), reach, unwieldy
   - Name: Doshko, zero-edge
+    Category: 2h_melee
     Type: Uncategorized
     Level: 14
     Price: 71500
@@ -790,6 +857,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Pike, elite
+    Category: 2h_melee
     Type: Uncategorized
     Level: 15
     Price: 95700
@@ -801,6 +869,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach
   - Name: Curve blade, buzzblade
+    Category: 2h_melee
     Type: Uncategorized
     Level: 16
     Price: 184300
@@ -812,6 +881,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2)
   - Name: Doshko, molecular rift
+    Category: 2h_melee
     Type: Uncategorized
     Level: 17
     Price: 248000
@@ -823,6 +893,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1), unwieldy
   - Name: Swoop hammer, mach II
+    Category: 2h_melee
     Type: Uncategorized
     Level: 17
     Price: 273000
@@ -834,6 +905,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach, unwieldy
   - Name: Devastation blade, apocalypse
+    Category: 2h_melee
     Type: Uncategorized
     Level: 18
     Price: 410200
@@ -845,6 +917,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Doshko, dimensional blade
+    Category: 2h_melee
     Type: Uncategorized
     Level: 19
     Price: 546100
@@ -856,6 +929,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Curve blade, dimensional slice
+    Category: 2h_melee
     Type: Uncategorized
     Level: 20
     Price: 815000
@@ -867,6 +941,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2)
   - Name: Swoop hammer, mach III
+    Category: 2h_melee
     Type: Uncategorized
     Level: 20
     Price: 905700
@@ -877,8 +952,12 @@ MonoBehaviour:
     Usage: 0
     Bulk: 2
     Special: Powered (capacity 40, usage 4), reach, unwieldy
+  meleeCategories:
+  - 1h_melee
+  - 2h_melee
   RangedWeapons:
   - Name: Zero pistol, frostbite-class
+    Category: small_arms
     Type: Cryo
     Level: 5
     Price: 3060
@@ -890,6 +969,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Zero pistol, hailstorm-class
+    Category: small_arms
     Type: Cryo
     Level: 10
     Price: 16900
@@ -901,6 +981,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Zero pistol, blizzard-class
+    Category: small_arms
     Type: Cryo
     Level: 15
     Price: 94500
@@ -912,6 +993,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Zero pistol, avalanche-class
+    Category: small_arms
     Type: Cryo
     Level: 19
     Price: 492900
@@ -923,6 +1005,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Flare gun, survival
+    Category: small_arms
     Type: Flame
     Level: 1
     Price: 90
@@ -934,6 +1017,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, bright
   - Name: Flame pistol
+    Category: small_arms
     Type: Flame
     Level: 2
     Price: 470
@@ -945,6 +1029,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Laser pistol, azimuth
+    Category: small_arms
     Type: Laser
     Level: 1
     Price: 350
@@ -956,6 +1041,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Laser pistol, corona
+    Category: small_arms
     Type: Laser
     Level: 6
     Price: 4270
@@ -967,6 +1053,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Laser pistol, aphelion
+    Category: small_arms
     Type: Laser
     Level: 9
     Price: 14820
@@ -978,6 +1065,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 1d4
   - Name: Laser pistol, perihelion
+    Category: small_arms
     Type: Laser
     Level: 12
     Price: 40200
@@ -989,6 +1077,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Laser pistol, parallax
+    Category: small_arms
     Type: Laser
     Level: 14
     Price: 82000
@@ -1000,6 +1089,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 2d4
   - Name: Laser pistol, zenith
+    Category: small_arms
     Type: Laser
     Level: 17
     Price: 245200
@@ -1011,6 +1101,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Plasma pistol, red star
+    Category: small_arms
     Type: Plasma
     Level: 7
     Price: 7200
@@ -1022,6 +1113,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Plasma pistol, yellow star
+    Category: small_arms
     Type: Plasma
     Level: 12
     Price: 40300
@@ -1033,6 +1125,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Plasma pistol, white star
+    Category: small_arms
     Type: Plasma
     Level: 15
     Price: 107500
@@ -1044,6 +1137,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Plasma pistol, blue star
+    Category: small_arms
     Type: Plasma
     Level: 19
     Price: 565000
@@ -1055,6 +1149,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Semi-auto pistol, Tactical
+    Category: small_arms
     Type: Projectile
     Level: 1
     Price: 260
@@ -1066,6 +1161,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Semi-auto pistol, advanced
+    Category: small_arms
     Type: Projectile
     Level: 7
     Price: 5500
@@ -1077,6 +1173,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Semi-auto pistol, elite
+    Category: small_arms
     Type: Projectile
     Level: 10
     Price: 18200
@@ -1088,6 +1185,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Semi-auto pistol, paragon
+    Category: small_arms
     Type: Projectile
     Level: 13
     Price: 45200
@@ -1099,6 +1197,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Gyrojet pistol, tactical
+    Category: small_arms
     Type: Projectile
     Level: 15
     Price: 91500
@@ -1110,6 +1209,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Gyrojet pistol, advanced
+    Category: small_arms
     Type: Projectile
     Level: 17
     Price: 212700
@@ -1121,6 +1221,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Gyrojet pistol, elite
+    Category: small_arms
     Type: Projectile
     Level: 20
     Price: 715800
@@ -1132,6 +1233,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Pulsecaster pistol
+    Category: small_arms
     Type: Shock
     Level: 1
     Price: 250
@@ -1143,6 +1245,7 @@ MonoBehaviour:
     Bulk: L
     Special: Nonlethal
   - Name: Arc pistol, static
+    Category: small_arms
     Type: Shock
     Level: 2
     Price: 750
@@ -1154,6 +1257,7 @@ MonoBehaviour:
     Bulk: L
     Special: Stun
   - Name: Arc pistol, aurora
+    Category: small_arms
     Type: Shock
     Level: 13
     Price: 45700
@@ -1165,6 +1269,7 @@ MonoBehaviour:
     Bulk: L
     Special: Stun
   - Name: Arc pistol, storm
+    Category: small_arms
     Type: Shock
     Level: 18
     Price: 365500
@@ -1176,6 +1281,7 @@ MonoBehaviour:
     Bulk: L
     Special: Stun
   - Name: Sonic pistol, thunderstrike
+    Category: small_arms
     Type: Sonic
     Level: 4
     Price: 2300
@@ -1187,6 +1293,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Sonic pistol, LFD
+    Category: small_arms
     Type: Sonic
     Level: 11
     Price: 26200
@@ -1198,6 +1305,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 1d6
   - Name: Sonic pistol, HFD
+    Category: small_arms
     Type: Sonic
     Level: 14
     Price: 71300
@@ -1209,6 +1317,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Sonic pistol, banshee
+    Category: small_arms
     Type: Sonic
     Level: 16
     Price: 191000
@@ -1220,6 +1329,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 1d10
   - Name: Needler pistol
+    Category: small_arms
     Type: Uncategorized
     Level: 1
     Price: 105
@@ -1231,6 +1341,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; tactical
+    Category: small_arms
     Type: Uncategorized
     Level: 3
     Price: 1650
@@ -1242,6 +1353,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; advanced
+    Category: small_arms
     Type: Uncategorized
     Level: 8
     Price: 6720
@@ -1253,6 +1365,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; elite
+    Category: small_arms
     Type: Uncategorized
     Level: 13
     Price: 44980
@@ -1264,6 +1377,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; paragon
+    Category: small_arms
     Type: Uncategorized
     Level: 18
     Price: 369000
@@ -1274,7 +1388,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: L
     Special: Analog, injection
-  - Name: 
+  - Name: Zero rifle, frostbite-class
+    Category: longarms
     Type: Cryo
     Level: 4
     Price: 2330
@@ -1285,7 +1400,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Zero rifle, hailstorm-class
+    Category: longarms
     Type: Cryo
     Level: 8
     Price: 10100
@@ -1296,7 +1412,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 2
     Special: "\u2014"
-  - Name: 
+  - Name: Zero rifle, blizzard-class
+    Category: longarms
     Type: Cryo
     Level: 14
     Price: 79800
@@ -1307,7 +1424,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: "\u2014"
-  - Name: 
+  - Name: Zero rifle, avalanche-class
+    Category: longarms
     Type: Cryo
     Level: 18
     Price: 410200
@@ -1318,7 +1436,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: "\u2014"
-  - Name: 
+  - Name: Flame rifle
+    Category: longarms
     Type: Flame
     Level: 2
     Price: 490
@@ -1329,7 +1448,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 1
     Special: Line, unwieldy
-  - Name: 
+  - Name: Laser rifle, azimuth
+    Category: longarms
     Type: Laser
     Level: 1
     Price: 425
@@ -1340,7 +1460,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Laser rifle, corona
+    Category: longarms
     Type: Laser
     Level: 6
     Price: 4650
@@ -1351,7 +1472,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Laser rifle, aphelion
+    Category: longarms
     Type: Laser
     Level: 9
     Price: 14300
@@ -1362,7 +1484,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Autobeam rifle, Tactical
+    Category: longarms
     Type: Laser
     Level: 11
     Price: 26900
@@ -1373,7 +1496,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: Automatic
-  - Name: 
+  - Name: Laser rifle, perihelion
+    Category: longarms
     Type: Laser
     Level: 13
     Price: 53800
@@ -1384,7 +1508,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Autobeam rifle, advanced
+    Category: longarms
     Type: Laser
     Level: 15
     Price: 95500
@@ -1395,7 +1520,8 @@ MonoBehaviour:
     Usage: 10
     Bulk: 2
     Special: Automatic
-  - Name: 
+  - Name: Laser rifle, parallax
+    Category: longarms
     Type: Laser
     Level: 17
     Price: 248000
@@ -1406,7 +1532,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Autobeam rifle, elite
+    Category: longarms
     Type: Laser
     Level: 19
     Price: 548100
@@ -1417,7 +1544,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: Automatic
-  - Name: 
+  - Name: Laser rifle, zenith
+    Category: longarms
     Type: Laser
     Level: 20
     Price: 722000
@@ -1428,7 +1556,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Plasma rifle, red star
+    Category: longarms
     Type: Plasma
     Level: 6
     Price: 4600
@@ -1439,7 +1568,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: Line, unwieldy
-  - Name: 
+  - Name: Plasma rifle, yellow star
+    Category: longarms
     Type: Plasma
     Level: 10
     Price: 16800
@@ -1450,7 +1580,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: Line, unwieldy
-  - Name: 
+  - Name: Plasma caster, white star
+    Category: longarms
     Type: Plasma
     Level: 13
     Price: 49100
@@ -1461,7 +1592,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: Boost 1d10
-  - Name: 
+  - Name: Plasma rifle, white star
+    Category: longarms
     Type: Plasma
     Level: 15
     Price: 126600
@@ -1472,7 +1604,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: Line, unwieldy
-  - Name: 
+  - Name: Plasma caster, blue star
+    Category: longarms
     Type: Plasma
     Level: 17
     Price: 275000
@@ -1483,7 +1616,8 @@ MonoBehaviour:
     Usage: 10
     Bulk: 2
     Special: Boost 2d10
-  - Name: 
+  - Name: Plasma rifle, blue star
+    Category: longarms
     Type: Plasma
     Level: 20
     Price: 935000
@@ -1494,7 +1628,8 @@ MonoBehaviour:
     Usage: 10
     Bulk: 2
     Special: Line, unwieldy
-  - Name: 
+  - Name: Hunting rifle
+    Category: longarms
     Type: Projectile
     Level: 1
     Price: 240
@@ -1505,7 +1640,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Scattergun, utility
+    Category: longarms
     Type: Projectile
     Level: 1
     Price: 235
@@ -1516,18 +1652,20 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, blast
-  - Name: 
+  - Name: Acid dart rifle, Tactical
+    Category: longarms
     Type: Projectile
     Level: 2
     Price: 485
     Range: 80 ft.
-    Capacity: 10 Darts
+    Capacity: 10 darts
     Damage: 1d8 A & P
-    Critical: Corrode 1d4
+    Critical: Corrode, 1d4
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Autotarget rifle
+    Category: longarms
     Type: Projectile
     Level: 2
     Price: 755
@@ -1538,7 +1676,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, automatic
-  - Name: 
+  - Name: Crossbolter, Tactical
+    Category: longarms
     Type: Projectile
     Level: 2
     Price: 475
@@ -1549,7 +1688,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Unwieldy
-  - Name: 
+  - Name: Kalo shredder, slipstream-class
+    Category: longarms
     Type: Projectile
     Level: 3
     Price: 1610
@@ -1560,7 +1700,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, automatic, underwater
-  - Name: 
+  - Name: Acid dart rifle, dual
+    Category: longarms
     Type: Projectile
     Level: 7
     Price: 6900
@@ -1571,7 +1712,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Kalo shredder, cascade-class
+    Category: longarms
     Type: Projectile
     Level: 7
     Price: 6630
@@ -1582,7 +1724,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, automatic, underwater
-  - Name: 
+  - Name: Seeker rifle, tactical
+    Category: longarms
     Type: Projectile
     Level: 7
     Price: 6030
@@ -1593,7 +1736,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Crossbolter, dual
+    Category: longarms
     Type: Projectile
     Level: 8
     Price: 8250
@@ -1604,7 +1748,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 2
     Special: Unwieldy
-  - Name: 
+  - Name: Scattergun, snub
+    Category: longarms
     Type: Projectile
     Level: 8
     Price: 8300
@@ -1615,7 +1760,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, blast
-  - Name: 
+  - Name: Magnetar rifle, tactical
+    Category: longarms
     Type: Projectile
     Level: 9
     Price: 11800
@@ -1626,7 +1772,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, automatic
-  - Name: 
+  - Name: Combat rifle
+    Category: longarms
     Type: Projectile
     Level: 10
     Price: 16500
@@ -1637,7 +1784,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Kalo shredder, torrent-class
+    Category: longarms
     Type: Projectile
     Level: 11
     Price: 26700
@@ -1648,7 +1796,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, automatic, underwater
-  - Name: 
+  - Name: Acid dart rifle, complex
+    Category: longarms
     Type: Projectile
     Level: 12
     Price: 39200
@@ -1659,7 +1808,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: Analog
-  - Name: 
+  - Name: Scattergun, impact
+    Category: longarms
     Type: Projectile
     Level: 12
     Price: 30400
@@ -1670,7 +1820,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, blast
-  - Name: 
+  - Name: Gyrojet rifle, Tactical
+    Category: longarms
     Type: Projectile
     Level: 13
     Price: 54000
@@ -1681,7 +1832,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog
-  - Name: 
+  - Name: Magnetar rifle, advanced
+    Category: longarms
     Type: Projectile
     Level: 13
     Price: 53700
@@ -1692,7 +1844,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, automatic
-  - Name: 
+  - Name: Kalo shredder, deluge-class
+    Category: longarms
     Type: Projectile
     Level: 14
     Price: 74300
@@ -1703,7 +1856,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, automatic, underwater
-  - Name: 
+  - Name: Seeker rifle, advanced
+    Category: longarms
     Type: Projectile
     Level: 14
     Price: 72300
@@ -1714,7 +1868,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Gyrojet rifle, advanced
+    Category: longarms
     Type: Projectile
     Level: 15
     Price: 122800
@@ -1725,7 +1880,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog
-  - Name: 
+  - Name: Scattergun, vortex
+    Category: longarms
     Type: Projectile
     Level: 15
     Price: 91900
@@ -1736,7 +1892,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, blast
-  - Name: 
+  - Name: Magnetar rifle, elite
+    Category: longarms
     Type: Projectile
     Level: 16
     Price: 185100
@@ -1747,7 +1904,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, automatic
-  - Name: 
+  - Name: Gyrojet rifle, elite
+    Category: longarms
     Type: Projectile
     Level: 17
     Price: 245600
@@ -1758,7 +1916,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog
-  - Name: 
+  - Name: Kalo shredder, monsoon-class
+    Category: longarms
     Type: Projectile
     Level: 17
     Price: 784000
@@ -1769,7 +1928,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog, automatic, underwater
-  - Name: 
+  - Name: Seeker rifle, elite
+    Category: longarms
     Type: Projectile
     Level: 17
     Price: 242500
@@ -1780,7 +1940,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Scattergun, grapeshot
+    Category: longarms
     Type: Projectile
     Level: 18
     Price: 331000
@@ -1791,7 +1952,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, blast
-  - Name: 
+  - Name: Magnetar rifle, paragon
+    Category: longarms
     Type: Projectile
     Level: 19
     Price: 612600
@@ -1802,7 +1964,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog, automatic
-  - Name: 
+  - Name: Gyrojet rifle, paragon
+    Category: longarms
     Type: Projectile
     Level: 20
     Price: 723500
@@ -1813,7 +1976,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Analog
-  - Name: 
+  - Name: Seeker rifle, paragon
+    Category: longarms
     Type: Projectile
     Level: 20
     Price: 809200
@@ -1824,7 +1988,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: Analog
-  - Name: 
+  - Name: Pulsecaster rifle
+    Category: longarms
     Type: Shock
     Level: 1
     Price: 100
@@ -1835,7 +2000,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: Nonlethal
-  - Name: 
+  - Name: Arc emitter, Tactical
+    Category: longarms
     Type: Shock
     Level: 2
     Price: 750
@@ -1846,7 +2012,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 1
     Special: Blast, stun, unwieldy
-  - Name: 
+  - Name: Arc rifle, static
+    Category: longarms
     Type: Shock
     Level: 6
     Price: 4200
@@ -1857,7 +2024,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Stun
-  - Name: 
+  - Name: Arc emitter, advanced
+    Category: longarms
     Type: Shock
     Level: 9
     Price: 13200
@@ -1868,7 +2036,8 @@ MonoBehaviour:
     Usage: 10
     Bulk: 1
     Special: Blast, stun, unwieldy
-  - Name: 
+  - Name: Arc rifle, aurora
+    Category: longarms
     Type: Shock
     Level: 11
     Price: 24500
@@ -1879,7 +2048,8 @@ MonoBehaviour:
     Usage: 1
     Bulk: 2
     Special: Stun
-  - Name: 
+  - Name: Arc rifle, storm
+    Category: longarms
     Type: Shock
     Level: 16
     Price: 190300
@@ -1890,7 +2060,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 2
     Special: Stun
-  - Name: 
+  - Name: Arc rifle, tempest
+    Category: longarms
     Type: Shock
     Level: 19
     Price: 622000
@@ -1901,7 +2072,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 2
     Special: Stun
-  - Name: 
+  - Name: Sonic rifle, thunderstrike
+    Category: longarms
     Type: Sonic
     Level: 5
     Price: 3400
@@ -1912,7 +2084,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 1
     Special: "\u2014"
-  - Name: 
+  - Name: Streetsweeper, thunderstrike
+    Category: longarms
     Type: Sonic
     Level: 7
     Price: 7150
@@ -1923,7 +2096,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: Boost 1d6
-  - Name: 
+  - Name: Sonic rifle, LFD
+    Category: longarms
     Type: Sonic
     Level: 10
     Price: 17000
@@ -1934,7 +2108,8 @@ MonoBehaviour:
     Usage: 2
     Bulk: 2
     Special: "\u2014"
-  - Name: 
+  - Name: Streetsweeper, LFD
+    Category: longarms
     Type: Sonic
     Level: 12
     Price: 39300
@@ -1945,7 +2120,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: Boost 1d8
-  - Name: 
+  - Name: Sonic rifle, HFD
+    Category: longarms
     Type: Sonic
     Level: 14
     Price: 80200
@@ -1956,7 +2132,8 @@ MonoBehaviour:
     Usage: 4
     Bulk: 2
     Special: "\u2014"
-  - Name: 
+  - Name: Streetsweeper, HFD
+    Category: longarms
     Type: Sonic
     Level: 16
     Price: 195000
@@ -1967,7 +2144,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: Boost 1d10
-  - Name: 
+  - Name: Sonic rifle, banshee
+    Category: longarms
     Type: Sonic
     Level: 18
     Price: 364500
@@ -1978,7 +2156,8 @@ MonoBehaviour:
     Usage: 5
     Bulk: 2
     Special: "\u2014"
-  - Name: 
+  - Name: Needler rifle
+    Category: longarms
     Type: Uncategorized
     Level: 1
     Price: 110
@@ -1990,6 +2169,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, injection
   - Name: Bow
+    Category: longarms
     Type: Uncategorized
     Level: 1
     Price: 255
@@ -2001,6 +2181,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Quick reload
   - Name: Shobhad horizon striker, tactical
+    Category: snipers
     Type: Projectile
     Level: 1
     Price: 440
@@ -2012,6 +2193,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (500 ft.), unwieldy
   - Name: Shirren-eye rifle, tactical
+    Category: snipers
     Type: Projectile
     Level: 2
     Price: 755
@@ -2023,6 +2205,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, sniper (250 ft.), unwieldy
   - Name: Shobhad horizon striker, advanced
+    Category: snipers
     Type: Projectile
     Level: 6
     Price: 4750
@@ -2034,6 +2217,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (1,000 ft.), unwieldy
   - Name: Shirren-eye rifle, advanced
+    Category: snipers
     Type: Projectile
     Level: 8
     Price: 9350
@@ -2045,6 +2229,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (500 ft.), unwieldy
   - Name: Shobhad horizon striker, elite
+    Category: snipers
     Type: Projectile
     Level: 11
     Price: 27300
@@ -2056,6 +2241,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (1,250 ft.), unwieldy
   - Name: Shirren-eye rifle, elite
+    Category: snipers
     Type: Projectile
     Level: 13
     Price: 54000
@@ -2067,6 +2253,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (750 ft.), unwieldy
   - Name: Shirren-eye rifle, paragon
+    Category: snipers
     Type: Projectile
     Level: 16
     Price: 147200
@@ -2078,6 +2265,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, sniper (1,000 ft.), unwieldy
   - Name: Shobhad horizon striker, paragon
+    Category: snipers
     Type: Projectile
     Level: 16
     Price: 185000
@@ -2089,6 +2277,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (1,500 ft.), unwieldy
   - Name: Shirren-eye rifle, warpshot
+    Category: snipers
     Type: Projectile
     Level: 20
     Price: 740800
@@ -2100,6 +2289,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, sniper (1,000 ft.), unwieldy
   - Name: Zero cannon, Tactical
+    Category: heavy_weapons
     Type: Cryo
     Level: 11
     Price: 23000
@@ -2111,6 +2301,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Zero cannon, advanced
+    Category: heavy_weapons
     Type: Cryo
     Level: 14
     Price: 81400
@@ -2122,6 +2313,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Zero cannon, elite
+    Category: heavy_weapons
     Type: Cryo
     Level: 18
     Price: 412800
@@ -2133,6 +2325,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Flamethrower, ifrit-class
+    Category: heavy_weapons
     Type: Flame
     Level: 2
     Price: 780
@@ -2144,6 +2337,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, salamander-class
+    Category: heavy_weapons
     Type: Flame
     Level: 8
     Price: 8600
@@ -2155,6 +2349,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, hellhound-class
+    Category: heavy_weapons
     Type: Flame
     Level: 12
     Price: 35100
@@ -2166,6 +2361,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, firedrake-class
+    Category: heavy_weapons
     Type: Flame
     Level: 15
     Price: 128000
@@ -2177,6 +2373,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, phoenix-class
+    Category: heavy_weapons
     Type: Flame
     Level: 18
     Price: 367500
@@ -2188,6 +2385,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Artillery laser, azimuth
+    Category: heavy_weapons
     Type: Laser
     Level: 1
     Price: 425
@@ -2199,6 +2397,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Artillery laser, corona
+    Category: heavy_weapons
     Type: Laser
     Level: 6
     Price: 4650
@@ -2210,6 +2409,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Artillery laser, aphelion
+    Category: heavy_weapons
     Type: Laser
     Level: 9
     Price: 14300
@@ -2221,6 +2421,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Autobeam artillery, Tactical
+    Category: heavy_weapons
     Type: Laser
     Level: 10
     Price: 19400
@@ -2232,6 +2433,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Artillery laser, perihelion
+    Category: heavy_weapons
     Type: Laser
     Level: 13
     Price: 53800
@@ -2243,6 +2445,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Autobeam artillery, advanced
+    Category: heavy_weapons
     Type: Laser
     Level: 16
     Price: 145700
@@ -2254,6 +2457,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Artillery laser, parallax
+    Category: heavy_weapons
     Type: Laser
     Level: 17
     Price: 248000
@@ -2265,6 +2469,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Autobeam artillery, elite
+    Category: heavy_weapons
     Type: Laser
     Level: 19
     Price: 543300
@@ -2276,6 +2481,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Artillery laser, zenith
+    Category: heavy_weapons
     Type: Laser
     Level: 20
     Price: 722000
@@ -2287,6 +2493,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Stearheart cannon, red star
+    Category: heavy_weapons
     Type: Plasma
     Level: 3
     Price: 1300
@@ -2298,6 +2505,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (5 ft.), unwieldy
   - Name: Plasma cannon, red star
+    Category: heavy_weapons
     Type: Plasma
     Level: 8
     Price: 8650
@@ -2309,6 +2517,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (5 ft.), unwieldy
   - Name: Starheart cannon, yellow star
+    Category: heavy_weapons
     Type: Plasma
     Level: 8
     Price: 9050
@@ -2320,6 +2529,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (10 ft.), unwieldy
   - Name: Starheart cannon, white star
+    Category: heavy_weapons
     Type: Plasma
     Level: 13
     Price: 48100
@@ -2331,6 +2541,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (10 ft.), unwieldy
   - Name: Plasma cannon, yellow star
+    Category: heavy_weapons
     Type: Plasma
     Level: 14
     Price: 62800
@@ -2342,6 +2553,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (5 ft.), unwieldy
   - Name: Plasma cannon, white star
+    Category: heavy_weapons
     Type: Plasma
     Level: 16
     Price: 189200
@@ -2353,6 +2565,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (5 ft.), unwieldy
   - Name: Starheart cannon, blue star
+    Category: heavy_weapons
     Type: Plasma
     Level: 18
     Price: 360000
@@ -2364,6 +2577,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (15 ft.), unwieldy
   - Name: Plasma cannon, blue star
+    Category: heavy_weapons
     Type: Plasma
     Level: 20
     Price: 950000
@@ -2375,6 +2589,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (10 ft.), unwieldy
   - Name: Reaction cannon, light
+    Category: heavy_weapons
     Type: Projectile
     Level: 1
     Price: 250
@@ -2386,6 +2601,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Machine gun, squad
+    Category: heavy_weapons
     Type: Projectile
     Level: 4
     Price: 2060
@@ -2397,6 +2613,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: X-gen gun, Tactical
+    Category: heavy_weapons
     Type: Projectile
     Level: 6
     Price: 4240
@@ -2408,6 +2625,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Reaction cannon, Tactical
+    Category: heavy_weapons
     Type: Projectile
     Level: 7
     Price: 6100
@@ -2419,6 +2637,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Machine gun, light
+    Category: heavy_weapons
     Type: Projectile
     Level: 8
     Price: 8600
@@ -2430,6 +2649,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: X-gen gun, advanced
+    Category: heavy_weapons
     Type: Projectile
     Level: 9
     Price: 13100
@@ -2441,6 +2661,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Reaction cannon, heavy
+    Category: heavy_weapons
     Type: Projectile
     Level: 10
     Price: 16750
@@ -2452,6 +2673,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Stellar cannon, light
+    Category: heavy_weapons
     Type: Projectile
     Level: 10
     Price: 19200
@@ -2463,6 +2685,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast
   - Name: Crossbolter, advanced
+    Category: heavy_weapons
     Type: Projectile
     Level: 11
     Price: 21900
@@ -2474,6 +2697,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Machine gun, medium
+    Category: heavy_weapons
     Type: Projectile
     Level: 11
     Price: 23100
@@ -2485,6 +2709,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: X-gen gun, elite
+    Category: heavy_weapons
     Type: Projectile
     Level: 13
     Price: 53700
@@ -2496,6 +2721,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Crossbolter, elite
+    Category: heavy_weapons
     Type: Projectile
     Level: 14
     Price: 71400
@@ -2507,6 +2733,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Reaction cannon, advanced
+    Category: heavy_weapons
     Type: Projectile
     Level: 14
     Price: 73000
@@ -2518,6 +2745,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Stellar cannon, heavy
+    Category: heavy_weapons
     Type: Projectile
     Level: 15
     Price: 122800
@@ -2529,6 +2757,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast
   - Name: Machine gun, heavy
+    Category: heavy_weapons
     Type: Projectile
     Level: 17
     Price: 220300
@@ -2540,6 +2769,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Reaction cannon, elite
+    Category: heavy_weapons
     Type: Projectile
     Level: 17
     Price: 244000
@@ -2551,6 +2781,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Crossbolter, paragon
+    Category: heavy_weapons
     Type: Projectile
     Level: 18
     Price: 327200
@@ -2562,6 +2793,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Reaction cannon, paragon
+    Category: heavy_weapons
     Type: Projectile
     Level: 20
     Price: 810000
@@ -2573,6 +2805,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: X-gen gun, paragon
+    Category: heavy_weapons
     Type: Projectile
     Level: 20
     Price: 826000
@@ -2584,6 +2817,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Anacite ion cannon, static
+    Category: heavy_weapons
     Type: Shock
     Level: 3
     Price: 1550
@@ -2595,6 +2829,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, static
+    Category: heavy_weapons
     Type: Shock
     Level: 6
     Price: 4620
@@ -2606,6 +2841,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (10 ft.), unwieldy
   - Name: Anacite ion cannon, aurora
+    Category: heavy_weapons
     Type: Shock
     Level: 8
     Price: 10900
@@ -2617,6 +2853,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, aurora
+    Category: heavy_weapons
     Type: Shock
     Level: 10
     Price: 19100
@@ -2628,6 +2865,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (15 ft.), unwieldy
   - Name: Anacite ion cannon, storm
+    Category: heavy_weapons
     Type: Shock
     Level: 13
     Price: 52900
@@ -2639,6 +2877,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, storm
+    Category: heavy_weapons
     Type: Shock
     Level: 16
     Price: 164800
@@ -2650,6 +2889,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (20 ft.), unwieldy
   - Name: Anacite ion cannon, tempest
+    Category: heavy_weapons
     Type: Shock
     Level: 18
     Price: 441000
@@ -2661,6 +2901,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, tempest
+    Category: heavy_weapons
     Type: Shock
     Level: 20
     Price: 735000
@@ -2672,6 +2913,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (20 ft.), unwieldy
   - Name: Screamer, thunderstrike
+    Category: heavy_weapons
     Type: Sonic
     Level: 5
     Price: 3350
@@ -2683,6 +2925,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast, unwieldy
   - Name: Screamer, LFD
+    Category: heavy_weapons
     Type: Sonic
     Level: 9
     Price: 14000
@@ -2694,6 +2937,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast, unwieldy
   - Name: Screamer, HFD
+    Category: heavy_weapons
     Type: Sonic
     Level: 15
     Price: 107500
@@ -2705,6 +2949,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast, unwieldy
   - Name: NIL grenade launcher, merc
+    Category: heavy_weapons
     Type: Uncategorized
     Level: 1
     Price: 280
@@ -2716,6 +2961,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: NIL grenade launcher, squad
+    Category: heavy_weapons
     Type: Uncategorized
     Level: 8
     Price: 9400
@@ -2727,6 +2973,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Analog
   - Name: IMDS missile launcher
+    Category: heavy_weapons
     Type: Uncategorized
     Level: 10
     Price: 18200
@@ -2738,6 +2985,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Carbonedge shuriken (10)
+    Category: thrown
     Type: Uncategorized
     Level: 1
     Price: 85
@@ -2749,6 +2997,7 @@ MonoBehaviour:
     Bulk: "\u2014"
     Special: Quick reload, thrown
   - Name: Nyfiber net
+    Category: thrown
     Type: Uncategorized
     Level: 2
     Price: 460
@@ -2759,3 +3008,9 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: 
+  rangedCategories:
+  - small_arms
+  - longarms
+  - snipers
+  - heavy_weapons
+  - thrown

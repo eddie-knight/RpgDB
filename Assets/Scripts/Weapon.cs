@@ -8,6 +8,7 @@ namespace TextRPG
     public class Weapon
     {
         public string Name;
+        public string Category;
         public string Type;
         public int Level;
         public int Price;

@@ -10,6 +10,7 @@ namespace TextRPG
     {
         public static string JsonHome = @"json/";
 
+        // Convert JSON file to JObject
         public static JObject GetJsonFromFile(string file_path)
         {
             string file_output = "";
@@ -24,71 +25,36 @@ namespace TextRPG
             return JObject.Parse(file_output);
         }
 
-        // TODO: Test and refine this, then delete the others
-        //public static void AddWeapons(JToken data, List<Weapon> Weapons)
-        //{
-        //Weapon weapon = new Weapon();
-
-        //foreach (var info in data)
-        //{
-        //    Debug.Log(info);
-        //}
-        //Weapons.Add(weapon);
-        //}
-        // 
-        // Melee Weapons
-        //
-        public static void AddMeleeWeapons(JToken data, List<Weapon> Weapons)
+        // Convert JToken object to Weapon object
+        public static Weapon ConvertWeapon(JToken data)
         {
             Weapon weapon = new Weapon();
-            weapon.Name = (string)data["Name"];
-            weapon.Type = (string)data["Type"];
-            weapon.Level = (int)data["Level"];
-            weapon.Price = (int)data["Price"];
-            weapon.Damage = (string)data["Damage"];
-            weapon.Critical = (string)data["Critical"]; ;
-            weapon.Bulk = (string)data["Bulk"];
-            weapon.Special = (string)data["Special"];
-
-            Weapons.Add(weapon);
-        }
-
-        public static void LoadMeleeWeaponData(string title, List<Weapon> Weapons)
-        {
-            JToken jsonObject = Database.GetJsonFromFile(title);
-            foreach (JToken data in jsonObject[title])
+            foreach (KeyValuePair<string, JToken> content in (JObject) data)
             {
-                Database.AddMeleeWeapons(data, Weapons);
+                var field = weapon.GetType().GetField(content.Key);
+                if ((object) field.FieldType == typeof(string))
+                    field.SetValue(weapon, content.Value.Value<string>());
+                else if (field.FieldType == typeof(int))
+                    field.SetValue(weapon, content.Value.Value<int>());
             }
+            return weapon;
         }
-        
-        // 
-        // Ranged Weapons
-        //
-        public static void AddRangedWeapons(JToken data, List<Weapon> Weapons)
+
+        // Add Weapon to List
+        public static void AddWeapon(JToken weapon, List<Weapon> Weapons, string title)
         {
-            Weapon weapon = new Weapon();
-            weapon.Name = (string)data["Name"];
-            weapon.Type = (string)data["Type"];
-            weapon.Level = (int)data["Level"];
-            weapon.Price = (int)data["Price"];
-            weapon.Damage = (string)data["Damage"];
-            weapon.Range = (string)data["Range"];
-            weapon.Critical = (string)data["Critical"]; ;
-            weapon.Capacity = (string)data["Capacity"]; ;
-            weapon.Usage = (int)data["Usage"]; ;
-            weapon.Bulk = (string)data["Bulk"];
-            weapon.Special = (string)data["Special"];
-
-            Weapons.Add(weapon);
+            Weapon convertedWeapon = ConvertWeapon(weapon);
+            convertedWeapon.Category = title;
+            Weapons.Add(convertedWeapon);
         }
 
-        public static void LoadRangedWeaponData(string title, List<Weapon> Weapons)
+        // Get All Weapon Data from JSON and add to List
+        public static void LoadWeaponData(string title, List<Weapon> Weapons)
         {
             JToken jsonObject = Database.GetJsonFromFile(title);
             foreach (JToken data in jsonObject[title])
             {
-                Database.AddRangedWeapons(data, Weapons);
+                Database.AddWeapon(data, Weapons, title);
             }
         }
     }
