@@ -73,10 +73,6 @@ namespace TextRPG
         // Convert JSON file data into a List format
         public void LoadWeaponData(string[] types, List<Weapon> list)
         {
-            // Debugging Tip:
-            // If an error occurs due to a JSON entry, run the script
-            // and look at which item is the last entered to the db.
-            // The next item on the list caused the error.
             foreach (string type in types)
             {
                 LoadWeaponData(type, list);
@@ -97,9 +93,9 @@ namespace TextRPG
         }
 
         // Return one weapon with exact name
-        public static List<Weapon> FindWeaponByName(string text)
+        public static Weapon FindWeaponByName(string text)
         {
-            return AllWeaponsList.FindAll(x => x.Name.Equals(text));
+            return AllWeaponsList.Find(x => x.Name.Equals(text));
         }
 
         // Return all melee weapons with text in name
