@@ -10,24 +10,29 @@ namespace TextRPG
     public class WeaponDatabase : Database
     {
         public List<Weapon> MeleeWeapons;
+        public string[] meleeCategories = { "1h_melee", "2h_melee" };
+
         public List<Weapon> RangedWeapons;
+        public string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
 
         public void Start()
         {
-            string[] meleeTypes = { "1h_melee", "2h_melee" };
-            string[] rangedTypes = {"small_arms", "longarms", "snipers", "heavy_weapons", "thrown"};
-            // Debug Tip:
+            // Weapon data is only loaded on first instantiation of Prefabs
+            if(MeleeWeapons.Count == 0)
+                LoadWeaponData(meleeCategories, MeleeWeapons);
+            if (RangedWeapons.Count == 0)
+                LoadWeaponData(rangedCategories, RangedWeapons);
+        }
+
+        public void LoadWeaponData(string[] types, List<Weapon>list)
+        {
+            // Debugging Tip:
             // If an error occurs due to a JSON entry, run the script
-            // and look at which item is the last entered to the db
-
-            foreach (string type in meleeTypes)
+            // and look at which item is the last entered to the db.
+            // The next item on the list caused the error.
+            foreach (string type in types)
             {
-                Database.LoadMeleeWeaponData(type, MeleeWeapons);
-            }
-
-            foreach (string type in rangedTypes)
-            {
-                Database.LoadRangedWeaponData(type, RangedWeapons);
+                Database.LoadWeaponData(type, list);
             }
         }
     }
