@@ -24,7 +24,41 @@ namespace TextRPG
                 LoadWeaponData(rangedCategories, RangedWeapons);
         }
 
-        public void LoadWeaponData(string[] types, List<Weapon>list)
+        // Convert JToken object to Weapon object
+        public static Weapon ConvertWeapon(JToken data)
+        {
+            Weapon weapon = new Weapon();
+            foreach (KeyValuePair<string, JToken> content in (JObject)data)
+            {
+                var field = weapon.GetType().GetField(content.Key);
+                if ((object)field.FieldType == typeof(string))
+                    field.SetValue(weapon, content.Value.Value<string>());
+                else if (field.FieldType == typeof(int))
+                    field.SetValue(weapon, content.Value.Value<int>());
+            }
+            return weapon;
+        }
+
+        // Add Weapon to List
+        public static void AddWeapon(JToken weapon, List<Weapon> Weapons, string title)
+        {
+            Weapon convertedWeapon = ConvertWeapon(weapon);
+            convertedWeapon.Category = title;
+            Weapons.Add(convertedWeapon);
+        }
+
+        // Get All Weapon Data from JSON and add to List
+        public static void LoadWeaponData(string title, List<Weapon> Weapons)
+        {
+            JToken jsonObject = Database.GetJsonFromFile(title);
+            foreach (JToken data in jsonObject[title])
+            {
+                AddWeapon(data, Weapons, title);
+            }
+        }
+
+        // Convert JSON file data into a List format
+        public void LoadWeaponData(string[] types, List<Weapon> list)
         {
             // Debugging Tip:
             // If an error occurs due to a JSON entry, run the script
@@ -32,8 +66,9 @@ namespace TextRPG
             // The next item on the list caused the error.
             foreach (string type in types)
             {
-                Database.LoadWeaponData(type, list);
+                LoadWeaponData(type, list);
             }
         }
+
     }
 }
