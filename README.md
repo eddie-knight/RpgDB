@@ -47,3 +47,16 @@ The `json/` directory is used for adding data to Assets. The JSON files are hand
 > If an error occurs due to a JSON entry, run the script
 > and look at which item is the last entered to the db.
 > The next item on the list caused the error.
+
+#### Search
+
+There are currently several search functions that can be used in the code.
+
+- `List<Weapon> SearchWeaponsByCategory(string category)`
+- `Weapon FindWeaponByName(string text)`
+- `List<Weapon> SearchMeleeWeaponsByName(string text)`
+- `List<Weapon> SearchRangedWeaponsByName(string text)`
+- `List<Weapon> SearchWeaponsByName(string text)`
+- `List<Weapon> SearchWeaponsByType(string text)`
+
+Search functionality will need dramatic improvement. Currently, a simple solution has not been found for creating a dynamic or agnostic search function such as `SearchWeaponsByField(string fieldName, string text)`. Also, __the search functions are all currently case-sensitive__.
