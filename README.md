@@ -38,3 +38,12 @@ Categories are defined at the top of the WeaponsDatabase class, and are used on 
 1. Specify the name of the JSON file. This will be passed as the `file_path` in the method `Database.GetJsonFromFile(file_path)`, which will concatenate it to create the full file path: `JsonHome + file_path + ".json")`
 1. Assist in the parsing of JSON. The object created by `Newtonsoft.Json.Linq.JObject.Parse` requires a top-level JSON object to hold the subsequent entries. Each JSON file will have a top level item that shares the name of the JSON file.
 1. Provide a category for searching. `WeaponDatabase.AddWeapon` takes a parameter called `title`, which will used to populate the field `Weapon.Category`. This field is subsequently used by `WeaponDatabase.SearchWeaponsByCategory` in order to filter `AllWeaponsList`.
+
+#### JSON
+
+The `json/` directory is used for adding data to Assets. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `Database.JsonHome` accordingly.
+
+> **Debugging Tip:**
+> If an error occurs due to a JSON entry, run the script
+> and look at which item is the last entered to the db.
+> The next item on the list caused the error.
