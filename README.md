@@ -1,4 +1,4 @@
-# Starfinder Database for Unity
+# RPG Database for Unity
 
 Open these files in a scene and add `WeaponDatabase.sh` to an object. Upon running, the script should be populated with data from each of the weapons in the JSON files.
 
