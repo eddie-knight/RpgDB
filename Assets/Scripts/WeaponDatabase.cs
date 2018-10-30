@@ -23,22 +23,23 @@ namespace RPGDB
 
         public void Start()
         {
-            // Weapon data is only loaded on first instantiation of Prefabs
+            // Data is only loaded on first instantiation of Prefabs
             if (MeleeWeapons.Count == 0)
             {
-                LoadWeaponData(meleeCategories, MeleeWeapons);
+                // Database.LoadData()
+                LoadData(meleeCategories, MeleeWeapons);
                 MeleeWeaponsList = MeleeWeapons;
             }
             if (RangedWeapons.Count == 0)
             {
-                LoadWeaponData(rangedCategories, RangedWeapons);
+                LoadData(rangedCategories, RangedWeapons);
                 RangedWeaponsList = RangedWeapons;
             }
             AllWeaponsList = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
         }
 
         // Convert JToken object to Weapon object
-        public static Weapon ConvertWeapon(JToken data)
+        public static Weapon ConvertObject(JToken data)
         {
             Weapon weapon = new Weapon();
             foreach (KeyValuePair<string, JToken> content in (JObject)data)
@@ -49,39 +50,9 @@ namespace RPGDB
                 else if (field.FieldType == typeof(int))
                     field.SetValue(weapon, content.Value.Value<int>());
             }
+            weapon.Category = category;
             return weapon;
         }
-
-        // Add Weapon to List
-        public static void AddWeapon(JToken weapon, List<Weapon> Weapons, string category, int id)
-        {
-            Weapon convertedWeapon = ConvertWeapon(weapon);
-            convertedWeapon.Category = category;
-            convertedWeapon.id = id;
-            Weapons.Add(convertedWeapon);
-        }
-
-        // Get All Weapon Data from JSON and add to List
-        public static void LoadWeaponDataFromJson(string category, List<Weapon> Weapons)
-        {
-            JToken jsonObject = Database.GetJsonFromFile(category);
-            int id = 1; 
-            foreach (JToken data in jsonObject[category])
-            {
-                AddWeapon(data, Weapons, category, id);
-                id++;
-            }
-        }
-
-        // Convert JSON file data into a List format
-        public void LoadWeaponData(string[] categories, List<Weapon> list)
-        {
-            foreach (string category in categories)
-            {
-                LoadWeaponDataFromJson(category, list);
-            }
-        }
-
 
         // TODO: Fix case-sensitivity on all search functions
 
