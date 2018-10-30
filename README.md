@@ -1,6 +1,6 @@
 # RPG Database for Unity
 
-Open these files in a scene and add `WeaponDatabase.sh` to an object. Upon running, the script should be populated with data from each of the weapons in the JSON files.
+Open these files in a scene and add a database script (such as `WeaponDatabase.cs`) to an object. Upon running, the script should be populated with data from each of the weapons in the JSON files.
 
 ## Requirements
 
@@ -12,24 +12,6 @@ https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-
 #### start()
 
 After attaching this script to a GameObject, `start()` will take effect on run. The function will check to see whether this GameObject already has values populated in the `MeleeWeaponsList` and `RangedWeaponsList`. If not, the values will be populated from the JSON files specified in `meleeCategories` and `rangedCategories`.
-
-```
-public void Start()
-{
-    // Weapon data is only loaded on first instantiation of Prefabs
-    if (MeleeWeapons.Count == 0)
-    {
-        LoadWeaponData(meleeCategories, MeleeWeapons);
-        MeleeWeaponsList = MeleeWeapons;
-    }
-    if (RangedWeapons.Count == 0)
-    {
-        LoadWeaponData(rangedCategories, RangedWeapons);
-        RangedWeaponsList = RangedWeapons;
-    }
-    AllWeaponsList = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
-}
-```
 
 #### Categories
 
