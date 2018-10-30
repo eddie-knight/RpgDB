@@ -11,7 +11,7 @@ https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-
 
 #### start()
 
-After attaching this script to a GameObject, `start()` will take effect on run. The function will check to see whether this GameObject already has values populated in the `MeleeWeaponsList` and `RangedWeaponsList`. If not, the values will be populated from the JSON files specified in `meleeCategories` and `rangedCategories`.
+After attaching this script to a GameObject, `start()` will take effect on run. The function will check to see whether this GameObject already has values populated in the appropriate list(s), such as `MeleeWeaponsList` and `RangedWeaponsList`. If not, the values will be populated from the JSON files specified in the associated category (such as `meleeCategories` and `rangedCategories`).
 
 #### Categories
 
