@@ -59,4 +59,23 @@ There are currently several search functions that can be used in the code.
 - `List<Weapon> SearchWeaponsByName(string text)`
 - `List<Weapon> SearchWeaponsByType(string text)`
 
+## Optional Modifications
+
+#### JsonHome
+```
+Relative location of directory containing JSON files
+public static string JsonHome = @"json/";
+```
+In the default case 'MyProject/json" lives beside "MyProject/Assets", so the relative path is "json".
+
+#### Categories
+```
+public static string[] meleeCategories = { "1h_melee", "2h_melee" };
+public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+```
+If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name *and* the appropriate categories list(s) in the associated class object. This enables the data to be properly loaded.
+
+## TODO
+
+#### Searching
 Search functionality will need dramatic improvement. Currently, a simple solution has not been found for creating a dynamic or agnostic search function such as `SearchWeaponsByField(string fieldName, string text)`. Also, __the search functions are all currently case-sensitive__.
