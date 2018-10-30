@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Newtonsoft.Json.Linq;
 
-namespace TextRPG
+namespace RPGDB
 {
     public class Database : MonoBehaviour
     {
+        // Relative location of directory containing JSON files
         public static string JsonHome = @"json/";
 
         // Convert JSON file to JObject

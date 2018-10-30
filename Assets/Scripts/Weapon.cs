@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-namespace TextRPG
+namespace RPGDB
 {
     [System.Serializable]
     public class Weapon
     {
         public string Name;
+        public int id; // Primary Key
         public string Category;
         public string Type;
         public int Level;

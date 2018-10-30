@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
-namespace TextRPG
+namespace RPGDB
 {
     public class WeaponDatabase : Database
     {
@@ -53,35 +53,36 @@ namespace TextRPG
         }
 
         // Add Weapon to List
-        public static void AddWeapon(JToken weapon, List<Weapon> Weapons, string title)
+        public static void AddWeapon(JToken weapon, List<Weapon> Weapons, string category, int id)
         {
             Weapon convertedWeapon = ConvertWeapon(weapon);
-            convertedWeapon.Category = title;
+            convertedWeapon.Category = category;
+            convertedWeapon.id = id;
             Weapons.Add(convertedWeapon);
         }
 
         // Get All Weapon Data from JSON and add to List
-        public static void LoadWeaponData(string title, List<Weapon> Weapons)
+        public static void LoadWeaponDataFromJson(string category, List<Weapon> Weapons)
         {
-            JToken jsonObject = Database.GetJsonFromFile(title);
-            foreach (JToken data in jsonObject[title])
+            JToken jsonObject = Database.GetJsonFromFile(category);
+            int id = 1; 
+            foreach (JToken data in jsonObject[category])
             {
-                AddWeapon(data, Weapons, title);
+                AddWeapon(data, Weapons, category, id);
+                id++;
             }
         }
 
         // Convert JSON file data into a List format
-        public void LoadWeaponData(string[] types, List<Weapon> list)
+        public void LoadWeaponData(string[] categories, List<Weapon> list)
         {
-            foreach (string type in types)
+            foreach (string category in categories)
             {
-                LoadWeaponData(type, list);
+                LoadWeaponDataFromJson(category, list);
             }
         }
 
 
-        // SEARCH FUNCTIONALITY
-        // These functions will return a List with any appropriate responses.
         // TODO: Fix case-sensitivity on all search functions
 
         // If provided category exists, find all weapons with category
