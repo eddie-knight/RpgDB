@@ -9,43 +9,43 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1894373033244550}
+  m_RootGameObject: {fileID: 1369340993001454}
   m_IsPrefabAsset: 1
---- !u!1 &1894373033244550
+--- !u!1 &1369340993001454
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4239541540962640}
-  - component: {fileID: 114644425200559858}
+  - component: {fileID: 4297131884064658}
+  - component: {fileID: 114438758358746938}
   m_Layer: 0
-  m_Name: Weapon Database
+  m_Name: WeaponDatabase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4239541540962640
+--- !u!4 &4297131884064658
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1894373033244550}
+  m_GameObject: {fileID: 1369340993001454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.6290884, y: -0.15380192, z: -1.655076}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114644425200559858
+--- !u!114 &114438758358746938
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1894373033244550}
+  m_GameObject: {fileID: 1369340993001454}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcd461d291183461db5f76aa9bd44a83, type: 3}
@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MeleeWeapons:
   - Name: Starfire sword, Tactical
+    id: 1
     Category: 1h_melee
     Type: Flame
     Level: 7
@@ -65,6 +66,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Starfire sword, inferno
+    id: 2
     Category: 1h_melee
     Type: Flame
     Level: 17
@@ -77,6 +79,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Plasma sword, Tactical
+    id: 3
     Category: 1h_melee
     Type: Plasma
     Level: 9
@@ -89,6 +92,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma sword, red star
+    id: 4
     Category: 1h_melee
     Type: Plasma
     Level: 13
@@ -101,6 +105,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Plasma sword, yellow star
+    id: 5
     Category: 1h_melee
     Type: Plasma
     Level: 15
@@ -113,6 +118,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Plasma sword, white star
+    id: 6
     Category: 1h_melee
     Type: Plasma
     Level: 18
@@ -125,6 +131,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Plasma sword, blue star
+    id: 7
     Category: 1h_melee
     Type: Plasma
     Level: 20
@@ -137,6 +144,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 4)
   - Name: Shock truncheon, static
+    id: 8
     Category: 1h_melee
     Type: Shock
     Level: 8
@@ -149,6 +157,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2), stun
   - Name: Shock truncheon, aurora
+    id: 9
     Category: 1h_melee
     Type: Shock
     Level: 11
@@ -161,6 +170,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2), stun
   - Name: Shock truncheon, storm
+    id: 10
     Category: 1h_melee
     Type: Shock
     Level: 16
@@ -173,6 +183,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 2), stun
   - Name: Shock truncheon, tempest
+    id: 11
     Category: 1h_melee
     Type: Shock
     Level: 19
@@ -185,6 +196,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 2), stun
   - Name: Pulse gauntlet, thunderstrike
+    id: 12
     Category: 1h_melee
     Type: Sonic
     Level: 2
@@ -197,6 +209,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Pulse gauntlet, LFD
+    id: 13
     Category: 1h_melee
     Type: Sonic
     Level: 7
@@ -209,6 +222,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Pulse gauntlet, HFD
+    id: 14
     Category: 1h_melee
     Type: Sonic
     Level: 12
@@ -221,6 +235,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Pulse gauntlet, banshee
+    id: 15
     Category: 1h_melee
     Type: Sonic
     Level: 16
@@ -233,6 +248,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Hammer, assault
+    id: 16
     Category: 1h_melee
     Type: Uncategorized
     Level: 1
@@ -245,6 +261,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Longsword
+    id: 17
     Category: 1h_melee
     Type: Uncategorized
     Level: 1
@@ -257,6 +274,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Starknife, Tactical
+    id: 18
     Category: 1h_melee
     Type: Uncategorized
     Level: 1
@@ -269,6 +287,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, thrown (20 ft.)
   - Name: Taclash, standard
+    id: 19
     Category: 1h_melee
     Type: Uncategorized
     Level: 1
@@ -281,6 +300,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, disarm, nonlethal, reach, trip
   - Name: Injection glove
+    id: 20
     Category: 1h_melee
     Type: Uncategorized
     Level: 2
@@ -293,6 +313,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Xenolash, immature
+    id: 21
     Category: 1h_melee
     Type: Uncategorized
     Level: 4
@@ -305,6 +326,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Fangblade
+    id: 22
     Category: 1h_melee
     Type: Uncategorized
     Level: 7
@@ -317,6 +339,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Longsword, sintered
+    id: 23
     Category: 1h_melee
     Type: Uncategorized
     Level: 7
@@ -329,6 +352,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Starknife, sintered
+    id: 24
     Category: 1h_melee
     Type: Uncategorized
     Level: 8
@@ -341,6 +365,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, thrown (50 ft.)
   - Name: Longsword, microserrated
+    id: 25
     Category: 1h_melee
     Type: Uncategorized
     Level: 9
@@ -353,6 +378,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Hammer, comet
+    id: 26
     Category: 1h_melee
     Type: Uncategorized
     Level: 10
@@ -365,6 +391,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Xenolash, mature
+    id: 27
     Category: 1h_melee
     Type: Uncategorized
     Level: 10
@@ -377,6 +404,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Longsword, ultrathin
+    id: 28
     Category: 1h_melee
     Type: Uncategorized
     Level: 11
@@ -389,6 +417,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Taclash, numbing
+    id: 29
     Category: 1h_melee
     Type: Uncategorized
     Level: 11
@@ -401,6 +430,7 @@ MonoBehaviour:
     Bulk: L
     Special: Disarm, powered (capacity 20, usage 2), reach, stun, trip
   - Name: Starknife, accelerated
+    id: 30
     Category: 1h_melee
     Type: Uncategorized
     Level: 12
@@ -413,6 +443,7 @@ MonoBehaviour:
     Bulk: L
     Special: Powered (capacity 20, usage 1), thrown (30 ft.)
   - Name: Grindblade
+    id: 31
     Category: 1h_melee
     Type: Uncategorized
     Level: 13
@@ -425,6 +456,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Longsword, zero-edge
+    id: 32
     Category: 1h_melee
     Type: Uncategorized
     Level: 14
@@ -437,6 +469,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Xenolash, blooming
+    id: 33
     Category: 1h_melee
     Type: Uncategorized
     Level: 14
@@ -449,6 +482,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Monowhip
+    id: 34
     Category: 1h_melee
     Type: Uncategorized
     Level: 15
@@ -461,6 +495,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, disarm, reach, trip
   - Name: Hammer, meteoric
+    id: 35
     Category: 1h_melee
     Type: Uncategorized
     Level: 16
@@ -473,6 +508,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Starknife, lightspeed
+    id: 36
     Category: 1h_melee
     Type: Uncategorized
     Level: 16
@@ -485,6 +521,7 @@ MonoBehaviour:
     Bulk: L
     Special: Powered (capacity 20, usage 2), thrown (50 ft.)
   - Name: Longsword, molecular rift
+    id: 37
     Category: 1h_melee
     Type: Uncategorized
     Level: 17
@@ -497,6 +534,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Longsword, ultraserrated
+    id: 38
     Category: 1h_melee
     Type: Uncategorized
     Level: 18
@@ -509,6 +547,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Xenolash, seeded
+    id: 39
     Category: 1h_melee
     Type: Uncategorized
     Level: 18
@@ -521,6 +560,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, disarm, entangle, reach, trip
   - Name: Hammer, gravity well
+    id: 40
     Category: 1h_melee
     Type: Uncategorized
     Level: 19
@@ -533,6 +573,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 40, usage 2)
   - Name: Starknife, dimensional slice
+    id: 41
     Category: 1h_melee
     Type: Uncategorized
     Level: 19
@@ -545,6 +586,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, thrown (80 ft.)
   - Name: Longsword, dimensional slice
+    id: 42
     Category: 1h_melee
     Type: Uncategorized
     Level: 20
@@ -557,6 +599,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Cryopike, Tactical
+    id: 1
     Category: 2h_melee
     Type: Cryo
     Level: 5
@@ -569,6 +612,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2), reach
   - Name: Cryopike, advanced
+    id: 2
     Category: 2h_melee
     Type: Cryo
     Level: 12
@@ -581,6 +625,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2), reach
   - Name: Flame doshko, ember
+    id: 3
     Category: 2h_melee
     Type: Flame
     Level: 2
@@ -593,6 +638,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Flame doshko, blaze
+    id: 4
     Category: 2h_melee
     Type: Flame
     Level: 8
@@ -605,6 +651,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Flame doshko, inferno
+    id: 5
     Category: 2h_melee
     Type: Flame
     Level: 13
@@ -617,6 +664,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Flame doshko, Solar flare
+    id: 6
     Category: 2h_melee
     Type: Flame
     Level: 19
@@ -629,6 +677,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1)
   - Name: Plasma doshko, red star
+    id: 7
     Category: 2h_melee
     Type: Plasma
     Level: 6
@@ -641,6 +690,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma doshko, yellow star
+    id: 8
     Category: 2h_melee
     Type: Plasma
     Level: 10
@@ -653,6 +703,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma doshko, white star
+    id: 9
     Category: 2h_melee
     Type: Plasma
     Level: 15
@@ -665,6 +716,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Plasma doshko, blue star
+    id: 10
     Category: 2h_melee
     Type: Plasma
     Level: 18
@@ -677,6 +729,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 2)
   - Name: Doshko, Tactical
+    id: 11
     Category: 2h_melee
     Type: Uncategorized
     Level: 1
@@ -689,6 +742,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Pike, Tactical
+    id: 12
     Category: 2h_melee
     Type: Uncategorized
     Level: 2
@@ -701,6 +755,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach
   - Name: Curve blade, carbon steel
+    id: 13
     Category: 2h_melee
     Type: Uncategorized
     Level: 4
@@ -713,6 +768,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Swoop hammer, Tactical
+    id: 14
     Category: 2h_melee
     Type: Uncategorized
     Level: 5
@@ -725,6 +781,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach, unwieldy
   - Name: Devastation blade, wrack
+    id: 15
     Category: 2h_melee
     Type: Uncategorized
     Level: 7
@@ -737,6 +794,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Doshko, advanced
+    id: 16
     Category: 2h_melee
     Type: Uncategorized
     Level: 7
@@ -749,6 +807,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Staff, sentinel
+    id: 17
     Category: 2h_melee
     Type: Uncategorized
     Level: 7
@@ -761,6 +820,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Block, powered (capacity 20, usage 1), stun
   - Name: Pike, advanced
+    id: 18
     Category: 2h_melee
     Type: Uncategorized
     Level: 9
@@ -773,6 +833,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach
   - Name: Swoop hammer, advanced
+    id: 19
     Category: 2h_melee
     Type: Uncategorized
     Level: 9
@@ -785,6 +846,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach, unwieldy
   - Name: Curve blade, ultrathin
+    id: 20
     Category: 2h_melee
     Type: Uncategorized
     Level: 10
@@ -797,6 +859,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Doshko, ultrathin
+    id: 21
     Category: 2h_melee
     Type: Uncategorized
     Level: 11
@@ -809,6 +872,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Devastation blade, ruin
+    id: 22
     Category: 2h_melee
     Type: Uncategorized
     Level: 13
@@ -821,6 +885,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Staff, repeller
+    id: 23
     Category: 2h_melee
     Type: Uncategorized
     Level: 13
@@ -833,6 +898,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Block, powered (capacity 20, usage 1), stun
   - Name: Swoop hammer, mach I
+    id: 24
     Category: 2h_melee
     Type: Uncategorized
     Level: 13
@@ -845,6 +911,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 4), reach, unwieldy
   - Name: Doshko, zero-edge
+    id: 25
     Category: 2h_melee
     Type: Uncategorized
     Level: 14
@@ -857,6 +924,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Pike, elite
+    id: 26
     Category: 2h_melee
     Type: Uncategorized
     Level: 15
@@ -869,6 +937,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach
   - Name: Curve blade, buzzblade
+    id: 27
     Category: 2h_melee
     Type: Uncategorized
     Level: 16
@@ -881,6 +950,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2)
   - Name: Doshko, molecular rift
+    id: 28
     Category: 2h_melee
     Type: Uncategorized
     Level: 17
@@ -893,6 +963,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Powered (capacity 20, usage 1), unwieldy
   - Name: Swoop hammer, mach II
+    id: 29
     Category: 2h_melee
     Type: Uncategorized
     Level: 17
@@ -905,6 +976,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, reach, unwieldy
   - Name: Devastation blade, apocalypse
+    id: 30
     Category: 2h_melee
     Type: Uncategorized
     Level: 18
@@ -917,6 +989,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Doshko, dimensional blade
+    id: 31
     Category: 2h_melee
     Type: Uncategorized
     Level: 19
@@ -929,6 +1002,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, unwieldy
   - Name: Curve blade, dimensional slice
+    id: 32
     Category: 2h_melee
     Type: Uncategorized
     Level: 20
@@ -941,6 +1015,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Powered (capacity 40, usage 2)
   - Name: Swoop hammer, mach III
+    id: 33
     Category: 2h_melee
     Type: Uncategorized
     Level: 20
@@ -952,11 +1027,9 @@ MonoBehaviour:
     Usage: 0
     Bulk: 2
     Special: Powered (capacity 40, usage 4), reach, unwieldy
-  meleeCategories:
-  - 1h_melee
-  - 2h_melee
   RangedWeapons:
   - Name: Zero pistol, frostbite-class
+    id: 1
     Category: small_arms
     Type: Cryo
     Level: 5
@@ -969,6 +1042,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Zero pistol, hailstorm-class
+    id: 2
     Category: small_arms
     Type: Cryo
     Level: 10
@@ -981,6 +1055,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Zero pistol, blizzard-class
+    id: 3
     Category: small_arms
     Type: Cryo
     Level: 15
@@ -993,6 +1068,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Zero pistol, avalanche-class
+    id: 4
     Category: small_arms
     Type: Cryo
     Level: 19
@@ -1005,6 +1081,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Flare gun, survival
+    id: 5
     Category: small_arms
     Type: Flame
     Level: 1
@@ -1017,6 +1094,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, bright
   - Name: Flame pistol
+    id: 6
     Category: small_arms
     Type: Flame
     Level: 2
@@ -1029,6 +1107,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Laser pistol, azimuth
+    id: 7
     Category: small_arms
     Type: Laser
     Level: 1
@@ -1041,6 +1120,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Laser pistol, corona
+    id: 8
     Category: small_arms
     Type: Laser
     Level: 6
@@ -1053,6 +1133,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Laser pistol, aphelion
+    id: 9
     Category: small_arms
     Type: Laser
     Level: 9
@@ -1065,6 +1146,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 1d4
   - Name: Laser pistol, perihelion
+    id: 10
     Category: small_arms
     Type: Laser
     Level: 12
@@ -1077,6 +1159,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Laser pistol, parallax
+    id: 11
     Category: small_arms
     Type: Laser
     Level: 14
@@ -1089,6 +1172,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 2d4
   - Name: Laser pistol, zenith
+    id: 12
     Category: small_arms
     Type: Laser
     Level: 17
@@ -1101,6 +1185,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Plasma pistol, red star
+    id: 13
     Category: small_arms
     Type: Plasma
     Level: 7
@@ -1113,6 +1198,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Plasma pistol, yellow star
+    id: 14
     Category: small_arms
     Type: Plasma
     Level: 12
@@ -1125,6 +1211,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Plasma pistol, white star
+    id: 15
     Category: small_arms
     Type: Plasma
     Level: 15
@@ -1137,6 +1224,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Plasma pistol, blue star
+    id: 16
     Category: small_arms
     Type: Plasma
     Level: 19
@@ -1149,6 +1237,7 @@ MonoBehaviour:
     Bulk: L
     Special: Line, unwieldy
   - Name: Semi-auto pistol, Tactical
+    id: 17
     Category: small_arms
     Type: Projectile
     Level: 1
@@ -1161,6 +1250,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Semi-auto pistol, advanced
+    id: 18
     Category: small_arms
     Type: Projectile
     Level: 7
@@ -1173,6 +1263,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Semi-auto pistol, elite
+    id: 19
     Category: small_arms
     Type: Projectile
     Level: 10
@@ -1185,6 +1276,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Semi-auto pistol, paragon
+    id: 20
     Category: small_arms
     Type: Projectile
     Level: 13
@@ -1197,6 +1289,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Gyrojet pistol, tactical
+    id: 21
     Category: small_arms
     Type: Projectile
     Level: 15
@@ -1209,6 +1302,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Gyrojet pistol, advanced
+    id: 22
     Category: small_arms
     Type: Projectile
     Level: 17
@@ -1221,6 +1315,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Gyrojet pistol, elite
+    id: 23
     Category: small_arms
     Type: Projectile
     Level: 20
@@ -1233,6 +1328,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog
   - Name: Pulsecaster pistol
+    id: 24
     Category: small_arms
     Type: Shock
     Level: 1
@@ -1245,6 +1341,7 @@ MonoBehaviour:
     Bulk: L
     Special: Nonlethal
   - Name: Arc pistol, static
+    id: 25
     Category: small_arms
     Type: Shock
     Level: 2
@@ -1257,6 +1354,7 @@ MonoBehaviour:
     Bulk: L
     Special: Stun
   - Name: Arc pistol, aurora
+    id: 26
     Category: small_arms
     Type: Shock
     Level: 13
@@ -1269,6 +1367,7 @@ MonoBehaviour:
     Bulk: L
     Special: Stun
   - Name: Arc pistol, storm
+    id: 27
     Category: small_arms
     Type: Shock
     Level: 18
@@ -1281,6 +1380,7 @@ MonoBehaviour:
     Bulk: L
     Special: Stun
   - Name: Sonic pistol, thunderstrike
+    id: 28
     Category: small_arms
     Type: Sonic
     Level: 4
@@ -1293,6 +1393,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Sonic pistol, LFD
+    id: 29
     Category: small_arms
     Type: Sonic
     Level: 11
@@ -1305,6 +1406,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 1d6
   - Name: Sonic pistol, HFD
+    id: 30
     Category: small_arms
     Type: Sonic
     Level: 14
@@ -1317,6 +1419,7 @@ MonoBehaviour:
     Bulk: L
     Special: "\u2014"
   - Name: Sonic pistol, banshee
+    id: 31
     Category: small_arms
     Type: Sonic
     Level: 16
@@ -1329,6 +1432,7 @@ MonoBehaviour:
     Bulk: L
     Special: Boost 1d10
   - Name: Needler pistol
+    id: 32
     Category: small_arms
     Type: Uncategorized
     Level: 1
@@ -1341,6 +1445,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; tactical
+    id: 33
     Category: small_arms
     Type: Uncategorized
     Level: 3
@@ -1353,6 +1458,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; advanced
+    id: 34
     Category: small_arms
     Type: Uncategorized
     Level: 8
@@ -1365,6 +1471,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; elite
+    id: 35
     Category: small_arms
     Type: Uncategorized
     Level: 13
@@ -1377,6 +1484,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Nightarch needler; paragon
+    id: 36
     Category: small_arms
     Type: Uncategorized
     Level: 18
@@ -1389,6 +1497,7 @@ MonoBehaviour:
     Bulk: L
     Special: Analog, injection
   - Name: Zero rifle, frostbite-class
+    id: 1
     Category: longarms
     Type: Cryo
     Level: 4
@@ -1401,6 +1510,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Zero rifle, hailstorm-class
+    id: 2
     Category: longarms
     Type: Cryo
     Level: 8
@@ -1413,6 +1523,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Zero rifle, blizzard-class
+    id: 3
     Category: longarms
     Type: Cryo
     Level: 14
@@ -1425,6 +1536,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Zero rifle, avalanche-class
+    id: 4
     Category: longarms
     Type: Cryo
     Level: 18
@@ -1437,6 +1549,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Flame rifle
+    id: 5
     Category: longarms
     Type: Flame
     Level: 2
@@ -1449,6 +1562,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Line, unwieldy
   - Name: Laser rifle, azimuth
+    id: 6
     Category: longarms
     Type: Laser
     Level: 1
@@ -1461,6 +1575,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Laser rifle, corona
+    id: 7
     Category: longarms
     Type: Laser
     Level: 6
@@ -1473,6 +1588,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Laser rifle, aphelion
+    id: 8
     Category: longarms
     Type: Laser
     Level: 9
@@ -1485,6 +1601,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Autobeam rifle, Tactical
+    id: 9
     Category: longarms
     Type: Laser
     Level: 11
@@ -1497,6 +1614,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Laser rifle, perihelion
+    id: 10
     Category: longarms
     Type: Laser
     Level: 13
@@ -1509,6 +1627,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Autobeam rifle, advanced
+    id: 11
     Category: longarms
     Type: Laser
     Level: 15
@@ -1521,6 +1640,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Laser rifle, parallax
+    id: 12
     Category: longarms
     Type: Laser
     Level: 17
@@ -1533,6 +1653,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Autobeam rifle, elite
+    id: 13
     Category: longarms
     Type: Laser
     Level: 19
@@ -1545,6 +1666,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Laser rifle, zenith
+    id: 14
     Category: longarms
     Type: Laser
     Level: 20
@@ -1557,6 +1679,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Plasma rifle, red star
+    id: 15
     Category: longarms
     Type: Plasma
     Level: 6
@@ -1569,6 +1692,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Plasma rifle, yellow star
+    id: 16
     Category: longarms
     Type: Plasma
     Level: 10
@@ -1581,6 +1705,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Plasma caster, white star
+    id: 17
     Category: longarms
     Type: Plasma
     Level: 13
@@ -1593,6 +1718,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Boost 1d10
   - Name: Plasma rifle, white star
+    id: 18
     Category: longarms
     Type: Plasma
     Level: 15
@@ -1605,6 +1731,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Plasma caster, blue star
+    id: 19
     Category: longarms
     Type: Plasma
     Level: 17
@@ -1617,6 +1744,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Boost 2d10
   - Name: Plasma rifle, blue star
+    id: 20
     Category: longarms
     Type: Plasma
     Level: 20
@@ -1629,6 +1757,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Hunting rifle
+    id: 21
     Category: longarms
     Type: Projectile
     Level: 1
@@ -1641,6 +1770,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Scattergun, utility
+    id: 22
     Category: longarms
     Type: Projectile
     Level: 1
@@ -1653,6 +1783,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, blast
   - Name: Acid dart rifle, Tactical
+    id: 23
     Category: longarms
     Type: Projectile
     Level: 2
@@ -1665,6 +1796,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Autotarget rifle
+    id: 24
     Category: longarms
     Type: Projectile
     Level: 2
@@ -1677,6 +1809,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Crossbolter, Tactical
+    id: 25
     Category: longarms
     Type: Projectile
     Level: 2
@@ -1689,6 +1822,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Kalo shredder, slipstream-class
+    id: 26
     Category: longarms
     Type: Projectile
     Level: 3
@@ -1701,6 +1835,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, automatic, underwater
   - Name: Acid dart rifle, dual
+    id: 27
     Category: longarms
     Type: Projectile
     Level: 7
@@ -1713,6 +1848,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Kalo shredder, cascade-class
+    id: 28
     Category: longarms
     Type: Projectile
     Level: 7
@@ -1725,6 +1861,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, automatic, underwater
   - Name: Seeker rifle, tactical
+    id: 29
     Category: longarms
     Type: Projectile
     Level: 7
@@ -1737,6 +1874,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Crossbolter, dual
+    id: 30
     Category: longarms
     Type: Projectile
     Level: 8
@@ -1749,6 +1887,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Scattergun, snub
+    id: 31
     Category: longarms
     Type: Projectile
     Level: 8
@@ -1761,6 +1900,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, blast
   - Name: Magnetar rifle, tactical
+    id: 32
     Category: longarms
     Type: Projectile
     Level: 9
@@ -1773,6 +1913,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Combat rifle
+    id: 33
     Category: longarms
     Type: Projectile
     Level: 10
@@ -1785,6 +1926,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Kalo shredder, torrent-class
+    id: 34
     Category: longarms
     Type: Projectile
     Level: 11
@@ -1797,6 +1939,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, automatic, underwater
   - Name: Acid dart rifle, complex
+    id: 35
     Category: longarms
     Type: Projectile
     Level: 12
@@ -1809,6 +1952,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Scattergun, impact
+    id: 36
     Category: longarms
     Type: Projectile
     Level: 12
@@ -1821,6 +1965,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast
   - Name: Gyrojet rifle, Tactical
+    id: 37
     Category: longarms
     Type: Projectile
     Level: 13
@@ -1833,6 +1978,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Magnetar rifle, advanced
+    id: 38
     Category: longarms
     Type: Projectile
     Level: 13
@@ -1845,6 +1991,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Kalo shredder, deluge-class
+    id: 39
     Category: longarms
     Type: Projectile
     Level: 14
@@ -1857,6 +2004,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, automatic, underwater
   - Name: Seeker rifle, advanced
+    id: 40
     Category: longarms
     Type: Projectile
     Level: 14
@@ -1869,6 +2017,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Gyrojet rifle, advanced
+    id: 41
     Category: longarms
     Type: Projectile
     Level: 15
@@ -1881,6 +2030,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Scattergun, vortex
+    id: 42
     Category: longarms
     Type: Projectile
     Level: 15
@@ -1893,6 +2043,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast
   - Name: Magnetar rifle, elite
+    id: 43
     Category: longarms
     Type: Projectile
     Level: 16
@@ -1905,6 +2056,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Gyrojet rifle, elite
+    id: 44
     Category: longarms
     Type: Projectile
     Level: 17
@@ -1917,6 +2069,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Kalo shredder, monsoon-class
+    id: 45
     Category: longarms
     Type: Projectile
     Level: 17
@@ -1929,6 +2082,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, automatic, underwater
   - Name: Seeker rifle, elite
+    id: 46
     Category: longarms
     Type: Projectile
     Level: 17
@@ -1941,6 +2095,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Scattergun, grapeshot
+    id: 47
     Category: longarms
     Type: Projectile
     Level: 18
@@ -1953,6 +2108,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast
   - Name: Magnetar rifle, paragon
+    id: 48
     Category: longarms
     Type: Projectile
     Level: 19
@@ -1965,6 +2121,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Gyrojet rifle, paragon
+    id: 49
     Category: longarms
     Type: Projectile
     Level: 20
@@ -1977,6 +2134,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: Seeker rifle, paragon
+    id: 50
     Category: longarms
     Type: Projectile
     Level: 20
@@ -1989,6 +2147,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog
   - Name: Pulsecaster rifle
+    id: 51
     Category: longarms
     Type: Shock
     Level: 1
@@ -2001,6 +2160,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Nonlethal
   - Name: Arc emitter, Tactical
+    id: 52
     Category: longarms
     Type: Shock
     Level: 2
@@ -2013,6 +2173,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Blast, stun, unwieldy
   - Name: Arc rifle, static
+    id: 53
     Category: longarms
     Type: Shock
     Level: 6
@@ -2025,6 +2186,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Stun
   - Name: Arc emitter, advanced
+    id: 54
     Category: longarms
     Type: Shock
     Level: 9
@@ -2037,6 +2199,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Blast, stun, unwieldy
   - Name: Arc rifle, aurora
+    id: 55
     Category: longarms
     Type: Shock
     Level: 11
@@ -2049,6 +2212,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Stun
   - Name: Arc rifle, storm
+    id: 56
     Category: longarms
     Type: Shock
     Level: 16
@@ -2061,6 +2225,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Stun
   - Name: Arc rifle, tempest
+    id: 57
     Category: longarms
     Type: Shock
     Level: 19
@@ -2073,6 +2238,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Stun
   - Name: Sonic rifle, thunderstrike
+    id: 58
     Category: longarms
     Type: Sonic
     Level: 5
@@ -2085,6 +2251,7 @@ MonoBehaviour:
     Bulk: 1
     Special: "\u2014"
   - Name: Streetsweeper, thunderstrike
+    id: 59
     Category: longarms
     Type: Sonic
     Level: 7
@@ -2097,6 +2264,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Boost 1d6
   - Name: Sonic rifle, LFD
+    id: 60
     Category: longarms
     Type: Sonic
     Level: 10
@@ -2109,6 +2277,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Streetsweeper, LFD
+    id: 61
     Category: longarms
     Type: Sonic
     Level: 12
@@ -2121,6 +2290,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Boost 1d8
   - Name: Sonic rifle, HFD
+    id: 62
     Category: longarms
     Type: Sonic
     Level: 14
@@ -2133,6 +2303,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Streetsweeper, HFD
+    id: 63
     Category: longarms
     Type: Sonic
     Level: 16
@@ -2145,6 +2316,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Boost 1d10
   - Name: Sonic rifle, banshee
+    id: 64
     Category: longarms
     Type: Sonic
     Level: 18
@@ -2157,6 +2329,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Needler rifle
+    id: 65
     Category: longarms
     Type: Uncategorized
     Level: 1
@@ -2169,6 +2342,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, injection
   - Name: Bow
+    id: 66
     Category: longarms
     Type: Uncategorized
     Level: 1
@@ -2181,6 +2355,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Quick reload
   - Name: Shobhad horizon striker, tactical
+    id: 1
     Category: snipers
     Type: Projectile
     Level: 1
@@ -2193,6 +2368,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (500 ft.), unwieldy
   - Name: Shirren-eye rifle, tactical
+    id: 2
     Category: snipers
     Type: Projectile
     Level: 2
@@ -2205,6 +2381,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, sniper (250 ft.), unwieldy
   - Name: Shobhad horizon striker, advanced
+    id: 3
     Category: snipers
     Type: Projectile
     Level: 6
@@ -2217,6 +2394,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (1,000 ft.), unwieldy
   - Name: Shirren-eye rifle, advanced
+    id: 4
     Category: snipers
     Type: Projectile
     Level: 8
@@ -2229,6 +2407,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (500 ft.), unwieldy
   - Name: Shobhad horizon striker, elite
+    id: 5
     Category: snipers
     Type: Projectile
     Level: 11
@@ -2241,6 +2420,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (1,250 ft.), unwieldy
   - Name: Shirren-eye rifle, elite
+    id: 6
     Category: snipers
     Type: Projectile
     Level: 13
@@ -2253,6 +2433,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (750 ft.), unwieldy
   - Name: Shirren-eye rifle, paragon
+    id: 7
     Category: snipers
     Type: Projectile
     Level: 16
@@ -2265,6 +2446,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, sniper (1,000 ft.), unwieldy
   - Name: Shobhad horizon striker, paragon
+    id: 8
     Category: snipers
     Type: Projectile
     Level: 16
@@ -2277,6 +2459,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, sniper (1,500 ft.), unwieldy
   - Name: Shirren-eye rifle, warpshot
+    id: 9
     Category: snipers
     Type: Projectile
     Level: 20
@@ -2289,6 +2472,7 @@ MonoBehaviour:
     Bulk: 1
     Special: Analog, sniper (1,000 ft.), unwieldy
   - Name: Zero cannon, Tactical
+    id: 1
     Category: heavy_weapons
     Type: Cryo
     Level: 11
@@ -2301,6 +2485,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Zero cannon, advanced
+    id: 2
     Category: heavy_weapons
     Type: Cryo
     Level: 14
@@ -2313,6 +2498,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Zero cannon, elite
+    id: 3
     Category: heavy_weapons
     Type: Cryo
     Level: 18
@@ -2325,6 +2511,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, unwieldy
   - Name: Flamethrower, ifrit-class
+    id: 4
     Category: heavy_weapons
     Type: Flame
     Level: 2
@@ -2337,6 +2524,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, salamander-class
+    id: 5
     Category: heavy_weapons
     Type: Flame
     Level: 8
@@ -2349,6 +2537,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, hellhound-class
+    id: 6
     Category: heavy_weapons
     Type: Flame
     Level: 12
@@ -2361,6 +2550,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, firedrake-class
+    id: 7
     Category: heavy_weapons
     Type: Flame
     Level: 15
@@ -2373,6 +2563,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Flamethrower, phoenix-class
+    id: 8
     Category: heavy_weapons
     Type: Flame
     Level: 18
@@ -2385,6 +2576,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, blast, unwieldy
   - Name: Artillery laser, azimuth
+    id: 9
     Category: heavy_weapons
     Type: Laser
     Level: 1
@@ -2397,6 +2589,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Artillery laser, corona
+    id: 10
     Category: heavy_weapons
     Type: Laser
     Level: 6
@@ -2409,6 +2602,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Artillery laser, aphelion
+    id: 11
     Category: heavy_weapons
     Type: Laser
     Level: 9
@@ -2421,6 +2615,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Autobeam artillery, Tactical
+    id: 12
     Category: heavy_weapons
     Type: Laser
     Level: 10
@@ -2433,6 +2628,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Artillery laser, perihelion
+    id: 13
     Category: heavy_weapons
     Type: Laser
     Level: 13
@@ -2445,6 +2641,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Autobeam artillery, advanced
+    id: 14
     Category: heavy_weapons
     Type: Laser
     Level: 16
@@ -2457,6 +2654,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Artillery laser, parallax
+    id: 15
     Category: heavy_weapons
     Type: Laser
     Level: 17
@@ -2469,6 +2667,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Autobeam artillery, elite
+    id: 16
     Category: heavy_weapons
     Type: Laser
     Level: 19
@@ -2481,6 +2680,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Artillery laser, zenith
+    id: 17
     Category: heavy_weapons
     Type: Laser
     Level: 20
@@ -2493,6 +2693,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Stearheart cannon, red star
+    id: 18
     Category: heavy_weapons
     Type: Plasma
     Level: 3
@@ -2505,6 +2706,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (5 ft.), unwieldy
   - Name: Plasma cannon, red star
+    id: 19
     Category: heavy_weapons
     Type: Plasma
     Level: 8
@@ -2517,6 +2719,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (5 ft.), unwieldy
   - Name: Starheart cannon, yellow star
+    id: 20
     Category: heavy_weapons
     Type: Plasma
     Level: 8
@@ -2529,6 +2732,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (10 ft.), unwieldy
   - Name: Starheart cannon, white star
+    id: 21
     Category: heavy_weapons
     Type: Plasma
     Level: 13
@@ -2541,6 +2745,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (10 ft.), unwieldy
   - Name: Plasma cannon, yellow star
+    id: 22
     Category: heavy_weapons
     Type: Plasma
     Level: 14
@@ -2553,6 +2758,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (5 ft.), unwieldy
   - Name: Plasma cannon, white star
+    id: 23
     Category: heavy_weapons
     Type: Plasma
     Level: 16
@@ -2565,6 +2771,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (5 ft.), unwieldy
   - Name: Starheart cannon, blue star
+    id: 24
     Category: heavy_weapons
     Type: Plasma
     Level: 18
@@ -2577,6 +2784,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Bright, explode (15 ft.), unwieldy
   - Name: Plasma cannon, blue star
+    id: 25
     Category: heavy_weapons
     Type: Plasma
     Level: 20
@@ -2589,6 +2797,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (10 ft.), unwieldy
   - Name: Reaction cannon, light
+    id: 26
     Category: heavy_weapons
     Type: Projectile
     Level: 1
@@ -2601,6 +2810,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Machine gun, squad
+    id: 27
     Category: heavy_weapons
     Type: Projectile
     Level: 4
@@ -2613,6 +2823,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: X-gen gun, Tactical
+    id: 28
     Category: heavy_weapons
     Type: Projectile
     Level: 6
@@ -2625,6 +2836,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Reaction cannon, Tactical
+    id: 29
     Category: heavy_weapons
     Type: Projectile
     Level: 7
@@ -2637,6 +2849,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Machine gun, light
+    id: 30
     Category: heavy_weapons
     Type: Projectile
     Level: 8
@@ -2649,6 +2862,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: X-gen gun, advanced
+    id: 31
     Category: heavy_weapons
     Type: Projectile
     Level: 9
@@ -2661,6 +2875,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Reaction cannon, heavy
+    id: 32
     Category: heavy_weapons
     Type: Projectile
     Level: 10
@@ -2673,6 +2888,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Stellar cannon, light
+    id: 33
     Category: heavy_weapons
     Type: Projectile
     Level: 10
@@ -2685,6 +2901,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast
   - Name: Crossbolter, advanced
+    id: 34
     Category: heavy_weapons
     Type: Projectile
     Level: 11
@@ -2697,6 +2914,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Machine gun, medium
+    id: 35
     Category: heavy_weapons
     Type: Projectile
     Level: 11
@@ -2709,6 +2927,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: X-gen gun, elite
+    id: 36
     Category: heavy_weapons
     Type: Projectile
     Level: 13
@@ -2721,6 +2940,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Crossbolter, elite
+    id: 37
     Category: heavy_weapons
     Type: Projectile
     Level: 14
@@ -2733,6 +2953,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Reaction cannon, advanced
+    id: 38
     Category: heavy_weapons
     Type: Projectile
     Level: 14
@@ -2745,6 +2966,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Stellar cannon, heavy
+    id: 39
     Category: heavy_weapons
     Type: Projectile
     Level: 15
@@ -2757,6 +2979,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast
   - Name: Machine gun, heavy
+    id: 40
     Category: heavy_weapons
     Type: Projectile
     Level: 17
@@ -2769,6 +2992,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog, automatic
   - Name: Reaction cannon, elite
+    id: 41
     Category: heavy_weapons
     Type: Projectile
     Level: 17
@@ -2781,6 +3005,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: Crossbolter, paragon
+    id: 42
     Category: heavy_weapons
     Type: Projectile
     Level: 18
@@ -2793,6 +3018,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Unwieldy
   - Name: Reaction cannon, paragon
+    id: 43
     Category: heavy_weapons
     Type: Projectile
     Level: 20
@@ -2805,6 +3031,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Penetrating
   - Name: X-gen gun, paragon
+    id: 44
     Category: heavy_weapons
     Type: Projectile
     Level: 20
@@ -2817,6 +3044,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Automatic
   - Name: Anacite ion cannon, static
+    id: 45
     Category: heavy_weapons
     Type: Shock
     Level: 3
@@ -2829,6 +3057,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, static
+    id: 46
     Category: heavy_weapons
     Type: Shock
     Level: 6
@@ -2841,6 +3070,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (10 ft.), unwieldy
   - Name: Anacite ion cannon, aurora
+    id: 47
     Category: heavy_weapons
     Type: Shock
     Level: 8
@@ -2853,6 +3083,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, aurora
+    id: 48
     Category: heavy_weapons
     Type: Shock
     Level: 10
@@ -2865,6 +3096,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (15 ft.), unwieldy
   - Name: Anacite ion cannon, storm
+    id: 49
     Category: heavy_weapons
     Type: Shock
     Level: 13
@@ -2877,6 +3109,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, storm
+    id: 50
     Category: heavy_weapons
     Type: Shock
     Level: 16
@@ -2889,6 +3122,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (20 ft.), unwieldy
   - Name: Anacite ion cannon, tempest
+    id: 51
     Category: heavy_weapons
     Type: Shock
     Level: 18
@@ -2901,6 +3135,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Line, lockdown, unwieldy
   - Name: Shock caster, tempest
+    id: 52
     Category: heavy_weapons
     Type: Shock
     Level: 20
@@ -2913,6 +3148,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Explode (20 ft.), unwieldy
   - Name: Screamer, thunderstrike
+    id: 53
     Category: heavy_weapons
     Type: Sonic
     Level: 5
@@ -2925,6 +3161,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast, unwieldy
   - Name: Screamer, LFD
+    id: 54
     Category: heavy_weapons
     Type: Sonic
     Level: 9
@@ -2937,6 +3174,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast, unwieldy
   - Name: Screamer, HFD
+    id: 55
     Category: heavy_weapons
     Type: Sonic
     Level: 15
@@ -2949,6 +3187,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Blast, unwieldy
   - Name: NIL grenade launcher, merc
+    id: 56
     Category: heavy_weapons
     Type: Uncategorized
     Level: 1
@@ -2961,6 +3200,7 @@ MonoBehaviour:
     Bulk: 2
     Special: Analog
   - Name: NIL grenade launcher, squad
+    id: 57
     Category: heavy_weapons
     Type: Uncategorized
     Level: 8
@@ -2973,6 +3213,7 @@ MonoBehaviour:
     Bulk: 3
     Special: Analog
   - Name: IMDS missile launcher
+    id: 58
     Category: heavy_weapons
     Type: Uncategorized
     Level: 10
@@ -2985,6 +3226,7 @@ MonoBehaviour:
     Bulk: 2
     Special: "\u2014"
   - Name: Carbonedge shuriken (10)
+    id: 1
     Category: thrown
     Type: Uncategorized
     Level: 1
@@ -2997,6 +3239,7 @@ MonoBehaviour:
     Bulk: "\u2014"
     Special: Quick reload, thrown
   - Name: Nyfiber net
+    id: 2
     Category: thrown
     Type: Uncategorized
     Level: 2
@@ -3008,9 +3251,3 @@ MonoBehaviour:
     Usage: 1
     Bulk: 1
     Special: 
-  rangedCategories:
-  - small_arms
-  - longarms
-  - snipers
-  - heavy_weapons
-  - thrown
