@@ -6,13 +6,14 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
-namespace RPGDB
+namespace RpgDB
 {
     public class AmmuntionDatabase : Database
     {
-        public List<Weapon> Ammunition;
-        // ? public static List<Weapon> AmmunitionList;
         public static string[] ammunitionCategories = { "ammunition" };
+
+        public static List<Ammunition> AmmunitionList;
+        public List<Ammunition> Ammunition;
 
         public void Start()
         {
@@ -20,15 +21,24 @@ namespace RPGDB
             if (Ammunition.Count == 0)
             {
             	// Database.LoadData()
-                LoadData(ammunitionCategories, Ammunition);
+                LoadData(ammunitionCategories);
+                Ammunition = AmmunitionList;
             }
         }
 
+        // Add Object to Ammunition List
+        public override void AddObject(JToken item, string category)
+        {
+            Ammunition convertedObject = ConvertObject(item);
+            convertedObject.Category = category;
+            AmmunitionList.Add(convertedObject);
+        }
+
         // Convert JToken object to Ammunition object
-        public static Ammunition ConvertObject(JToken data)
+        public Ammunition ConvertObject(JToken item)
         {
             Ammunition ammunition = new Ammunition();
-            foreach (KeyValuePair<string, JToken> content in (JObject)data)
+            foreach (KeyValuePair<string, JToken> content in (JObject)item)
             {
                 var field = ammunition.GetType().GetField(content.Key);
                 if ((object)field.FieldType == typeof(string))
