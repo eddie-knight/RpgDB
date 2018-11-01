@@ -42,12 +42,14 @@ There are currently several search functions that can be used in the code.
 - `List<Weapon> SearchWeaponsByType(string text)`
 
 **Example Search:**
-> Weapon debugWeapon = FindWeaponByName("Bow");
-> PropertyInfo[] properties = typeof(Weapon).GetProperties();
-> foreach (PropertyInfo property in properties)
-> {
->    Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
-> }
+```
+ Weapon debugWeapon = FindWeaponByName("Bow");
+ PropertyInfo[] properties = typeof(Weapon).GetProperties();
+ foreach (PropertyInfo property in properties)
+ {
+    Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
+ }
+```
 
 ## Optional Modifications
 
