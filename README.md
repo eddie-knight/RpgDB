@@ -1,6 +1,8 @@
 # RPG Database for Unity
 
-Open these files in a scene and add a database script (such as `WeaponDatabase.cs`) to an object. Upon running, the script should be populated with data from each of the weapons in the JSON files.
+This is a simple database builder, designed to process JSON files and drop them in to a static GameObject database for use in RPG style games. 
+
+The following README is simply development notes for reference.
 
 ## Requirements
 
