@@ -1,6 +1,6 @@
 # RPG Database for Unity
 
-Open these files in a scene and add `WeaponDatabase.sh` to an object. Upon running, the script should be populated with data from each of the weapons in the JSON files.
+Open these files in a scene and add a database script (such as `WeaponDatabase.cs`) to an object. Upon running, the script should be populated with data from each of the weapons in the JSON files.
 
 ## Requirements
 
@@ -11,25 +11,7 @@ https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-
 
 #### start()
 
-After attaching this script to a GameObject, `start()` will take effect on run. The function will check to see whether this GameObject already has values populated in the `MeleeWeaponsList` and `RangedWeaponsList`. If not, the values will be populated from the JSON files specified in `meleeCategories` and `rangedCategories`.
-
-```
-public void Start()
-{
-    // Weapon data is only loaded on first instantiation of Prefabs
-    if (MeleeWeapons.Count == 0)
-    {
-        LoadWeaponData(meleeCategories, MeleeWeapons);
-        MeleeWeaponsList = MeleeWeapons;
-    }
-    if (RangedWeapons.Count == 0)
-    {
-        LoadWeaponData(rangedCategories, RangedWeapons);
-        RangedWeaponsList = RangedWeapons;
-    }
-    AllWeaponsList = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
-}
-```
+After attaching this script to a GameObject, `start()` will take effect on run. The function will check to see whether this GameObject already has values populated in the appropriate list(s), such as `MeleeWeaponsList` and `RangedWeaponsList`. If not, the values will be populated from the JSON files specified in the associated category (such as `meleeCategories` and `rangedCategories`).
 
 #### Categories
 
@@ -67,4 +49,23 @@ There are currently several search functions that can be used in the code.
 >    Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
 > }
 
+## Optional Modifications
+
+#### JsonHome
+```
+Relative location of directory containing JSON files
+public static string JsonHome = @"json/";
+```
+In the default case 'MyProject/json" lives beside "MyProject/Assets", so the relative path is "json".
+
+#### Categories
+```
+public static string[] meleeCategories = { "1h_melee", "2h_melee" };
+public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+```
+If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name *and* the appropriate categories list(s) in the associated class object. This enables the data to be properly loaded.
+
+## TODO
+
+#### Searching
 Search functionality will need dramatic improvement. Currently, a simple solution has not been found for creating a dynamic or agnostic search function such as `SearchWeaponsByField(string fieldName, string text)`. Also, __the search functions are all currently case-sensitive__.
