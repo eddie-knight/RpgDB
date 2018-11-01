@@ -1,3 +1,4 @@
+using System.Reflection;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,82 +7,59 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
-namespace RPGDB
+namespace RpgDB
 {
     public class WeaponDatabase : Database
     {
-        public List<Weapon> MeleeWeapons;
-        public static List<Weapon> MeleeWeaponsList;
-
         public static string[] meleeCategories = { "1h_melee", "2h_melee" };
-
-        public List<Weapon> RangedWeapons;
-        public static List<Weapon> RangedWeaponsList;
         public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
 
-        public static List<Weapon> AllWeaponsList;
+        public static List<IRpgObject> MeleeWeapons = new List<IRpgObject>();
+        public static List<IRpgObject> RangedWeapons = new List<IRpgObject>();
+        public static List<Weapon> AllWeapons = new List<Weapon>();
 
         public void Start()
         {
-            // Weapon data is only loaded on first instantiation of Prefabs
-            if (MeleeWeapons.Count == 0)
+            List<Weapon> MeleeWeaponsList = new List<Weapon>();
+            List<Weapon> RangedWeaponsList = new List<Weapon>();
+
+            // Data is only loaded on first instantiation of Prefabs
+            if (MeleeWeaponsList.Count < 1)
             {
-                LoadWeaponData(meleeCategories, MeleeWeapons);
-                MeleeWeaponsList = MeleeWeapons;
+                LoadData(meleeCategories, MeleeWeapons);
+                MeleeWeaponsList = MeleeWeapons.Cast<Weapon>().ToList();
             }
-            if (RangedWeapons.Count == 0)
+            if (RangedWeaponsList.Count < 1)
             {
-                LoadWeaponData(rangedCategories, RangedWeapons);
-                RangedWeaponsList = RangedWeapons;
+                LoadData(rangedCategories, RangedWeapons);
+                RangedWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
             }
-            AllWeaponsList = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
+            if (AllWeapons.Count < 1)
+                AllWeapons = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
+        }
+
+        // Convert JToken to Weapon object, then add to provided list
+        public override void AddObject(JToken item, List<IRpgObject> list, string category)
+        {
+            Weapon convertedObject = (Weapon)ConvertObject(item, category);
+            convertedObject.Category = category;
+            list.Add(convertedObject);
         }
 
         // Convert JToken object to Weapon object
-        public static Weapon ConvertWeapon(JToken data)
+        public override IRpgObject ConvertObject(JToken item, string category)
         {
             Weapon weapon = new Weapon();
-            foreach (KeyValuePair<string, JToken> content in (JObject)data)
+            foreach (KeyValuePair<string, JToken> content in (JObject)item)
             {
-                var field = weapon.GetType().GetField(content.Key);
-                if ((object)field.FieldType == typeof(string))
-                    field.SetValue(weapon, content.Value.Value<string>());
-                else if (field.FieldType == typeof(int))
-                    field.SetValue(weapon, content.Value.Value<int>());
+                var field = weapon.GetType().GetProperty(content.Key);
+                if ((object)field.PropertyType == typeof(string))
+                    field.SetValue(weapon, content.Value.Value<string>(), null);
+                else if (field.PropertyType == typeof(int))
+                    field.SetValue(weapon, content.Value.Value<int>(), null);
             }
             return weapon;
         }
-
-        // Add Weapon to List
-        public static void AddWeapon(JToken weapon, List<Weapon> Weapons, string category, int id)
-        {
-            Weapon convertedWeapon = ConvertWeapon(weapon);
-            convertedWeapon.Category = category;
-            convertedWeapon.id = id;
-            Weapons.Add(convertedWeapon);
-        }
-
-        // Get All Weapon Data from JSON and add to List
-        public static void LoadWeaponDataFromJson(string category, List<Weapon> Weapons)
-        {
-            JToken jsonObject = Database.GetJsonFromFile(category);
-            int id = 1; 
-            foreach (JToken data in jsonObject[category])
-            {
-                AddWeapon(data, Weapons, category, id);
-                id++;
-            }
-        }
-
-        // Convert JSON file data into a List format
-        public void LoadWeaponData(string[] categories, List<Weapon> list)
-        {
-            foreach (string category in categories)
-            {
-                LoadWeaponDataFromJson(category, list);
-            }
-        }
-
 
         // TODO: Fix case-sensitivity on all search functions
 
@@ -89,38 +67,38 @@ namespace RPGDB
         public static List<Weapon> SearchWeaponsByCategory(string category)
         {
             return meleeCategories.Contains(category) || rangedCategories.Contains(category)
-                                  ? AllWeaponsList.FindAll(x => x.Category.Contains(category))
+                                  ? AllWeapons.FindAll(x => x.Category.Contains(category))
                                       : null;
         }
 
         // Return one weapon with exact name
-        public static Weapon FindWeaponByName(string text)
+        public Weapon FindWeaponByName(string text)
         {
-            return AllWeaponsList.Find(x => x.Name.Equals(text));
+            return AllWeapons.Find(x => x.Name.Equals(text));
         }
 
         // Return all melee weapons with text in name
         public static List<Weapon> SearchMeleeWeaponsByName(string text)
         {
-            return MeleeWeaponsList.FindAll(x => x.Name.Contains(text));
+            return MeleeWeapons.FindAll(x => x.Name.Contains(text)).Cast<Weapon>().ToList();
         }
 
         // Return all ranged weapons with text in name
         public static List<Weapon> SearchRangedWeaponsByName(string text)
         {
-            return RangedWeaponsList.FindAll(x => x.Name.Contains(text));
+            return MeleeWeapons.FindAll(x => x.Name.Contains(text)).Cast<Weapon>().ToList();
         }
 
         // Return all weapons with text in name
         public static List<Weapon> SearchWeaponsByName(string text)
         {
-            return AllWeaponsList.FindAll(x => x.Name.Contains(text));
+            return AllWeapons.FindAll(x => x.Name.Contains(text));
         }
 
         // Return all weapons with text in type
         public static List<Weapon> SearchWeaponsByType(string text)
         {
-            return AllWeaponsList.FindAll(x => x.Type.Contains(text));
+            return AllWeapons.FindAll(x => x.Type.Contains(text));
         }
 
     }
