@@ -2,7 +2,7 @@
 
 This is a simple database builder, designed to process JSON files and drop them in to a static GameObject database for use in RPG style games. 
 
-The following README is simply development notes for reference.
+The following README contains development notes for reference.
 
 ## Requirements
 
