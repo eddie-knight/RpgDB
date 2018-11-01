@@ -59,4 +59,12 @@ There are currently several search functions that can be used in the code.
 - `List<Weapon> SearchWeaponsByName(string text)`
 - `List<Weapon> SearchWeaponsByType(string text)`
 
+**Example Search:**
+> Weapon debugWeapon = FindWeaponByName("Bow");
+> PropertyInfo[] properties = typeof(Weapon).GetProperties();
+> foreach (PropertyInfo property in properties)
+> {
+>    Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
+> }
+
 Search functionality will need dramatic improvement. Currently, a simple solution has not been found for creating a dynamic or agnostic search function such as `SearchWeaponsByField(string fieldName, string text)`. Also, __the search functions are all currently case-sensitive__.

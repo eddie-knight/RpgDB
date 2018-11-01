@@ -1,5 +1,6 @@
 namespace RpgDB
 {
+    [System.Serializable]
     public class Ammunition : IRpgObject
     {
         public string Name { get; set; }

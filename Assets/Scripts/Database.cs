@@ -10,8 +10,10 @@ namespace RpgDB
     {
         // Relative location of directory containing JSON files
         public static string JsonHome = @"json/";
-        
-        public abstract void AddObject(JToken item, string category);
+
+        public abstract IRpgObject ConvertObject(JToken item, string category);
+
+        public abstract void AddObject(JToken item, List<IRpgObject> list, string category);
 
         // Convert JSON file to JObject
         public static JObject GetJsonFromFile(string file_path)
@@ -29,21 +31,22 @@ namespace RpgDB
         }
 
         // Get All Object Data from JSON and Add to List
-        public void LoadDataFromJson(string category)
+        public void LoadDataFromJson(string category, List<IRpgObject> list)
         {
             JToken jsonObject = GetJsonFromFile(category);
-            foreach (JToken item in jsonObject[category])
+            foreach (JToken data in jsonObject[category])
             {
-                AddObject(item, category);
+                AddObject(data, list, category);
             }
         }
 
         // Convert JSON file data into a List format
-        public void LoadData(string[] categories)
+        public void LoadData(string[] categories, List<IRpgObject> list)
         {
             foreach (string category in categories)
             {
-                LoadDataFromJson(category);
+                if(category != null)
+                    LoadDataFromJson(category, list);
             }
         }
         
