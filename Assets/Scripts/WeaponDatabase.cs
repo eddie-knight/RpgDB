@@ -1,9 +1,4 @@
-using System.Reflection;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using System.IO;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
@@ -41,24 +36,9 @@ namespace RpgDB
         // Convert JToken to Weapon object, then add to provided list
         public override void AddObject(JToken item, List<IRpgObject> list, string category)
         {
-            Weapon convertedObject = (Weapon)ConvertObject(item, category);
-            convertedObject.Category = category;
-            list.Add(convertedObject);
-        }
-
-        // Convert JToken object to Weapon object
-        public override IRpgObject ConvertObject(JToken item, string category)
-        {
             Weapon weapon = new Weapon();
-            foreach (KeyValuePair<string, JToken> content in (JObject)item)
-            {
-                var field = weapon.GetType().GetProperty(content.Key);
-                if ((object)field.PropertyType == typeof(string))
-                    field.SetValue(weapon, content.Value.Value<string>(), null);
-                else if (field.PropertyType == typeof(int))
-                    field.SetValue(weapon, content.Value.Value<int>(), null);
-            }
-            return weapon;
+            weapon.ConvertObject(item, category);
+            list.Add(weapon);
         }
 
         // TODO: Fix case-sensitivity on all search functions
