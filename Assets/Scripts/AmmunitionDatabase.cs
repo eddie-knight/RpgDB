@@ -1,8 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using System.IO;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
@@ -28,25 +24,9 @@ namespace RpgDB
         // Add Object to Ammunition List
         public override void AddObject(JToken item, List<IRpgObject> list, string category)
         {
-            Ammunition convertedObject = (Ammunition)ConvertObject(item, category);
-            convertedObject.Category = category;
-            list.Add(convertedObject);
-        }
-
-        // Convert JToken object to Ammunition object
-        public override IRpgObject ConvertObject(JToken item, string category)
-        {
             Ammunition ammunition = new Ammunition();
-            foreach (KeyValuePair<string, JToken> content in (JObject)item)
-            {
-                // TODO: This is giving an error in spite of being identical to the non-buggy WeaponDatabase.
-                var field = ammunition.GetType().GetProperty(content.Key);
-                if ((object)field.PropertyType == typeof(string))
-                    field.SetValue(ammunition, content.Value.Value<string>(), null);
-                else if (field.PropertyType == typeof(int))
-                    field.SetValue(ammunition, content.Value.Value<int>(), null);
-            }
-            return ammunition;
+            ammunition.ConvertObject(item, category);
+            list.Add(ammunition);
         }
 
         // TODO: Build Search Functions.

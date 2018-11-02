@@ -2,7 +2,6 @@ using UnityEngine;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-using System.Collections;
 
 namespace RpgDB
 {
@@ -10,8 +9,6 @@ namespace RpgDB
     {
         // Relative location of directory containing JSON files
         public static string JsonHome = @"json/";
-
-        public abstract IRpgObject ConvertObject(JToken item, string category);
 
         public abstract void AddObject(JToken item, List<IRpgObject> list, string category);
 
