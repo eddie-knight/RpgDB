@@ -17,26 +17,9 @@ namespace RpgDB
 
         public override string ToString ()
         {
-            return "[" + id + "] Level " + Level + " " + Category + ": " + Name;
+            return "Name + [" + id + ": Level " + Level + " " + Category + "]";
         }
-
-        public string[] GetStats ()
-        {
-            return new string[] {"Name: " + Name,
-                "Category: " + Category,
-                "Level: " + Level,
-                "Price: " + Price,
-                "Bulk: " + Bulk,
-                "Special: " + Special,
-                "id: " + id};
-        }
-
-        public void DisplayStats()
-        {
-            foreach(string stat in GetStats())
-                Debug.Log(stat);
-        }
-
+        
         public void ConvertObject(JToken item, string category)
         {
             Debug.Log(item);
