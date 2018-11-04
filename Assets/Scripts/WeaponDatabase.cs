@@ -6,7 +6,8 @@ namespace RpgDB
 {
     public class WeaponDatabase : Database
     {
-        public static string[] meleeCategories = { "1h_melee", "2h_melee" };
+
+        public static string[] meleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
         public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
 
         public static List<IRpgObject> MeleeWeapons = new List<IRpgObject>();
