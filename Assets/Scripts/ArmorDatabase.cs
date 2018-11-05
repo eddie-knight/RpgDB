@@ -6,10 +6,10 @@ namespace RpgDB
 {
     public class ArmorDatabase : Database
     {
-        public static string[] ArmorCategories = { "light_armor" };
+        public string[] ArmorCategories = { "light_armor, heavy_armor" };
 
         public static List<IRpgObject> ArmorList = new List<IRpgObject>();
-        public List<Armor> Armor = new List<Armor>();
+        public static List<Armor> Armor = new List<Armor>();
 
         public void Start()
         {
