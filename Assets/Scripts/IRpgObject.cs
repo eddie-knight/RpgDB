@@ -8,6 +8,5 @@ namespace RpgDB
         int Level { get; set; }
         int Price { get; set; }
         string Bulk { get; set; }
-        string Special { get; set; }
     }
 }

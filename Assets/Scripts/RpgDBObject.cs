@@ -13,16 +13,14 @@ namespace RpgDB
         public int Level { get; set; }
         public int Price { get; set; }
         public string Bulk { get; set; }
-        public string Special { get; set; }
 
         public override string ToString ()
         {
-            return "Name + [" + id + ": Level " + Level + " " + Category + "]";
+            return Name + " [Level " + Level + " " + Category + "]";
         }
         
         public void ConvertObject(JToken item, string category)
         {
-            Debug.Log(item);
             Category = category;
             foreach (KeyValuePair<string, JToken> content in (JObject)item)
             {

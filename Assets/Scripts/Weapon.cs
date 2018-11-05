@@ -9,5 +9,6 @@ namespace RpgDB
         public string Damage { get; set; }
         public string Critical { get; set; }
         public int Usage { get; set; }
+        public string Special { get; set; }
     }
 }
