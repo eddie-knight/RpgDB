@@ -6,9 +6,8 @@ namespace RpgDB
 {
     public class WeaponDatabase : Database
     {
-
-        public static string[] meleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
-        public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+        public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
+        public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
 
         public static List<IRpgObject> MeleeWeapons = new List<IRpgObject>();
         public static List<IRpgObject> RangedWeapons = new List<IRpgObject>();
@@ -22,12 +21,12 @@ namespace RpgDB
             // Data is only loaded on first instantiation of Prefabs
             if (MeleeWeaponsList.Count < 1)
             {
-                LoadData(meleeCategories, MeleeWeapons);
+                LoadData(MeleeCategories, MeleeWeapons);
                 MeleeWeaponsList = MeleeWeapons.Cast<Weapon>().ToList();
             }
             if (RangedWeaponsList.Count < 1)
             {
-                LoadData(rangedCategories, RangedWeapons);
+                LoadData(RangedCategories, RangedWeapons);
                 RangedWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
             }
             if (AllWeapons.Count < 1)
@@ -43,14 +42,6 @@ namespace RpgDB
         }
 
         // TODO: Fix case-sensitivity on all search functions
-
-        // If provided category exists, find all weapons with category
-        public static List<Weapon> SearchWeaponsByCategory(string category)
-        {
-            return meleeCategories.Contains(category) || rangedCategories.Contains(category)
-                                  ? AllWeapons.FindAll(x => x.Category.Contains(category))
-                                      : null;
-        }
 
         // Return one weapon with exact name
         public Weapon FindWeaponByName(string text)
