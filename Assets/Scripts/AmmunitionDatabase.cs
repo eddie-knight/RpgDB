@@ -6,10 +6,10 @@ namespace RpgDB
 {
     public class AmmunitionDatabase : Database
     {
-        public static string[] ammunitionCategories = { "ammunition" };
+        public string[] ammunitionCategories = { "ammunition" };
 
         public static List<IRpgObject> AmmunitionList = new List<IRpgObject>();
-        public List<Ammunition> Ammunition = new List<Ammunition>();
+        public static List<Ammunition> Ammunition = new List<Ammunition>();
 
         public void Start()
         {
