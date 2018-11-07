@@ -1,27 +1,29 @@
-﻿using UnityEngine;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
 namespace RpgDB
 {
     [System.Serializable]
-    public class RpgDBObject : IRpgDBEntry
+    public class CharacterClass : IRpgDBEntry
     {
         public string Name { get; set; }
         public int id { get; set; } // Primary Key
-        public string Category { get; set; }
-        public int Level { get; set; }
-        public int Price { get; set; }
-        public string Bulk { get; set; }
+        public string Description { get; set; }
+        public int Hit_Points { get; set; }
+        public int Stamina_Points { get; set; }
+        public string Key_Ability_Score_Text { get; set; }
+        public string Key_Ability_Score { get; set; }
+        public int Skill_Ranks_per_Level { get; set; }
 
-        public override string ToString ()
+        public string Category = "Class";
+
+        public override string ToString()
         {
-            return Name + " [Level " + Level + " " + Category + "]";
+            return Name + " [" + Category + "]";
         }
-        
-        public void ConvertObject(JToken item, string category)
+
+        public void ConvertObject(JToken item)
         {
-            Category = category;
             foreach (KeyValuePair<string, JToken> content in (JObject)item)
             {
                 var field = this.GetType().GetProperty(content.Key);
@@ -31,5 +33,6 @@ namespace RpgDB
                     field.SetValue(this, content.Value.Value<int>(), null);
             }
         }
+
     }
 }
