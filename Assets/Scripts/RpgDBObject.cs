@@ -30,7 +30,6 @@ namespace RpgDB
                 else if (field.PropertyType == typeof(int))
                     field.SetValue(this, content.Value.Value<int>(), null);
             }
-            Debug.Log(this.ToString());
         }
     }
 }
