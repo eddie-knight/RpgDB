@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
@@ -9,8 +9,8 @@ namespace RpgDB
         public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
         public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
 
-        public static List<IRpgObject> MeleeWeapons = new List<IRpgObject>();
-        public static List<IRpgObject> RangedWeapons = new List<IRpgObject>();
+        public static List<IRpgDBEntry> MeleeWeapons = new List<IRpgDBEntry>();
+        public static List<IRpgDBEntry> RangedWeapons = new List<IRpgDBEntry>();
         public static List<Weapon> AllWeapons = new List<Weapon>();
 
         public void Start()
@@ -34,7 +34,7 @@ namespace RpgDB
         }
 
         // Convert JToken to Weapon object, then add to provided list
-        public override void AddObject(JToken item, List<IRpgObject> list, string category)
+        public override void AddObject(JToken item, List<IRpgDBEntry> list, string category)
         {
             Weapon weapon = new Weapon();
             weapon.ConvertObject(item, category);

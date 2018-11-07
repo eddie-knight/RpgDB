@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
@@ -8,7 +8,7 @@ namespace RpgDB
     {
         public string[] ArmorCategories = { "light_armor", "heavy_armor" };
 
-        public static List<IRpgObject> ArmorList = new List<IRpgObject>();
+        public static List<IRpgDBEntry> ArmorList = new List<IRpgDBEntry>();
         public static List<Armor> Armor = new List<Armor>();
 
         public void Start()
@@ -22,7 +22,7 @@ namespace RpgDB
         }
 
         // Add Object to Armor List
-        public override void AddObject(JToken item, List<IRpgObject> list, string category)
+        public override void AddObject(JToken item, List<IRpgDBEntry> list, string category)
         {
             Armor armor = new Armor();
             armor.ConvertObject(item, category);

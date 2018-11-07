@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.IO;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace RpgDB
         // Relative to project home
         public static string JsonHome = @"json/";
 
-        public abstract void AddObject(JToken item, List<IRpgObject> list, string category);
+        public abstract void AddObject(JToken item, List<IRpgDBEntry> list, string category=null);
 
         // Convert JSON file to JObject
         public static JObject GetJsonFromFile(string file_path)
@@ -29,7 +29,7 @@ namespace RpgDB
         }
 
         // Get All Object Data from JSON and Add to List
-        public void LoadDataFromJson(string category, List<IRpgObject> list)
+        public void LoadDataFromJson(string category, List<IRpgDBEntry> list)
         {
             JToken jsonObject = GetJsonFromFile(category);
             foreach (JToken data in jsonObject[category])
@@ -39,7 +39,7 @@ namespace RpgDB
         }
 
         // Convert JSON file data into a List format
-        public void LoadData(string[] categories, List<IRpgObject> list)
+        public void LoadData(string[] categories, List<IRpgDBEntry> list)
         {
             foreach (string category in categories)
             {

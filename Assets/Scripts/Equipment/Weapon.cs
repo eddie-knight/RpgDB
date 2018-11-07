@@ -1,7 +1,7 @@
-namespace RpgDB
+﻿namespace RpgDB
 {
     [System.Serializable]
-    public class Weapon : RpgDBObject, IRpgObject
+    public class Weapon : RpgDBObject, IRpgDBEntry
     {
         public string Type { get; set; }
         public string Range { get; set; }

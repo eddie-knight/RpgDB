@@ -1,7 +1,7 @@
-namespace RpgDB
+﻿namespace RpgDB
 {
     [System.Serializable]
-    public class Armor : RpgDBObject, IRpgObject
+    public class Armor : RpgDBObject, IRpgDBEntry
     {
       public int EAC_Bonus { get; set; }
       public int KAC_Bonus { get; set; }

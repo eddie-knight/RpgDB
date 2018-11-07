@@ -8,7 +8,7 @@ namespace RpgDB
     {
         public string[] UpgradesCategories = { "upgrades" };
 
-        public static List<IRpgObject> UpgradesList = new List<IRpgObject>();
+        public static List<IRpgDBEntry> UpgradesList = new List<IRpgDBEntry>();
         public static List<Upgrade> Upgrades = new List<Upgrade>();
 
         public void Start()
@@ -22,7 +22,7 @@ namespace RpgDB
         }
 
         // Add Object to Upgrades List
-        public override void AddObject(JToken item, List<IRpgObject> list, string category)
+        public override void AddObject(JToken item, List<IRpgDBEntry> list, string category)
         {
             Upgrade Upgrade = new Upgrade();
             Upgrade.ConvertObject(item, category);
