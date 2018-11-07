@@ -7,7 +7,8 @@ namespace RpgDB
 {
     public abstract class Database : MonoBehaviour
     {
-        // Relative location of directory containing JSON files
+        // Location of directory containing JSON files
+        // Relative to project home
         public static string JsonHome = @"json/";
 
         public abstract void AddObject(JToken item, List<IRpgObject> list, string category);
