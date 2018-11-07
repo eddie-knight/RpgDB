@@ -1,6 +1,6 @@
 # RPG Database for Unity
 
-This is a simple database builder, designed to process JSON files and drop them in to a static GameObject database for use in RPG style games. 
+This is a simple database builder for use in RPG style games. 
 
 The following README contains development notes for reference.
 
