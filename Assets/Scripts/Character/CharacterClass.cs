@@ -16,6 +16,12 @@ namespace RpgDB
         public int Skill_Ranks_per_Level { get; set; }
 
         public string Category = "Class";
+        public List<IRpgDBEntry> ClassSkills = new List<IRpgDBEntry>();
+
+        public void Awake()
+        {
+            
+        }
 
         public override string ToString()
         {
@@ -34,5 +40,31 @@ namespace RpgDB
             }
         }
 
+        public void AddObject(JToken item, List<ClassSkills> list, string category)
+        {
+            ClassSkills classSkills = new ClassSkills();
+            classSkills.ConvertObject(item);
+            list.Add(classSkills);
+        }
+
+        public void LoadDataFromJson(string category, List<ClassSkills> list)
+        {
+            JToken jsonObject = Database.GetJsonFromFile(category);
+            foreach (JToken data in jsonObject[category])
+            {
+                AddObject(data, list, category);
+            }
+        }
+
+        public void LoadData(string[] categories, List<ClassSkills> list)
+        {
+            foreach (string category in categories)
+            {
+                if (category != null)
+                    LoadDataFromJson(category, list);
+            }
+        }
+        // Load data from "{{name}}.json"
+        // Create List of ClassStats
     }
 }
