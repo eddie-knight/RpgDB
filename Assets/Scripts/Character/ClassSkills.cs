@@ -21,22 +21,21 @@ namespace RpgDB
         public int Spells_per_Day_lvl5 { get; set; }
         public int Spells_per_Day_lvl6 { get; set; }
 
-        //public override string ToString()
-        //{
-        //    return Name + " [Level " + Level + " " + Category + "]";
-        //}
+        public override string ToString()
+        {
+            return "Skills for a level" + Level + " character.";
+        }
 
-        //public void ConvertObject(JToken item, string category)
-        //{
-        //    Category = category;
-        //    foreach (KeyValuePair<string, JToken> content in (JObject)item)
-        //    {
-        //        var field = this.GetType().GetProperty(content.Key);
-        //        if ((object)field.PropertyType == typeof(string))
-        //            field.SetValue(this, content.Value.Value<string>(), null);
-        //        else if (field.PropertyType == typeof(int))
-        //            field.SetValue(this, content.Value.Value<int>(), null);
-        //    }
-        //}
+        public void ConvertObject(JToken item)
+        {
+            foreach (KeyValuePair<string, JToken> content in (JObject)item)
+            {
+                var field = this.GetType().GetProperty(content.Key);
+                if ((object)field.PropertyType == typeof(string))
+                    field.SetValue(this, content.Value.Value<string>(), null);
+                else if (field.PropertyType == typeof(int))
+                    field.SetValue(this, content.Value.Value<int>(), null);
+            }
+        }
     }
 }
