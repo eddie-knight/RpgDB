@@ -11,9 +11,8 @@ namespace RpgDB
         public static List<IRpgDBEntry> AmmunitionList = new List<IRpgDBEntry>();
         public static List<Ammunition> Ammunition = new List<Ammunition>();
 
-        public void Start()
+        public void Awake()
         {
-            // Data is only loaded on first instantiation of Prefabs
             if (Ammunition.Count < 1)
             {
                 LoadData(ammunitionCategories, AmmunitionList);
@@ -29,7 +28,9 @@ namespace RpgDB
             list.Add(ammunition);
         }
 
-        // TODO: Build Search Functions.
-
+        public Ammunition GetByName(string text)
+        {
+            return Ammunition.Find(x => x.Name.Equals(text));
+        }
     }
 }

@@ -11,9 +11,8 @@ namespace RpgDB
         public static List<IRpgDBEntry> UpgradesList = new List<IRpgDBEntry>();
         public static List<Upgrade> Upgrades = new List<Upgrade>();
 
-        public void Start()
+        public void Awake()
         {
-            // Data is only loaded on first instantiation of Prefabs
             if (Upgrades.Count < 1)
             {
                 LoadData(UpgradesCategories, UpgradesList);
@@ -29,7 +28,10 @@ namespace RpgDB
             list.Add(Upgrade);
         }
 
-        // TODO: Build Search Functions.
+        public Upgrade GetByName(string text)
+        {
+            return Upgrades.Find(x => x.Name.Equals(text));
+        }
 
     }
 }

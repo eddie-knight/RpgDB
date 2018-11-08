@@ -11,9 +11,8 @@ namespace RpgDB
         public static List<IRpgDBEntry> ArmorList = new List<IRpgDBEntry>();
         public static List<Armor> Armor = new List<Armor>();
 
-        public void Start()
+        public void Awake()
         {
-            // Data is only loaded on first instantiation of Prefabs
             if (Armor.Count < 1)
             {
                 LoadData(ArmorCategories, ArmorList);
@@ -28,5 +27,11 @@ namespace RpgDB
             armor.ConvertObject(item, category);
             list.Add(armor);
         }
+
+        public Armor GetByName(string text)
+        {
+            return Armor.Find(x => x.Name.Equals(text));
+        }
+
     }
 }
