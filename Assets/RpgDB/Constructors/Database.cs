@@ -9,7 +9,7 @@ namespace RpgDB
     {
         // Location of directory containing JSON files
         // Relative to project home
-        public static string JsonHome = @"json/";
+        public static string JsonHome = @"Assets/RpgDB/json/";
 
         public abstract void AddObject(JToken item, List<IRpgDBEntry> list, string category=null);
 

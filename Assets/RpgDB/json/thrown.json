@@ -1,0 +1,31 @@
+{
+  "thrown":
+  [
+    {
+      "Type": "Uncategorized",
+      "Name": "Carbonedge shuriken (10)",
+      "Level": 1,
+      "Price": 85,
+      "Damage": "1d4 P",
+      "Range": "10 ft.",
+      "Critical": "bleed 1d4",
+      "Capacity": "Drawn",
+      "Usage": 1,
+      "Bulk": "—",
+      "Special": "Quick reload, thrown"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Nyfiber net",
+      "Level": 2,
+      "Price": 460,
+      "Damage": "—",
+      "Range": "10 ft.",
+      "Critical": "—",
+      "Capacity": "Drawn",
+      "Usage": 1,
+      "Bulk": 1,
+      "Special": ""
+    }
+  ]
+}

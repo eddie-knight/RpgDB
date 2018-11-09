@@ -1,0 +1,335 @@
+{
+  "2h_melee": 
+  [
+    {
+      "Type": "Cryo",
+      "Name": "Cryopike, Tactical",
+      "Level": 5,
+      "Price": 3360,
+      "Damage": "1d8 C",
+      "Critical": "—",
+      "Bulk": 2,
+      "Special": "Powered (capacity 40, usage 2), reach"
+    },
+    {
+      "Type": "Cryo",
+      "Name": "Cryopike, advanced",
+      "Level": 12,
+      "Price": 34800,
+      "Damage": "2d8 C",
+      "Critical": "Staggered",
+      "Bulk": 2,
+      "Special": "Powered (capacity 40, usage 2), reach"
+    },
+    {
+      "Type": "Flame",
+      "Name": "Flame doshko, ember",
+      "Level": 2,
+      "Price": 750,
+      "Damage": "1d8 F",
+      "Critical": "Wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Flame",
+      "Name": "Flame doshko, blaze",
+      "Level": 8,
+      "Price": 8500,
+      "Damage": "2d8 F",
+      "Critical": "Wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Flame",
+      "Name": "Flame doshko, inferno",
+      "Level": 13,
+      "Price": 53200,
+      "Damage": "5d8 F",
+      "Critical": "Wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Flame",
+      "Name": "Flame doshko, Solar flare",
+      "Level": 19,
+      "Price": 595000,
+      "Damage": "10d8 F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma doshko, red star",
+      "Level": 6,
+      "Price": 4650,
+      "Damage": "1d10 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma doshko, yellow star",
+      "Level": 10,
+      "Price": 17000,
+      "Damage": "2d10 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma doshko, white star",
+      "Level": 15,
+      "Price": 126800,
+      "Damage": "5d10 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Plasma",
+      "Name": "Plasma doshko, blue star",
+      "Level": 18,
+      "Price": 364100,
+      "Damage": "7d10 E & F",
+      "Critical": "Severe wound",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 2)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Doshko, Tactical",
+      "Level": 1,
+      "Price": 240,
+      "Damage": "1d12 P",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Pike, Tactical",
+      "Level": 2,
+      "Price": 475,
+      "Damage": "1d8 P",
+      "Critical": "—",
+      "Bulk": 2,
+      "Special": "Analog, reach"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Curve blade, carbon steel",
+      "Level": 4,
+      "Price": 2230,
+      "Damage": "1d10 S",
+      "Critical": "Bleed 1d6",
+      "Bulk": 2,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Swoop hammer, Tactical",
+      "Level": 5,
+      "Price": 3360,
+      "Damage": "1d10 B",
+      "Critical": "Knockdown",
+      "Bulk": 2,
+      "Special": "Analog, reach, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Devastation blade, wrack",
+      "Level": 7,
+      "Price": 5500,
+      "Damage": "2d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Doshko, advanced",
+      "Level": 7,
+      "Price": 5300,
+      "Damage": "2d12 P",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Staff, sentinel",
+      "Level": 7,
+      "Price": 6320,
+      "Damage": "1d10 B",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Block, powered (capacity 20, usage 1), stun"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Pike, advanced",
+      "Level": 9,
+      "Price": 12200,
+      "Damage": "2d8 P",
+      "Critical": "Bleed 1d8",
+      "Bulk": 2,
+      "Special": "Analog, reach"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Swoop hammer, advanced",
+      "Level": 9,
+      "Price": 14300,
+      "Damage": "3d10 B",
+      "Critical": "Knockdown",
+      "Bulk": 2,
+      "Special": "Analog, reach, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Curve blade, ultrathin",
+      "Level": 10,
+      "Price": 18100,
+      "Damage": "3d10 S",
+      "Critical": "Bleed 2d6",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Doshko, ultrathin",
+      "Level": 11,
+      "Price": 24600,
+      "Damage": "4d12 P",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Devastation blade, ruin",
+      "Level": 13,
+      "Price": 43900,
+      "Damage": "5d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Staff, repeller",
+      "Level": 13,
+      "Price": 45200,
+      "Damage": "3d8 B",
+      "Critical": "Knockdown",
+      "Bulk": 1,
+      "Special": "Block, powered (capacity 20, usage 1), stun"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Swoop hammer, mach I",
+      "Level": 13,
+      "Price": 44100,
+      "Damage": "5d10 B",
+      "Critical": "Knockdown",
+      "Bulk": 2,
+      "Special": "Powered (capacity 40, usage 4), reach, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Doshko, zero-edge",
+      "Level": 14,
+      "Price": 71500,
+      "Damage": "7d12 P",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Pike, elite",
+      "Level": 15,
+      "Price": 95700,
+      "Damage": "7d8 P",
+      "Critical": "Bleed 3d8",
+      "Bulk": 2,
+      "Special": "Analog, reach"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Curve blade, buzzblade",
+      "Level": 16,
+      "Price": 184300,
+      "Damage": "8d10 S",
+      "Critical": "Bleed 5d6",
+      "Bulk": 2,
+      "Special": "Powered (capacity 40, usage 2)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Doshko, molecular rift",
+      "Level": 17,
+      "Price": 248000,
+      "Damage": "10d12 P",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Powered (capacity 20, usage 1), unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Swoop hammer, mach II",
+      "Level": 17,
+      "Price": 273000,
+      "Damage": "10d10 B",
+      "Critical": "Knockdown",
+      "Bulk": 2,
+      "Special": "Analog, reach, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Devastation blade, apocalypse",
+      "Level": 18,
+      "Price": 410200,
+      "Damage": "12d8 S",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Doshko, dimensional blade",
+      "Level": 19,
+      "Price": 546100,
+      "Damage": "13d12 P",
+      "Critical": "—",
+      "Bulk": 1,
+      "Special": "Analog, unwieldy"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Curve blade, dimensional slice",
+      "Level": 20,
+      "Price": 815000,
+      "Damage": "12d10 S",
+      "Critical": "Bleed 6d6",
+      "Bulk": 2,
+      "Special": "Powered (capacity 40, usage 2)"
+    },
+    {
+      "Type": "Uncategorized",
+      "Name": "Swoop hammer, mach III",
+      "Level": 20,
+      "Price": 905700,
+      "Damage": "14d10 B & F",
+      "Critical": "Knockdown",
+      "Bulk": 2,
+      "Special": "Powered (capacity 40, usage 4), reach, unwieldy"
+    }
+  ]
+}

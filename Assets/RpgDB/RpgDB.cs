@@ -22,7 +22,6 @@ namespace RpgDB
 
         private void Start()
         {
-            Weapons.Awake();
         }
     }
 }
