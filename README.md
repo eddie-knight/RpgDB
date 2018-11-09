@@ -25,7 +25,7 @@ Categories are defined at the top of the WeaponsDatabase class, and are used on 
 
 #### JSON
 
-The `json/` directory is used for adding data to Assets. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `Database.JsonHome` accordingly.
+The `/json` directory is used for housing data files. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `Database.JsonHome` accordingly.
 
 > **Debugging Tip:**
 > If an error occurs due to a JSON entry, run the script
@@ -34,14 +34,11 @@ The `json/` directory is used for adding data to Assets. The JSON files are hand
 
 #### Search
 
-There are currently several search functions that can be used in the code.
+There is currently one primary search function that can be used in the code: 
 
-- `List<Weapon> SearchWeaponsByCategory(string category)`
-- `Weapon FindWeaponByName(string text)`
-- `List<Weapon> SearchMeleeWeaponsByName(string text)`
-- `List<Weapon> SearchRangedWeaponsByName(string text)`
-- `List<Weapon> SearchWeaponsByName(string text)`
-- `List<Weapon> SearchWeaponsByType(string text)`
+`Database.GetByName()`
+
+This returns an object of the type that is specific to the database, such as `class Weapon`
 
 **Example Search:**
 ```
@@ -72,4 +69,4 @@ If the JSON file names are modified, or if additional files are added, be sure t
 ## TODO
 
 #### Searching
-Search functionality will need dramatic improvement. Currently, a simple solution has not been found for creating a dynamic or agnostic search function such as `SearchWeaponsByField(string fieldName, string text)`. Also, __the search functions are all currently case-sensitive__.
+Search functionality will need dramatic improvement. Currently, the only reliable search function across all categories is `GetByName()`. WeaponDatabase has starters for other search types that should be refined before being implemented elsewhere. Also, __the search functions are all currently case-sensitive__.
