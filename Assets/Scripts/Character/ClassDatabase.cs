@@ -12,9 +12,8 @@ namespace RpgDB
         public static List<IRpgDBEntry> ClassList = new List<IRpgDBEntry>();
         public static List<CharacterClass> Classes = new List<CharacterClass>();
 
-        public void Start()
+        public void Awake()
         {
-            // Data is only loaded on first instantiation of Prefabs
             if (Classes.Count < 1)
             {
                 LoadData(classCategories, ClassList);
@@ -30,9 +29,7 @@ namespace RpgDB
             list.Add(characterClass);
         }
 
-        // TODO: Build Search Functions.
-
-        public CharacterClass FindClassByName(string text)
+        public CharacterClass GetByName(string text)
         {
             return Classes.Find(x => x.Name.Equals(text));
         }

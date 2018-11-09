@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Linq;
+using UnityEngine;
 
 namespace RpgDB
 {
@@ -11,14 +12,14 @@ namespace RpgDB
 
         public static List<IRpgDBEntry> MeleeWeapons = new List<IRpgDBEntry>();
         public static List<IRpgDBEntry> RangedWeapons = new List<IRpgDBEntry>();
+
         public static List<Weapon> AllWeapons = new List<Weapon>();
 
-        public void Start()
+        public void Awake()
         {
             List<Weapon> MeleeWeaponsList = new List<Weapon>();
             List<Weapon> RangedWeaponsList = new List<Weapon>();
 
-            // Data is only loaded on first instantiation of Prefabs
             if (MeleeWeaponsList.Count < 1)
             {
                 LoadData(MeleeCategories, MeleeWeapons);
@@ -44,21 +45,9 @@ namespace RpgDB
         // TODO: Fix case-sensitivity on all search functions
 
         // Return one weapon with exact name
-        public Weapon FindWeaponByName(string text)
+        public Weapon GetByName(string text)
         {
             return AllWeapons.Find(x => x.Name.Equals(text));
-        }
-
-        // Return all melee weapons with text in name
-        public static List<Weapon> SearchMeleeWeaponsByName(string text)
-        {
-            return MeleeWeapons.FindAll(x => x.Name.Contains(text)).Cast<Weapon>().ToList();
-        }
-
-        // Return all ranged weapons with text in name
-        public static List<Weapon> SearchRangedWeaponsByName(string text)
-        {
-            return MeleeWeapons.FindAll(x => x.Name.Contains(text)).Cast<Weapon>().ToList();
         }
 
         // Return all weapons with text in name
