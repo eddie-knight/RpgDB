@@ -11,11 +11,11 @@ https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-
 
 ## Functionality
 
-#### start()
+### start()
 
 After attaching this script to a GameObject, `start()` will take effect on run. The function will check to see whether this GameObject already has values populated in the appropriate list(s), such as `MeleeWeaponsList` and `RangedWeaponsList`. If not, the values will be populated from the JSON files specified in the associated category (such as `meleeCategories` and `rangedCategories`).
 
-#### Categories
+### Categories
 
 Categories are defined at the top of the WeaponsDatabase class, and are used on `start()`. The categories are simple strings, which are used for the following:
 
@@ -32,7 +32,7 @@ The `/json` directory is used for housing data files. The JSON files are handled
 > and look at which item is the last entered to the db.
 > The next item on the list caused the error.
 
-#### Search
+### Search
 
 There is currently one primary search function that can be used in the code: 
 
@@ -52,14 +52,14 @@ This returns an object of the type that is specific to the database, such as `cl
 
 ## Optional Modifications
 
-#### JsonHome
+### JsonHome
 ```
 Relative location of directory containing JSON files
 public static string JsonHome = @"json/";
 ```
 In the default case 'MyProject/json" lives beside "MyProject/Assets", so the relative path is "json".
 
-#### Categories
+### Categories
 ```
 public static string[] meleeCategories = { "1h_melee", "2h_melee" };
 public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
@@ -68,5 +68,7 @@ If the JSON file names are modified, or if additional files are added, be sure t
 
 ## TODO
 
-#### Searching
-Search functionality will need dramatic improvement. Currently, the only reliable search function across all categories is `GetByName()`. WeaponDatabase has starters for other search types that should be refined before being implemented elsewhere. Also, __the search functions are all currently case-sensitive__.
+### Searching
+Search functionality will need dramatic improvement. Currently, the only reliable search function across all categories is `GetByName()`. WeaponDatabase has starters for other search types that should be refined before being implemented elsewhere. 
+
+Also, __the search functions are all currently case-sensitive__.
