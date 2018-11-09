@@ -2,7 +2,7 @@
   "Solarian":
   [
     {
-      "Class_Level": 1,
+      "Level": 1,
       "Base_Attack_Bonus": 1,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 0,
@@ -12,7 +12,7 @@
       "Solar_Weapon": "1d6"
     },
     {
-      "Class_Level": 2,
+      "Level": 2,
       "Base_Attack_Bonus": 2,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 0,
@@ -22,7 +22,7 @@
       "Solar_Weapon": "1d6"
     },
     {
-      "Class_Level": 3,
+      "Level": 3,
       "Base_Attack_Bonus": 3,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 1,
@@ -32,7 +32,7 @@
       "Solar_Weapon": "1d6"
     },
     {
-      "Class_Level": 4,
+      "Level": 4,
       "Base_Attack_Bonus": 4,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 1,
@@ -42,7 +42,7 @@
       "Solar_Weapon": "1d6"
     },
     {
-      "Class_Level": 5,
+      "Level": 5,
       "Base_Attack_Bonus": 5,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 1,
@@ -52,7 +52,7 @@
       "Solar_Weapon": "1d6"
     },
     {
-      "Class_Level": 6,
+      "Level": 6,
       "Base_Attack_Bonus": 6,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 2,
@@ -62,7 +62,7 @@
       "Solar_Weapon": "2d6"
     },
     {
-      "Class_Level": 7,
+      "Level": 7,
       "Base_Attack_Bonus": 7,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 2,
@@ -72,7 +72,7 @@
       "Solar_Weapon": "2d6"
     },
     {
-      "Class_Level": 8,
+      "Level": 8,
       "Base_Attack_Bonus": 8,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 2,
@@ -82,7 +82,7 @@
       "Solar_Weapon": "2d6"
     },
     {
-      "Class_Level": 9,
+      "Level": 9,
       "Base_Attack_Bonus": 9,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 3,
@@ -92,7 +92,7 @@
       "Solar_Weapon": "3d6"
     },
     {
-      "Class_Level": 10,
+      "Level": 10,
       "Base_Attack_Bonus": 10,
       "Fort_Save_Bonus": 7,
       "Ref_Save_Bonus": 3,
@@ -102,7 +102,7 @@
       "Solar_Weapon": "3d6"
     },
     {
-      "Class_Level": 11,
+      "Level": 11,
       "Base_Attack_Bonus": 11,
       "Fort_Save_Bonus": 7,
       "Ref_Save_Bonus": 3,
@@ -112,7 +112,7 @@
       "Solar_Weapon": "3d6"
     },
     {
-      "Class_Level": 12,
+      "Level": 12,
       "Base_Attack_Bonus": 12,
       "Fort_Save_Bonus": 8,
       "Ref_Save_Bonus": 4,
@@ -122,7 +122,7 @@
       "Solar_Weapon": "4d6"
     },
     {
-      "Class_Level": 13,
+      "Level": 13,
       "Base_Attack_Bonus": 13,
       "Fort_Save_Bonus": 8,
       "Ref_Save_Bonus": 4,
@@ -132,7 +132,7 @@
       "Solar_Weapon": "5d6"
     },
     {
-      "Class_Level": 14,
+      "Level": 14,
       "Base_Attack_Bonus": 14,
       "Fort_Save_Bonus": 9,
       "Ref_Save_Bonus": 4,
@@ -142,7 +142,7 @@
       "Solar_Weapon": "6d6"
     },
     {
-      "Class_Level": 15,
+      "Level": 15,
       "Base_Attack_Bonus": 15,
       "Fort_Save_Bonus": 9,
       "Ref_Save_Bonus": 5,
@@ -152,7 +152,7 @@
       "Solar_Weapon": "7d6"
     },
     {
-      "Class_Level": 16,
+      "Level": 16,
       "Base_Attack_Bonus": 16,
       "Fort_Save_Bonus": 10,
       "Ref_Save_Bonus": 5,
@@ -162,7 +162,7 @@
       "Solar_Weapon": "8d6"
     },
     {
-      "Class_Level": 17,
+      "Level": 17,
       "Base_Attack_Bonus": 17,
       "Fort_Save_Bonus": 10,
       "Ref_Save_Bonus": 5,
@@ -172,7 +172,7 @@
       "Solar_Weapon": "9d6"
     },
     {
-      "Class_Level": 18,
+      "Level": 18,
       "Base_Attack_Bonus": 18,
       "Fort_Save_Bonus": 11,
       "Ref_Save_Bonus": 6,
@@ -182,7 +182,7 @@
       "Solar_Weapon": "10d6"
     },
     {
-      "Class_Level": 19,
+      "Level": 19,
       "Base_Attack_Bonus": 19,
       "Fort_Save_Bonus": 11,
       "Ref_Save_Bonus": 6,
@@ -192,7 +192,7 @@
       "Solar_Weapon": "11d6"
     },
     {
-      "Class_Level": 20,
+      "Level": 20,
       "Base_Attack_Bonus": 20,
       "Fort_Save_Bonus": 12,
       "Ref_Save_Bonus": 6,

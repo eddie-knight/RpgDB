@@ -2,49 +2,49 @@
   "Mystic":
   [
     {
-      "Class_Level": 1,
+      "Level": 1,
       "Base_Attack_Bonus": 0,
       "Fort_Save_Bonus": 0,
       "Ref_Save_Bonus": 0,
       "Will_Save_Bonus": 2,
       "Class_Features": "Connection, connection power, connection spell, healing touch",
       "Spells_per_Day_lvl1": 2,
-      "Spells_per_Day_lvl2": "",
-      "Spells_per_Day_lvl3": "",
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl2": 0,
+      "Spells_per_Day_lvl3": 0,
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 2,
+      "Level": 2,
       "Base_Attack_Bonus": 1,
       "Fort_Save_Bonus": 0,
       "Ref_Save_Bonus": 0,
       "Will_Save_Bonus": 3,
       "Class_Features": "Channel skill +1, mindlink",
       "Spells_per_Day_lvl1": 2,
-      "Spells_per_Day_lvl2": "",
-      "Spells_per_Day_lvl3": "",
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl2": 0,
+      "Spells_per_Day_lvl3": 0,
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 3,
+      "Level": 3,
       "Base_Attack_Bonus": 2,
       "Fort_Save_Bonus": 1,
       "Ref_Save_Bonus": 1,
       "Will_Save_Bonus": 3,
       "Class_Features": "Connection power, weapon specialization",
       "Spells_per_Day_lvl1": 3,
-      "Spells_per_Day_lvl2": "",
-      "Spells_per_Day_lvl3": "",
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl2": 0,
+      "Spells_per_Day_lvl3": 0,
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 4,
+      "Level": 4,
       "Base_Attack_Bonus": 3,
       "Fort_Save_Bonus": 1,
       "Ref_Save_Bonus": 1,
@@ -52,13 +52,13 @@
       "Class_Features": "Connection spell",
       "Spells_per_Day_lvl1": 3,
       "Spells_per_Day_lvl2": 2,
-      "Spells_per_Day_lvl3": "",
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl3": 0,
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 5,
+      "Level": 5,
       "Base_Attack_Bonus": 3,
       "Fort_Save_Bonus": 1,
       "Ref_Save_Bonus": 1,
@@ -66,13 +66,13 @@
       "Class_Features": "Channel skill +2",
       "Spells_per_Day_lvl1": 4,
       "Spells_per_Day_lvl2": 2,
-      "Spells_per_Day_lvl3": "",
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl3": 0,
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 6,
+      "Level": 6,
       "Base_Attack_Bonus": 4,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 2,
@@ -80,13 +80,13 @@
       "Class_Features": "Connection power",
       "Spells_per_Day_lvl1": 4,
       "Spells_per_Day_lvl2": 3,
-      "Spells_per_Day_lvl3": "",
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl3": 0,
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 7,
+      "Level": 7,
       "Base_Attack_Bonus": 5,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 2,
@@ -95,12 +95,12 @@
       "Spells_per_Day_lvl1": 4,
       "Spells_per_Day_lvl2": 3,
       "Spells_per_Day_lvl3": 2,
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 8,
+      "Level": 8,
       "Base_Attack_Bonus": 6,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 2,
@@ -109,12 +109,12 @@
       "Spells_per_Day_lvl1": 4,
       "Spells_per_Day_lvl2": 4,
       "Spells_per_Day_lvl3": 2,
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 9,
+      "Level": 9,
       "Base_Attack_Bonus": 6,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 3,
@@ -123,12 +123,12 @@
       "Spells_per_Day_lvl1": 5,
       "Spells_per_Day_lvl2": 4,
       "Spells_per_Day_lvl3": 3,
-      "Spells_per_Day_lvl4": "",
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl4": 0,
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 10,
+      "Level": 10,
       "Base_Attack_Bonus": 7,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 3,
@@ -138,11 +138,11 @@
       "Spells_per_Day_lvl2": 4,
       "Spells_per_Day_lvl3": 3,
       "Spells_per_Day_lvl4": 2,
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 11,
+      "Level": 11,
       "Base_Attack_Bonus": 8,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 3,
@@ -152,11 +152,11 @@
       "Spells_per_Day_lvl2": 4,
       "Spells_per_Day_lvl3": 4,
       "Spells_per_Day_lvl4": 2,
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 12,
+      "Level": 12,
       "Base_Attack_Bonus": 9,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 4,
@@ -166,11 +166,11 @@
       "Spells_per_Day_lvl2": 5,
       "Spells_per_Day_lvl3": 4,
       "Spells_per_Day_lvl4": 3,
-      "Spells_per_Day_lvl5": "",
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl5": 0,
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 13,
+      "Level": 13,
       "Base_Attack_Bonus": 9,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 4,
@@ -181,10 +181,10 @@
       "Spells_per_Day_lvl3": 4,
       "Spells_per_Day_lvl4": 3,
       "Spells_per_Day_lvl5": 2,
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 14,
+      "Level": 14,
       "Base_Attack_Bonus": 10,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 4,
@@ -195,10 +195,10 @@
       "Spells_per_Day_lvl3": 4,
       "Spells_per_Day_lvl4": 4,
       "Spells_per_Day_lvl5": 2,
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 15,
+      "Level": 15,
       "Base_Attack_Bonus": 11,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 5,
@@ -209,10 +209,10 @@
       "Spells_per_Day_lvl3": 5,
       "Spells_per_Day_lvl4": 4,
       "Spells_per_Day_lvl5": 3,
-      "Spells_per_Day_lvl6": ""
+      "Spells_per_Day_lvl6": 0
     },
     {
-      "Class_Level": 16,
+      "Level": 16,
       "Base_Attack_Bonus": 12,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 5,
@@ -226,7 +226,7 @@
       "Spells_per_Day_lvl6": 2
     },
     {
-      "Class_Level": 17,
+      "Level": 17,
       "Base_Attack_Bonus": 12,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 5,
@@ -240,7 +240,7 @@
       "Spells_per_Day_lvl6": 2
     },
     {
-      "Class_Level": 18,
+      "Level": 18,
       "Base_Attack_Bonus": 13,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 6,
@@ -254,7 +254,7 @@
       "Spells_per_Day_lvl6": 3
     },
     {
-      "Class_Level": 19,
+      "Level": 19,
       "Base_Attack_Bonus": 14,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 6,
@@ -268,7 +268,7 @@
       "Spells_per_Day_lvl6": 4
     },
     {
-      "Class_Level": 20,
+      "Level": 20,
       "Base_Attack_Bonus": 15,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 6,

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace RpgDB
 {
@@ -14,13 +15,13 @@ namespace RpgDB
         public string Key_Ability_Score_Text { get; set; }
         public string Key_Ability_Score { get; set; }
         public int Skill_Ranks_per_Level { get; set; }
-
         public string Category = "Class";
-        public List<IRpgDBEntry> ClassSkills = new List<IRpgDBEntry>();
+
+        public List<ClassSkills> ClassSkills = new List<ClassSkills>();
 
         public void Awake()
         {
-            
+            LoadSkills();
         }
 
         public override string ToString()
@@ -40,30 +41,22 @@ namespace RpgDB
             }
         }
 
-        public void AddObject(JToken item, List<ClassSkills> list, string category)
+        public void AddObject(JToken item)
         {
             ClassSkills classSkills = new ClassSkills();
             classSkills.ConvertObject(item);
-            list.Add(classSkills);
+            ClassSkills.Add(classSkills);
         }
 
-        public void LoadDataFromJson(string category, List<ClassSkills> list)
+        public void LoadSkills()
         {
-            JToken jsonObject = Database.GetJsonFromFile(category);
-            foreach (JToken data in jsonObject[category])
+            JToken jsonObject = Database.GetJsonFromFile(Name);
+            foreach (JToken data in jsonObject[Name])
             {
-                AddObject(data, list, category);
+                AddObject(data);
             }
         }
 
-        public void LoadData(string[] categories, List<ClassSkills> list)
-        {
-            foreach (string category in categories)
-            {
-                if (category != null)
-                    LoadDataFromJson(category, list);
-            }
-        }
         // Load data from "{{name}}.json"
         // Create List of ClassStats
     }

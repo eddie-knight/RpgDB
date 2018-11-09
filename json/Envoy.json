@@ -2,7 +2,7 @@
   "Envoy":
   [
     {
-      "Class_Level": 1,
+      "Level": 1,
       "Base_Attack_Bonus": 0,
       "Fort_Save_Bonus": 0,
       "Ref_Save_Bonus": 2,
@@ -10,7 +10,7 @@
       "Class_Features": "Envoy improvisation, expertise (1d6), skill expertise"
     },
     {
-      "Class_Level": 2,
+      "Level": 2,
       "Base_Attack_Bonus": 1,
       "Fort_Save_Bonus": 0,
       "Ref_Save_Bonus": 3,
@@ -18,7 +18,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 3,
+      "Level": 3,
       "Base_Attack_Bonus": 2,
       "Fort_Save_Bonus": 1,
       "Ref_Save_Bonus": 3,
@@ -26,7 +26,7 @@
       "Class_Features": "Expertise talent, weapon specialization"
     },
     {
-      "Class_Level": 4,
+      "Level": 4,
       "Base_Attack_Bonus": 3,
       "Fort_Save_Bonus": 1,
       "Ref_Save_Bonus": 4,
@@ -34,7 +34,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 5,
+      "Level": 5,
       "Base_Attack_Bonus": 3,
       "Fort_Save_Bonus": 1,
       "Ref_Save_Bonus": 4,
@@ -42,7 +42,7 @@
       "Class_Features": "Expertise (1d6+1), skill expertise"
     },
     {
-      "Class_Level": 6,
+      "Level": 6,
       "Base_Attack_Bonus": 4,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 5,
@@ -50,7 +50,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 7,
+      "Level": 7,
       "Base_Attack_Bonus": 5,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 5,
@@ -58,7 +58,7 @@
       "Class_Features": "Expertise talent"
     },
     {
-      "Class_Level": 8,
+      "Level": 8,
       "Base_Attack_Bonus": 6,
       "Fort_Save_Bonus": 2,
       "Ref_Save_Bonus": 6,
@@ -66,7 +66,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 9,
+      "Level": 9,
       "Base_Attack_Bonus": 6,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 6,
@@ -74,7 +74,7 @@
       "Class_Features": "Expertise (1d6+2), skill expertise"
     },
     {
-      "Class_Level": 10,
+      "Level": 10,
       "Base_Attack_Bonus": 7,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 7,
@@ -82,7 +82,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 11,
+      "Level": 11,
       "Base_Attack_Bonus": 8,
       "Fort_Save_Bonus": 3,
       "Ref_Save_Bonus": 7,
@@ -90,7 +90,7 @@
       "Class_Features": "Expertise talent"
     },
     {
-      "Class_Level": 12,
+      "Level": 12,
       "Base_Attack_Bonus": 9,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 8,
@@ -98,7 +98,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 13,
+      "Level": 13,
       "Base_Attack_Bonus": 9,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 8,
@@ -106,7 +106,7 @@
       "Class_Features": "Expertise (1d8+2), skill expertise"
     },
     {
-      "Class_Level": 14,
+      "Level": 14,
       "Base_Attack_Bonus": 10,
       "Fort_Save_Bonus": 4,
       "Ref_Save_Bonus": 9,
@@ -114,7 +114,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 15,
+      "Level": 15,
       "Base_Attack_Bonus": 11,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 9,
@@ -122,7 +122,7 @@
       "Class_Features": "Expertise talent"
     },
     {
-      "Class_Level": 16,
+      "Level": 16,
       "Base_Attack_Bonus": 12,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 10,
@@ -130,7 +130,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 17,
+      "Level": 17,
       "Base_Attack_Bonus": 12,
       "Fort_Save_Bonus": 5,
       "Ref_Save_Bonus": 10,
@@ -138,7 +138,7 @@
       "Class_Features": "Expertise (1d8+3), skill expertise"
     },
     {
-      "Class_Level": 18,
+      "Level": 18,
       "Base_Attack_Bonus": 13,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 11,
@@ -146,7 +146,7 @@
       "Class_Features": "Envoy improvisation"
     },
     {
-      "Class_Level": 19,
+      "Level": 19,
       "Base_Attack_Bonus": 14,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 11,
@@ -154,7 +154,7 @@
       "Class_Features": "Expertise talent"
     },
     {
-      "Class_Level": 20,
+      "Level": 20,
       "Base_Attack_Bonus": 15,
       "Fort_Save_Bonus": 6,
       "Ref_Save_Bonus": 12,
