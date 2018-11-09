@@ -23,7 +23,7 @@ namespace RpgDB
 
         public override string ToString()
         {
-            return "Skills for a level" + Level + " character.";
+            return "Skills for a level " + Level + " character.";
         }
 
         public void ConvertObject(JToken item)

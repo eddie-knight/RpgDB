@@ -31,7 +31,9 @@ namespace RpgDB
 
         public CharacterClass GetByName(string text)
         {
-            return Classes.Find(x => x.Name.Equals(text));
+            CharacterClass retrievedClass = Classes.Find(x => x.Name.Equals(text));
+            retrievedClass.Awake();
+            return retrievedClass;
         }
     }
 }
