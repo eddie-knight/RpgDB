@@ -3,14 +3,14 @@ using System.Collections;
 
 namespace RpgDB
 {
-    public class TestObject : MonoBehaviour
+    public class RpgDB : MonoBehaviour
     {
         WeaponDatabase Weapons;
         AmmunitionDatabase Ammunition;
         ArmorDatabase Armor;
         UpgradeDatabase Upgrades;
         ClassDatabase Classes;
-        // Use this for initialization
+
         void Awake()
         {
             Weapons = gameObject.AddComponent(typeof(WeaponDatabase)) as WeaponDatabase;
@@ -22,12 +22,7 @@ namespace RpgDB
 
         private void Start()
         {
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            Weapons.Awake();
         }
     }
 }
