@@ -9,14 +9,14 @@ namespace RpgDB
         public string[] ammunitionCategories = { "ammunition" };
 
         public static List<IRpgDBEntry> AmmunitionList = new List<IRpgDBEntry>();
-        public static List<Ammunition> Ammunition = new List<Ammunition>();
+        public static List<Ammunition> All = new List<Ammunition>();
 
         public void Awake()
         {
-            if (Ammunition.Count < 1)
+            if (All.Count < 1)
             {
                 LoadData(ammunitionCategories, AmmunitionList);
-                Ammunition = AmmunitionList.Cast<Ammunition>().ToList();
+                All = AmmunitionList.Cast<Ammunition>().ToList();
             }
         }
 
@@ -30,7 +30,7 @@ namespace RpgDB
 
         public Ammunition GetByName(string text)
         {
-            return Ammunition.Find(x => x.Name.Equals(text));
+            return All.Find(x => x.Name.Equals(text));
         }
     }
 }

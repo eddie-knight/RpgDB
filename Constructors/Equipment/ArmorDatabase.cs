@@ -9,14 +9,14 @@ namespace RpgDB
         public string[] ArmorCategories = { "light_armor", "heavy_armor" };
 
         public static List<IRpgDBEntry> ArmorList = new List<IRpgDBEntry>();
-        public static List<Armor> Armor = new List<Armor>();
+        public static List<Armor> All = new List<Armor>();
 
         public void Awake()
         {
-            if (Armor.Count < 1)
+            if (All.Count < 1)
             {
                 LoadData(ArmorCategories, ArmorList);
-                Armor = ArmorList.Cast<Armor>().ToList();
+                All = ArmorList.Cast<Armor>().ToList();
             }
         }
 
@@ -30,7 +30,7 @@ namespace RpgDB
 
         public Armor GetByName(string text)
         {
-            return Armor.Find(x => x.Name.Equals(text));
+            return All.Find(x => x.Name.Equals(text));
         }
 
     }
