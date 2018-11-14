@@ -10,14 +10,14 @@ namespace RpgDB
         public string[] classCategories = { "character_classes" };
 
         public static List<IRpgDBEntry> ClassList = new List<IRpgDBEntry>();
-        public static List<CharacterClass> Classes = new List<CharacterClass>();
+        public static List<CharacterClass> All = new List<CharacterClass>();
 
         public void Awake()
         {
-            if (Classes.Count < 1)
+            if (All.Count < 1)
             {
                 LoadData(classCategories, ClassList);
-                Classes = ClassList.Cast<CharacterClass>().ToList();
+                All = ClassList.Cast<CharacterClass>().ToList();
             }
         }
 
@@ -31,7 +31,7 @@ namespace RpgDB
 
         public CharacterClass GetByName(string text)
         {
-            CharacterClass retrievedClass = Classes.Find(x => x.Name.Equals(text));
+            CharacterClass retrievedClass = All.Find(x => x.Name.Equals(text));
             retrievedClass.Awake();
             return retrievedClass;
         }

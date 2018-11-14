@@ -9,14 +9,14 @@ namespace RpgDB
         public string[] UpgradesCategories = { "upgrades" };
 
         public static List<IRpgDBEntry> UpgradesList = new List<IRpgDBEntry>();
-        public static List<Upgrade> Upgrades = new List<Upgrade>();
+        public static List<Upgrade> All = new List<Upgrade>();
 
         public void Awake()
         {
-            if (Upgrades.Count < 1)
+            if (All.Count < 1)
             {
                 LoadData(UpgradesCategories, UpgradesList);
-                Upgrades = UpgradesList.Cast<Upgrade>().ToList();
+                All = UpgradesList.Cast<Upgrade>().ToList();
             }
         }
 
@@ -30,7 +30,7 @@ namespace RpgDB
 
         public Upgrade GetByName(string text)
         {
-            return Upgrades.Find(x => x.Name.Equals(text));
+            return All.Find(x => x.Name.Equals(text));
         }
 
     }
