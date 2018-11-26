@@ -160,12 +160,12 @@ This returns an object of the type that is specific to the database, such as `cl
 
 **Example Search:**
 ```
- Weapon debugWeapon = FindWeaponByName("Bow");
- PropertyInfo[] properties = typeof(Weapon).GetProperties();
- foreach (PropertyInfo property in properties)
- {
-    Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
- }
+Weapon debugWeapon = allWeapons.GetByName("Bow");
+PropertyInfo[] properties = typeof(Weapon).GetProperties();
+foreach (PropertyInfo property in properties)
+{
+Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
+}
 ```
 
 
