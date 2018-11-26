@@ -7,7 +7,7 @@ namespace RpgDB
 {
     public class ClassDatabase : Database
     {
-        public string[] classCategories = { "character_classes" };
+        public string classCategory = "character_classes";
 
         public static List<IRpgDBEntry> ClassList = new List<IRpgDBEntry>();
         public static List<CharacterClass> All = new List<CharacterClass>();
@@ -16,7 +16,7 @@ namespace RpgDB
         {
             if (All.Count < 1)
             {
-                LoadData(classCategories, ClassList);
+                LoadData(classCategory, ClassList);
                 All = ClassList.Cast<CharacterClass>().ToList();
             }
         }

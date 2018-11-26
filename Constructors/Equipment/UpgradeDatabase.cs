@@ -6,7 +6,7 @@ namespace RpgDB
 {
     public class UpgradeDatabase : Database
     {
-        public string[] UpgradesCategories = { "upgrades" };
+        public string UpgradesCategory = "upgrades";
 
         public static List<IRpgDBEntry> UpgradesList = new List<IRpgDBEntry>();
         public static List<Upgrade> All = new List<Upgrade>();
@@ -15,7 +15,7 @@ namespace RpgDB
         {
             if (All.Count < 1)
             {
-                LoadData(UpgradesCategories, UpgradesList);
+                LoadData(UpgradesCategory, UpgradesList);
                 All = UpgradesList.Cast<Upgrade>().ToList();
             }
         }

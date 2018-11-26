@@ -6,7 +6,7 @@ namespace RpgDB
 {
     public class AmmunitionDatabase : Database
     {
-        public string[] ammunitionCategories = { "ammunition" };
+        public string ammunitionCategory = "ammunition";
 
         public static List<IRpgDBEntry> AmmunitionList = new List<IRpgDBEntry>();
         public static List<Ammunition> All = new List<Ammunition>();
@@ -15,7 +15,7 @@ namespace RpgDB
         {
             if (All.Count < 1)
             {
-                LoadData(ammunitionCategories, AmmunitionList);
+                LoadData(ammunitionCategory, AmmunitionList);
                 All = AmmunitionList.Cast<Ammunition>().ToList();
             }
         }

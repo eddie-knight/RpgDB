@@ -9,7 +9,7 @@ namespace RpgDB
     {
         public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
         public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
-        public string[] ThrownCategories = { "thrown" };
+        public string ThrownCategory = "thrown";
 
         public static List<IRpgDBEntry> MeleeWeapons = new List<IRpgDBEntry>();
         public static List<IRpgDBEntry> RangedWeapons = new List<IRpgDBEntry>();
@@ -35,7 +35,7 @@ namespace RpgDB
             }
             if (ThrownWeaponsList.Count < 1)
             {
-                LoadData(RangedCategories, RangedWeapons);
+                LoadData(ThrownCategory, RangedWeapons);
                 RangedWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
             }
             if (All.Count < 1)
