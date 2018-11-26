@@ -3,6 +3,9 @@
     [System.Serializable]
     public class Weapon : RpgDBObject, IRpgDBEntry
     {
+        public bool Melee { get; set; }
+        public bool Ranged { get; set; }
+        public bool Thrown { get; set; }
         public string Type { get; set; }
         public string Range { get; set; }
         public string Capacity { get; set; }
