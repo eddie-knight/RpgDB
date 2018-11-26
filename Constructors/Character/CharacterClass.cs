@@ -17,7 +17,9 @@ namespace RpgDB
         public int Skill_Ranks_per_Level { get; set; }
         public string Category = "Class";
 
+        public List<string> Proficiencies = new List<string>();
         public List<ClassSkills> ClassSkills = new List<ClassSkills>();
+        public List<IRpgDBEntry> Inventory = new List<IRpgDBEntry>();
 
         public void Awake()
         {
