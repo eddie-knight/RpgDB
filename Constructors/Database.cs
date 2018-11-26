@@ -24,6 +24,7 @@ namespace RpgDB
                 {
                     file_output += line;
                 }
+                file.Dispose();
             }
             return JObject.Parse(file_output);
         }
@@ -47,6 +48,12 @@ namespace RpgDB
                     LoadDataFromJson(category, list);
             }
         }
-        
+
+        // Convert JSON file data into a List format
+        public void LoadData(string category, List<IRpgDBEntry> list)
+        {
+            LoadDataFromJson(category, list);
+        }
+
     }
 }
