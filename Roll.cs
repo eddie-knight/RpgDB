@@ -5,6 +5,11 @@ namespace RpgDB
     {
         private Random Random = new Random();
 
+        public int rollDie(int die)
+        {
+            return Random.Next(1, (die - 1));
+        }
+
         public int d20()
         {
             return Random.Next(1, 21);
