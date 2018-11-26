@@ -17,6 +17,7 @@ https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-
 ## Overview
 
 ### GameDatabase.cs
+`public class GameDatabase : MonoBehaviour`
 
 After attaching this script to a GameObject, this script will initialize at runtime with several components that hold parsed data. These are held as components so that the JSON is parsed only once, at runtime.
 
@@ -81,6 +82,7 @@ This MonoBehaviour is the base class for the components that are built by `RpgDB
 
 
 ### Constructors/IRpgDBEntry.cs
+`public interface IRpgDBEntry`
 
 This interface does more than create a contract for it's adherants to follow- and the contract it does require is simply a `name` and `id`. The true value of this interface is that it allows dynamic functionality for helper functions that are not benefitted by static typing.
 
@@ -91,10 +93,44 @@ The greatest value of this interface, however, comes in the inventory. By using 
 
 ## Constructors/Character
 
+### Constructors/Character/CharacterClass.cs
+`public class CharacterClass : IRpgDBEntry`
+
+### Constructors/Character/ClassDatabase.cs
+`public class ClassDatabase : Database`
+
+### Constructors/Character/ClassSkills.cs
+`[System.Serializable] public class ClassSkills`
 
 
 ## Constructors/Equipment
 
+### Constructors/Equipment/Ammunition.cs
+`[System.Serializable] public class Ammunition : RpgDBObject, IRpgDBEntry`
+
+### Constructors/Equipment/AmmunitionDatabase.cs
+`public class AmmunitionDatabase : Database`
+
+### Constructors/Equipment/Armor.cs
+`[System.Serializable] public class Armor : RpgDBObject, IRpgDBEntry`
+
+### Constructors/Equipment/ArmorDatabase.cs
+`public class ArmorDatabase : Database`
+
+### Constructors/Equipment/RpgDBObject.cs
+`[System.Serializable] public class RpgDBObject : IRpgDBEntry`
+
+### Constructors/Equipment/Upgrade.cs
+`[System.Serializable] public class Upgrade : RpgDBObject, IRpgDBEntry`
+
+### Constructors/Equipment/UpgradeDatabase.cs
+`public class UpgradeDatabase : Database`
+
+### Constructors/Equipment/Weapon.cs
+`[System.Serializable] public class Weapon : RpgDBObject, IRpgDBEntry`
+
+### Constructors/Equipment/WeaponDatabase.cs
+`public class WeaponDatabase : Database`
 
 
 ### Categories
