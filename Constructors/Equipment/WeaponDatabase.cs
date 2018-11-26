@@ -8,10 +8,12 @@ namespace RpgDB
     public class WeaponDatabase : Database
     {
         public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
-        public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+        public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
+        public string[] ThrownCategories = { "thrown" };
 
         public static List<IRpgDBEntry> MeleeWeapons = new List<IRpgDBEntry>();
         public static List<IRpgDBEntry> RangedWeapons = new List<IRpgDBEntry>();
+        public static List<IRpgDBEntry> ThrownWeapons = new List<IRpgDBEntry>();
 
         public static List<Weapon> All = new List<Weapon>();
 
@@ -19,6 +21,7 @@ namespace RpgDB
         {
             List<Weapon> MeleeWeaponsList = new List<Weapon>();
             List<Weapon> RangedWeaponsList = new List<Weapon>();
+            List<Weapon> ThrownWeaponsList = new List<Weapon>();
 
             if (MeleeWeaponsList.Count < 1)
             {
@@ -30,8 +33,13 @@ namespace RpgDB
                 LoadData(RangedCategories, RangedWeapons);
                 RangedWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
             }
+            if (ThrownWeaponsList.Count < 1)
+            {
+                LoadData(RangedCategories, RangedWeapons);
+                RangedWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
+            }
             if (All.Count < 1)
-                All = MeleeWeaponsList.Union(RangedWeaponsList).ToList();
+                All = MeleeWeaponsList.Union(RangedWeaponsList).Union(ThrownWeaponsList).ToList();
         }
 
         // Convert JToken to Weapon object, then add to provided list
