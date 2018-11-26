@@ -21,7 +21,7 @@ namespace RpgDB
             }
         }
 
-        // Add Object to Ammunition List
+        // Add Object to Class List
         public override void AddObject(JToken item, List<IRpgDBEntry> list, string category)
         {
             CharacterClass characterClass = new CharacterClass();
