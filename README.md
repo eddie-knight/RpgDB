@@ -135,7 +135,7 @@ The greatest value of this interface, however, comes in the inventory. By using 
 
 ### Categories
 
-Categories are defined at the top of the WeaponsDatabase class, and are used on `start()`. The categories are simple strings, which are used for the following:
+Categories are defined at the top of the each class, and are used in `RpgDB.Database.LoadData` on `start()`. The categories are strings (or arrays of strings), which are used for the following:
 
 1. Specify the name of the JSON file. This will be passed as the `file_path` in the method `Database.GetJsonFromFile(file_path)`, which will concatenate it to create the full file path: `JsonHome + file_path + ".json")`
 1. Assist in the parsing of JSON. The object created by `Newtonsoft.Json.Linq.JObject.Parse` requires a top-level JSON object to hold the subsequent entries. Each JSON file will have a top level item that shares the name of the JSON file.
@@ -174,10 +174,11 @@ This returns an object of the type that is specific to the database, such as `cl
 ### Categories
 
 	```
-	public static string[] meleeCategories = { "1h_melee", "2h_melee" };
-	public static string[] rangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons", "thrown" };
+    public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
+    public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
+    public string ThrownCategory = "thrown";
 	```
-	If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name _and_ the appropriate categories list(s) in the associated class object. This enables the data to be properly loaded.
+	If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name in the json file _and_ the appropriate categories list(s) in the associated class object. All three must explicitly match for the data to be properly loaded.
 
 ## TODO
 
