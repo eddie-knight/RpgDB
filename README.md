@@ -173,12 +173,12 @@ This returns an object of the type that is specific to the database, such as `cl
 
 ### Categories
 
-	```
-    public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
-    public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
-    public string ThrownCategory = "thrown";
-	```
-	If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name in the json file _and_ the appropriate categories list(s) in the associated class object. All three must explicitly match for the data to be properly loaded.
+```
+public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
+public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
+public string ThrownCategory = "thrown";
+```
+If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name in the json file _and_ the appropriate categories list(s) in the associated class object. All three must explicitly match for the data to be properly loaded.
 
 ## TODO
 
