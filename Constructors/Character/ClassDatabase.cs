@@ -35,5 +35,13 @@ namespace RpgDB
             retrievedClass.Awake();
             return retrievedClass;
         }
+
+        public Character CreateCharacterByClass(string characterClass)
+        {
+            CharacterClass classObject = GetByName(characterClass);
+            Character character = new Character(classObject);
+            return character;
+        }
+
     }
 }
