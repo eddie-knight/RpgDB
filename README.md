@@ -99,6 +99,8 @@ The greatest value of this interface, however, comes in the inventory. By using 
 ### Constructors/Character/ClassDatabase.cs
 `public class ClassDatabase : Database`
 
+Use `ClassDatabase.CreateCharacter` to convert a character class string into a Character object. This is the recommended method for creating a Character. After creating the Character, it should promptly be given necessary values such as Abilities.
+
 ### Constructors/Character/ClassSkills.cs
 `[System.Serializable] public class ClassSkills`
 
