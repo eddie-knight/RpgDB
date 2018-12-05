@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace RpgDB
 {
-    public class GameDatabase : MonoBehaviour
+    public sealed class GameDatabase : MonoBehaviour
     {
         public WeaponDatabase Weapons;
         public AmmunitionDatabase Ammunition;

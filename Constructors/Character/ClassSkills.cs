@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace RpgDB
 {
     [System.Serializable]
-    public class ClassSkills
+    public sealed class ClassSkills
     {
         public int Level { get; set; }
         public int Base_Attack_Bonus { get; set; }
