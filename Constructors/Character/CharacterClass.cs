@@ -5,17 +5,17 @@ using UnityEngine;
 namespace RpgDB
 {
     [System.Serializable]
-    public class CharacterClass : IRpgDBEntry
+    public sealed class CharacterClass: IRpgDBEntry
     {
         public string Name { get; set; }
-        public int id { get; set; } // Primary Key
+        public string Category = "Class";
         public string Description { get; set; }
-        public int Hit_Points { get; set; }
-        public int Stamina_Points { get; set; }
         public string Key_Ability_Score_Text { get; set; }
         public string Key_Ability_Score { get; set; }
+        public int Level { get; set; }
+        public int Hit_Points { get; set; }
+        public int Stamina_Points { get; set; }
         public int Skill_Ranks_per_Level { get; set; }
-        public string Category = "Class";
 
         public List<string> Proficiencies = new List<string>();
         public List<ClassSkills> ClassSkills = new List<ClassSkills>();
@@ -45,9 +45,9 @@ namespace RpgDB
 
         public void AddObject(JToken item)
         {
-            ClassSkills classSkills = new ClassSkills();
-            classSkills.ConvertObject(item);
-            ClassSkills.Add(classSkills);
+            ClassSkills skills = new ClassSkills();
+            skills.ConvertObject(item);
+            ClassSkills.Add(skills);
         }
 
         public void LoadSkills()
