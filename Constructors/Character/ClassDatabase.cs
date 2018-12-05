@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace RpgDB
 {
-    public class ClassDatabase : Database
+    public sealed class ClassDatabase : Database
     {
         public string classCategory = "character_classes";
 
@@ -36,12 +36,19 @@ namespace RpgDB
             return retrievedClass;
         }
 
-        public Character CreateCharacterByClass(string characterClass)
+        public Character CreateCharacter(string characterClass)
         {
             CharacterClass classObject = GetByName(characterClass);
             Character character = new Character(classObject);
             return character;
         }
 
+        public Character CreateCharacter(string characterClass, int level)
+        {
+            CharacterClass classObject = GetByName(characterClass);
+            classObject.Level = level;
+            Character character = new Character(classObject);
+            return character;
+        }
     }
 }
