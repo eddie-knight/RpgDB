@@ -1,49 +1,47 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Linq;
 using System;
-using RpgDB;
+using System.Collections.Generic;
 
 namespace RpgDB
 {
     // Characters are built from their selected associated class
     // This does not currently allow for multiclassing
-    public class Character : CharacterClass
+    public class Character
     {
-        public string Class;
+        public string Name { get; set; }
+        public int Level { get; set; }
 
-        public int STR;
-        public int DEX;
-        public int CON;
-        public int INT;
-        public int WIS;
-        public int CHA;
+        // These may be functions that look for the class value or
+        // the highest value from multiple classes
+        public int Hit_Points;
         public int Resolve_Points;
-
         public int Base_Save;
         public int BAB;
 
-        public int EAC_Mod;
-        public int KAC_Mod;
-        public int Fortitude_Mod;
-        public int Reflex_Mod;
-        public int Will_Mod;
-        public int Melee_Mod;
-        public int Ranged_Mod;
-        public int Thrown_Mod;
-        public int Initiative_Mod;
 
-        // TODO:
-        // In order to use "professions", we need a way to specify the ability,
-        // and create a reference to the value of the appropriate variable.
+        // Anywhere Character.Class is used, it should check whether
+        // Class = "Multiclass" and subsequently handle Character.Multiclass
+        public CharacterClass Class;
+        public List<CharacterClass> Multiclass = new List<CharacterClass>();
 
-        public Roll Roll = new Roll();
-        public Abilities AbilityRanks = new Abilities();
-        public Abilities AbilityMods = new Abilities();
+        // Provide roll functionality within this class
+        private Roll Roll = new Roll();
+
+        // This requires functions that look for modifiers
+        // in appropriate places and return the highest modifier value
+        public Modifiers Modifiers = new Modifiers();
+
+        public Abilities Abilities = new Abilities();
+        public Skills SkillRanks = new Skills();
 
         public Armor Armor { get; set; }
         public Weapon Right_Hand { get; set; }
         public Weapon Left_Hand { get; set; }
+
+        // TODO:
+        // In order to use "professions", we need function to specify the ability,
+        // and create a reference to the value of the appropriate variable.
+
 
         //
         // Helper function(s)
@@ -60,52 +58,66 @@ namespace RpgDB
 
         public Character(CharacterClass characterClass)
         {
-            Class = characterClass.Name;
-            Description = characterClass.Description;
-            Hit_Points = characterClass.Hit_Points;
-            Stamina_Points = characterClass.Stamina_Points;
-            Key_Ability_Score_Text = characterClass.Key_Ability_Score_Text;
-            Key_Ability_Score = characterClass.Key_Ability_Score;
-            Skill_Ranks_per_Level = characterClass.Skill_Ranks_per_Level;
-            Category = characterClass.Category;
-            Proficiencies = characterClass.Proficiencies;
-            ClassSkills = characterClass.ClassSkills;
+            Level = characterClass.Level;
+            Class = characterClass;
+        }
+
+        // Creates Multiclass Character
+        public Character(List<CharacterClass> characterClasses)
+        {
+            Class = null;
+            Multiclass = characterClasses;
+            foreach (CharacterClass characterClass in characterClasses)
+            {
+                Level += characterClass.Level;
+                // TODO:
+                // Find and store highest modifiers
+            }
         }
 
         public Character Clone()
         {
             Character character = new Character
             {
-                Description = this.Description,
-                Hit_Points = this.Hit_Points,
-                Stamina_Points = this.Stamina_Points,
-                Key_Ability_Score_Text = this.Key_Ability_Score_Text,
-                Key_Ability_Score = this.Key_Ability_Score,
-                Skill_Ranks_per_Level = this.Skill_Ranks_per_Level,
-                Category = this.Category,
-                Proficiencies = this.Proficiencies,
-                ClassSkills = this.ClassSkills
+                // TODO:
+                // Copy all values
             };
-
             return character;
         }
+
+        // need single class and multiclass
+        public Character ApplyAbilityScores(Character character)
+        {
+            // 1. Apply Ability Scores
+            return character;
+        }
+
+
+        public void LevelUp(CharacterClass characterClass)
+        {
+            // 1. Apply Ability Scores
+            // 2. Add New Class Features
+            // 3. Add New Feats or Theme Benefits
+            // 4. Invest Skill Ranks
+        }
+
 
         //
         // Display Calculated Character Stats
 
         public int Initiative()
         {
-            return mod(DEX) + Initiative_Mod;
+            return mod(Abilities.DEX) + Modifiers.Initiative;
         }
 
         public int EAC()
         {
-            return Armor.EAC_Bonus + mod(DEX) + EAC_Mod;
+            return Armor.EAC_Bonus + mod(Abilities.DEX) + Modifiers.EAC;
         }
 
         public int KAC()
         {
-            return Armor.KAC_Bonus + mod(DEX) + KAC_Mod;
+            return Armor.KAC_Bonus + mod(Abilities.DEX) + Modifiers.KAC;
         }
 
         public int AC_Vs_Combat()
@@ -115,131 +127,133 @@ namespace RpgDB
 
         public int Fortitude()
         {
-            return Base_Save + mod(CON) + Fortitude_Mod;
+            return Base_Save + mod(Abilities.CON) + Modifiers.Fortitude;
         }
 
         public int Reflex()
         {
-            return Base_Save + mod(DEX) + Reflex_Mod;
+            return Base_Save + mod(Abilities.DEX) + Modifiers.Reflex;
         }
 
         public int Will()
         {
-            return Base_Save + mod(WIS) + Will_Mod;
+            return Base_Save + mod(Abilities.WIS) + Modifiers.Will;
         }
 
         public int MeleeAttack()
         {
-            return BAB + mod(STR) + Melee_Mod;
+            return BAB + mod(Abilities.STR) + Modifiers.Melee;
         }
 
         public int RangedAttack()
         {
-            return BAB + mod(DEX) + Ranged_Mod;
+            return BAB + mod(Abilities.DEX) + Modifiers.Ranged;
         }
 
         public int ThrownAttack()
         {
-            return BAB + mod(STR) + Thrown_Mod;
+            return BAB + mod(Abilities.STR) + Modifiers.Thrown;
         }
+
 
         //
         // Display Total Ability Scores
 
         public int Acrobatics()
         {
-            return AbilityRanks.Acrobatics + mod(DEX) + AbilityMods.Acrobatics;
+            return SkillRanks.Acrobatics + mod(Abilities.DEX) + Modifiers.Skills.Acrobatics;
         }
 
         public int Athletics()
         {
-            return AbilityRanks.Athletics + mod(STR) + AbilityMods.Athletics;
+            return SkillRanks.Athletics + mod(Abilities.STR) + Modifiers.Skills.Athletics;
         }
 
         public int Bluff()
         {
-            return AbilityRanks.Bluff + mod(CHA) + AbilityMods.Bluff;
+            return SkillRanks.Bluff + mod(Abilities.CHA) + Modifiers.Skills.Bluff;
         }
 
         public int Computers()
         {
-            return AbilityRanks.Computers + mod(INT) + AbilityMods.Computers;
+            return SkillRanks.Computers + mod(Abilities.INT) + Modifiers.Skills.Computers;
         }
 
         public int Culture()
         {
-            return AbilityRanks.Culture + mod(INT) + AbilityMods.Culture;
+            return SkillRanks.Culture + mod(Abilities.INT) + Modifiers.Skills.Culture;
         }
 
         public int Diplomacy()
         {
-            return AbilityRanks.Diplomacy + mod(CHA) + AbilityMods.Diplomacy;
+            return SkillRanks.Diplomacy + mod(Abilities.CHA) + Modifiers.Skills.Diplomacy;
         }
 
         public int Disguise()
         {
-            return AbilityRanks.Disguise + mod(CHA) + AbilityMods.Disguise;
+            return SkillRanks.Disguise + mod(Abilities.CHA) + Modifiers.Skills.Disguise;
         }
 
         public int Engineering()
         {
-            return AbilityRanks.Engineering + mod(INT) + AbilityMods.Engineering;
+            return SkillRanks.Engineering + mod(Abilities.INT) + Modifiers.Skills.Engineering;
         }
 
         public int Intimidate()
         {
-            return AbilityRanks.Intimidate + mod(CHA) + AbilityMods.Intimidate;
+            return SkillRanks.Intimidate + mod(Abilities.CHA) + Modifiers.Skills.Intimidate;
         }
 
         public int Life_Science()
         {
-            return AbilityRanks.Life_Science + mod(INT) + AbilityMods.Life_Science;
+            return SkillRanks.Life_Science + mod(Abilities.INT) + Modifiers.Skills.Life_Science;
         }
 
         public int Medicine()
         {
-            return AbilityRanks.Medicine + mod(INT) + AbilityMods.Medicine;
+            return SkillRanks.Medicine + mod(Abilities.INT) + Modifiers.Skills.Medicine;
         }
 
         public int Mysticism()
         {
-            return AbilityRanks.Mysticism + mod(WIS) + AbilityMods.Mysticism;
+            return SkillRanks.Mysticism + mod(Abilities.WIS) + Modifiers.Skills.Mysticism;
         }
 
         public int Perception()
         {
-            return AbilityRanks.Perception + mod(WIS) + AbilityMods.Perception;
+            return SkillRanks.Perception + mod(Abilities.WIS) + Modifiers.Skills.Perception;
         }
 
         public int Physical_Science()
         {
-            return AbilityRanks.Physical_Science + mod(INT) + AbilityMods.Physical_Science;
+            return SkillRanks.Physical_Science + mod(Abilities.INT) + Modifiers.Skills.Physical_Science;
         }
 
         public int Piloting()
         {
-            return AbilityRanks.Piloting + mod(INT) + AbilityMods.Piloting;
+            return SkillRanks.Piloting + mod(Abilities.INT) + Modifiers.Skills.Piloting;
         }
 
         public int Sense_Motive()
         {
-            return AbilityRanks.Sense_Motive + mod(WIS) + AbilityMods.Sense_Motive;
+            return SkillRanks.Sense_Motive + mod(Abilities.WIS) + Modifiers.Skills.Sense_Motive;
         }
 
         public int Slight_of_Hand()
         {
-            return AbilityRanks.Slight_of_Hand + mod(DEX) + AbilityMods.Slight_of_Hand;
+            return SkillRanks.Slight_of_Hand + mod(Abilities.DEX) + Modifiers.Skills.Slight_of_Hand;
         }
 
         public int Stealth()
         {
-            return AbilityRanks.Stealth + mod(DEX) + AbilityMods.Stealth;
+            return SkillRanks.Stealth + mod(Abilities.DEX) + Modifiers.Skills.Stealth;
         }
 
         public int Survival()
         {
-            return AbilityRanks.Survival + mod(WIS) + AbilityMods.Stealth;
+            return SkillRanks.Survival + mod(Abilities.WIS) + Modifiers.Skills.Stealth;
         }
+
 
         //
         // Combat Functions
@@ -251,9 +265,9 @@ namespace RpgDB
             int roll = Roll.d20();
 
             if (weapon.Melee || weapon.Thrown)
-                modifier = mod(STR);
+                modifier = mod(Abilities.STR);
             else if (weapon.Ranged)
-                modifier = mod(DEX);
+                modifier = mod(Abilities.DEX);
 
             // TODO: Add proficiency modifiers (helper class?)
             return (roll + modifier) > defense;
@@ -267,6 +281,7 @@ namespace RpgDB
             {
                 // Parse strings such as "2d8" and "1d10"
                 string[] damageString = weapon.Damage.Split('d');
+
                 int rollCount = Int32.Parse(damageString[0]);
                 int damageDie = Int32.Parse(damageString[1]);
 
@@ -277,5 +292,6 @@ namespace RpgDB
             }
             return damage;
         }
+
     }
 }
