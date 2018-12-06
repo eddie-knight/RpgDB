@@ -154,11 +154,11 @@ public string ThrownCategory = "thrown";
 If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name in the json file _and_ the appropriate categories list(s) in the associated class object. All three must explicitly match for the data to be properly loaded:
 
 1. JSON File Name 
-- ex. **1h_melee**.json
+    - ex. **1h_melee**.json
 1. Top level object name in JSON file
-- ex. { **"1h_melee"**: [...] }
+    - ex. { **"1h_melee"**: [...] }
 1. Appropriate lists for the associated class object
-- ex. public string[] MeleeCategories = { **"1h_melee"** ... }
+    - ex. public string[] MeleeCategories = { **"1h_melee"** ... }
 
 #### JSON
 
