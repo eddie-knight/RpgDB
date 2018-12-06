@@ -173,7 +173,7 @@ The `/json` directory is used for housing data files. The JSON files are handled
 
 There is currently one primary search function that can be used in the code: 
 
-`RpgDB.**XXX**Database.GetByName()`
+`RpgDB.XXXDatabase.GetByName()`
 
 This returns an object of the type that is specific to the database, such as `class Weapon`
 
