@@ -86,7 +86,7 @@ This MonoBehaviour is the base class for the components that are built by `RpgDB
 
 This interface does more than create a contract for it's adherants to follow- and the contract it does require is simply a `name` and `id`. The true value of this interface is that it allows dynamic functionality for helper functions that are not benefitted by static typing.
 
-This is used most frequently by the children of the `Database` class, in order to allow common functionality to be passed up to the parent. Without this interface, all of the `Database` functions would need to be repeated across child classes with almost no change.
+This is used most frequently by the children of the `RpgDB.Database` class, in order to allow common functionality to be passed up to the parent. Without this interface, all of the `RpgDB.Database` functions would need to be repeated across child classes with almost no change.
 
 The greatest value of this interface, however, comes in the inventory. By using this interface, we are able to create an inventory system that is simply a `List<IRpgDBEntry>`. Without this, the inventory system would require a high degree of specificity and customization to fit every type of object that it holds.
 
@@ -139,9 +139,9 @@ Use `ClassDatabase.CreateCharacter` to convert a character class string into a C
 
 Categories are defined at the top of the each class, and are used in `RpgDB.Database.LoadData` on `start()`. The categories are strings (or arrays of strings), which are used for the following:
 
-1. Specify the name of the JSON file. This will be passed as the `file_path` in the method `Database.GetJsonFromFile(file_path)`, which will concatenate it to create the full file path: `JsonHome + file_path + ".json")`
+1. Specify the name of the JSON file. This will be passed as the `file_path` in the method `RpgDB.Database.GetJsonFromFile(file_path)`, which will concatenate it to create the full file path: `JsonHome + file_path + ".json")`
 1. Assist in the parsing of JSON. The object created by `Newtonsoft.Json.Linq.JObject.Parse` requires a top-level JSON object to hold the subsequent entries. Each JSON file will have a top level item that shares the name of the JSON file.
-1. Provide a category for searching. `WeaponDatabase.AddWeapon` takes a parameter called `title`, which will used to populate the field `Weapon.Category`. This field is subsequently used by `WeaponDatabase.SearchWeaponsByCategory` in order to filter `AllWeaponsList`.
+1. Provide a category for searching. `RpgDB.WeaponDatabase.AddWeapon` takes a parameter called `title`, which will used to populate the field `Weapon.Category`. This field is subsequently used by `RpgDB.WeaponDatabase.SearchWeaponsByCategory` in order to filter `AllWeaponsList`.
 
 Categories examples from `WeaponsDatabase.cs`:
 
@@ -162,7 +162,7 @@ If the JSON file names are modified, or if additional files are added, be sure t
 
 #### JSON
 
-The `/json` directory is used for housing data files. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `Database.JsonHome` accordingly.
+The `/json` directory is used for housing data files. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `RpgDB.Database.JsonHome` accordingly.
 
 > **Debugging Tip:**
 > If an error occurs due to a JSON entry, run the script
@@ -173,7 +173,7 @@ The `/json` directory is used for housing data files. The JSON files are handled
 
 There is currently one primary search function that can be used in the code: 
 
-`Database.GetByName()`
+`RpgDB.**XXX**Database.GetByName()`
 
 This returns an object of the type that is specific to the database, such as `class Weapon`
 
@@ -191,6 +191,6 @@ Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
 ## TODO
 
 ### Searching
-Search functionality will need dramatic improvement. Currently, the only reliable search function across all categories is `GetByName()`. WeaponDatabase has starters for other search types that should be refined before being implemented elsewhere. 
+Search functionality will need dramatic improvement. Currently, the only reliable search function across all categories is `RpgDB.Database.GetByName()`. WeaponDatabase has starters for other search types that should be refined before being implemented elsewhere. 
 
 Also, **the search functions are all currently case-sensitive**.
