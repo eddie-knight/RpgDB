@@ -143,6 +143,23 @@ Categories are defined at the top of the each class, and are used in `RpgDB.Data
 1. Assist in the parsing of JSON. The object created by `Newtonsoft.Json.Linq.JObject.Parse` requires a top-level JSON object to hold the subsequent entries. Each JSON file will have a top level item that shares the name of the JSON file.
 1. Provide a category for searching. `WeaponDatabase.AddWeapon` takes a parameter called `title`, which will used to populate the field `Weapon.Category`. This field is subsequently used by `WeaponDatabase.SearchWeaponsByCategory` in order to filter `AllWeaponsList`.
 
+Categories examples from `WeaponsDatabase.cs`:
+
+```
+public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
+public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
+public string ThrownCategory = "thrown";
+```
+
+If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name in the json file _and_ the appropriate categories list(s) in the associated class object. All three must explicitly match for the data to be properly loaded:
+
+    1. JSON File Name 
+    - ex. **1h_melee**.json
+    1. Top level object name in JSON file
+    - ex. { **"1h_melee"**: [...] }
+    1. Appropriate lists for the associated class object
+    - ex. public string[] MeleeCategories = { **"1h_melee"** ... }
+
 #### JSON
 
 The `/json` directory is used for housing data files. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `Database.JsonHome` accordingly.
@@ -170,17 +187,6 @@ Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
 }
 ```
 
-
-## Optional Modifications
-
-### Categories
-
-```
-public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
-public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
-public string ThrownCategory = "thrown";
-```
-If the JSON file names are modified, or if additional files are added, be sure to modify the top-level object name in the json file _and_ the appropriate categories list(s) in the associated class object. All three must explicitly match for the data to be properly loaded.
 
 ## TODO
 
