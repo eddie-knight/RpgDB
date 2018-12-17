@@ -13,11 +13,8 @@ namespace RpgDB
 
         public void Awake()
         {
-            if (All.Count < 1)
-            {
-                LoadData(ammunitionCategory, AmmunitionList);
-                All = AmmunitionList.Cast<Ammunition>().ToList();
-            }
+            LoadData(ammunitionCategory, AmmunitionList);
+            All = AmmunitionList.Cast<Ammunition>().ToList();
         }
 
         // Add Object to Ammunition List

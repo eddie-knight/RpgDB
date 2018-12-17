@@ -8,25 +8,55 @@ namespace RpgDB
     public sealed class ClassDatabase : Database
     {
         public string classCategory = "character_classes";
+        public string proficienciesCategory = "class_proficiencies";
 
-        public static List<IRpgDBEntry> ClassList = new List<IRpgDBEntry>();
         public static List<CharacterClass> All = new List<CharacterClass>();
-
+        public static List<IRpgDBEntry> ClassList = new List<IRpgDBEntry>();
         public void Awake()
         {
+            // These are alive just long enough to pass through LoadData
+            List<IRpgDBEntry> ProficiencyList = new List<IRpgDBEntry>();
+
+            // This list is for holding proficiency data to pass to new classes
+            List<Proficiency> Proficiencies = new List<Proficiency>();
+            
             if (All.Count < 1)
             {
                 LoadData(classCategory, ClassList);
                 All = ClassList.Cast<CharacterClass>().ToList();
             }
+            if (Proficiencies.Count < 1)
+            {
+                LoadData(proficienciesCategory, ProficiencyList);
+                Proficiencies = ProficiencyList.Cast<Proficiency>().ToList();
+                foreach(Proficiency data in Proficiencies)
+                {
+                    AddProficiencyIdToClass(data);
+                }
+            }
+        }
+
+        public void AddProficiencyIdToClass(Proficiency data)
+        {
+            // Find class and modify it in place
+            All.Find(x => x.id.Equals(data.class_id)).Proficiencies.Add(data.feat_id);
         }
 
         // Add Object to Class List
         public override void AddObject(JToken item, List<IRpgDBEntry> list, string category)
         {
-            CharacterClass characterClass = new CharacterClass();
-            characterClass.ConvertObject(item);
-            list.Add(characterClass);
+            if (category == "character_classes")
+            {
+                CharacterClass characterClass = new CharacterClass();
+                characterClass.ConvertObject(item);
+                list.Add(characterClass);
+            }
+            if (category == "class_proficiencies")
+            {
+                Proficiency proficiency = new Proficiency();
+                proficiency.ConvertObject(item);
+                list.Add(proficiency);
+            }
         }
 
         public CharacterClass GetByName(string text)
@@ -36,18 +66,18 @@ namespace RpgDB
             return retrievedClass;
         }
 
-        public Character CreateCharacter(string characterClass)
+        public Character CreateCharacter(string characterClass, ExtensionsDatabase extensions)
         {
             CharacterClass classObject = GetByName(characterClass);
-            Character character = new Character(classObject);
+            Character character = new Character(classObject, extensions);
             return character;
         }
 
-        public Character CreateCharacter(string characterClass, int level)
+        public Character CreateCharacter(string characterClass, int level, ExtensionsDatabase extensions)
         {
             CharacterClass classObject = GetByName(characterClass);
             classObject.Level = level;
-            Character character = new Character(classObject);
+            Character character = new Character(classObject, extensions);
             return character;
         }
     }

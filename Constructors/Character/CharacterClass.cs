@@ -7,6 +7,7 @@ namespace RpgDB
     [System.Serializable]
     public sealed class CharacterClass: IRpgDBEntry
     {
+        public int id { get; set; }
         public string Name { get; set; }
         public string Category = "Class";
         public string Description { get; set; }
@@ -17,7 +18,8 @@ namespace RpgDB
         public int Stamina_Points { get; set; }
         public int Skill_Ranks_per_Level { get; set; }
 
-        public List<string> Proficiencies = new List<string>();
+        // This is simply a list of Feat ids
+        public List<int> Proficiencies = new List<int>();
         public List<ClassSkills> ClassSkills = new List<ClassSkills>();
         public List<IRpgDBEntry> Inventory = new List<IRpgDBEntry>();
 

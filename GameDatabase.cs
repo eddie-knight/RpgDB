@@ -10,6 +10,7 @@ namespace RpgDB
         public ArmorDatabase Armor;
         public UpgradeDatabase Upgrades;
         public ClassDatabase Classes;
+        public ExtensionsDatabase Extensions;
 
         void Awake()
         {
@@ -17,6 +18,7 @@ namespace RpgDB
             Ammunition = gameObject.AddComponent(typeof(AmmunitionDatabase)) as AmmunitionDatabase;
             Armor = gameObject.AddComponent(typeof(ArmorDatabase)) as ArmorDatabase;
             Upgrades = gameObject.AddComponent(typeof(UpgradeDatabase)) as UpgradeDatabase;
+            Extensions = gameObject.AddComponent(typeof(ExtensionsDatabase)) as ExtensionsDatabase;
             Classes = gameObject.AddComponent(typeof(ClassDatabase)) as ClassDatabase;
         }
 

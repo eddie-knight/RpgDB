@@ -11,14 +11,16 @@ namespace RpgDB
         public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
         public string ThrownCategory = "thrown";
 
-        public static List<IRpgDBEntry> MeleeWeapons = new List<IRpgDBEntry>();
-        public static List<IRpgDBEntry> RangedWeapons = new List<IRpgDBEntry>();
-        public static List<IRpgDBEntry> ThrownWeapons = new List<IRpgDBEntry>();
-
+        // TODO: Prove that this is able to hold data in a prefab
         public static List<Weapon> All = new List<Weapon>();
 
         public void Awake()
         {
+            // These only live long enough to build the list "All"
+            // TODO: Create logic not rely on interface lists for LoadData
+            List<IRpgDBEntry> MeleeWeapons = new List<IRpgDBEntry>();
+            List<IRpgDBEntry> RangedWeapons = new List<IRpgDBEntry>();
+            List<IRpgDBEntry> ThrownWeapons = new List<IRpgDBEntry>();
             List<Weapon> MeleeWeaponsList = new List<Weapon>();
             List<Weapon> RangedWeaponsList = new List<Weapon>();
             List<Weapon> ThrownWeaponsList = new List<Weapon>();
@@ -35,8 +37,8 @@ namespace RpgDB
             }
             if (ThrownWeaponsList.Count < 1)
             {
-                LoadData(ThrownCategory, RangedWeapons);
-                RangedWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
+                LoadData(ThrownCategory, ThrownWeapons);
+                ThrownWeaponsList = RangedWeapons.Cast<Weapon>().ToList();
             }
             if (All.Count < 1)
                 All = MeleeWeaponsList.Union(RangedWeaponsList).Union(ThrownWeaponsList).ToList();

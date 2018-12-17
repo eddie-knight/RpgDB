@@ -44,8 +44,8 @@ namespace RpgDB
         {
             foreach (string category in categories)
             {
-                if(category != null)
-                    LoadDataFromJson(category, list);
+                LoadDataFromJson(category, list);
+                Debug.Log("Loading Data for " + category + ".");
             }
         }
 
@@ -53,6 +53,7 @@ namespace RpgDB
         public void LoadData(string category, List<IRpgDBEntry> list)
         {
             LoadDataFromJson(category, list);
+            Debug.Log("Loading Data for " + category + ".");
         }
 
     }

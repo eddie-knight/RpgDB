@@ -23,5 +23,5 @@
         public int Slight_of_Hand;
         public int Stealth;
         public int Survival;
-    };
+    }
 }

@@ -8,5 +8,5 @@
         public int INT;
         public int WIS;
         public int CHA;
-    };
+    }
 }

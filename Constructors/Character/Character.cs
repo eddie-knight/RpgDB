@@ -18,7 +18,6 @@ namespace RpgDB
         public int Base_Save;
         public int BAB;
 
-
         // Anywhere Character.Class is used, it should check whether
         // Class = "Multiclass" and subsequently handle Character.Multiclass
         public CharacterClass Class;
@@ -29,7 +28,10 @@ namespace RpgDB
 
         // This requires functions that look for modifiers
         // in appropriate places and return the highest modifier value
-        public Modifiers Modifiers = new Modifiers();
+        // Check for modifiers on levelling and equip/unequip
+        public CharacterModifiers Modifiers = new CharacterModifiers();
+
+        public List<Feat> Feats = new List<Feat>();
 
         public Abilities Abilities = new Abilities();
         public Skills SkillRanks = new Skills();
@@ -41,7 +43,6 @@ namespace RpgDB
         // TODO:
         // In order to use "professions", we need function to specify the ability,
         // and create a reference to the value of the appropriate variable.
-
 
         //
         // Helper function(s)
@@ -56,20 +57,38 @@ namespace RpgDB
             // This is for instantiating a Character without providing class.
         }
 
-        public Character(CharacterClass characterClass)
+        public Character(CharacterClass characterClass, ExtensionsDatabase extensions)
         {
             Level = characterClass.Level;
             Class = characterClass;
+            foreach(int proficiency_id in characterClass.Proficiencies)
+            {
+                Feat proficiency = extensions.GetFeatById(proficiency_id);
+                Feats.Add(proficiency);
+            }
         }
 
         // Creates Multiclass Character
-        public Character(List<CharacterClass> characterClasses)
+        public Character(List<CharacterClass> characterClasses, ExtensionsDatabase extensions)
         {
+            List<int> unique_proficiency_ids = new List<int>();
             Class = null;
             Multiclass = characterClasses;
             foreach (CharacterClass characterClass in characterClasses)
             {
                 Level += characterClass.Level;
+
+                // Compile proficiency lists
+                foreach (int proficiency_id in characterClass.Proficiencies)
+                    if (!unique_proficiency_ids.Contains(proficiency_id))
+                        unique_proficiency_ids.Add(proficiency_id);
+                // Add proficiencies from each class without duplication
+                foreach(int id in unique_proficiency_ids)
+                {
+                    Feat proficiency = extensions.GetFeatById(id);
+                    Feats.Add(proficiency);
+                }
+
                 // TODO:
                 // Find and store highest modifiers
             }

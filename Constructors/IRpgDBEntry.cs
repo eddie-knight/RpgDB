@@ -2,6 +2,6 @@ namespace RpgDB
 {
     public interface IRpgDBEntry
     {
-        string Name { get; set; }
+        // This interface needs to be deprecated ASAP
     }
 }
