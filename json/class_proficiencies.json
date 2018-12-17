@@ -1,0 +1,129 @@
+{ 
+  "class_proficiencies":
+  [
+    {
+      "class_id": 1,
+      "feat_id": 49
+    },
+    {
+      "class_id": 1,
+      "feat_id": 7
+    },
+    {
+      "class_id": 1,
+      "feat_id": 31
+    },
+    {
+      "class_id": 1,
+      "feat_id": 119
+    },
+    {
+      "class_id": 2,
+      "feat_id": 49
+    },
+    {
+      "class_id": 2,
+      "feat_id": 7
+    },
+    {
+      "class_id": 2,
+      "feat_id": 31
+    },
+    {
+      "class_id": 2,
+      "feat_id": 119
+    },
+    {
+      "class_id": 3,
+      "feat_id": 49
+    },
+    {
+      "class_id": 3,
+      "feat_id": 7
+    },
+    {
+      "class_id": 3,
+      "feat_id": 119
+    },
+    {
+      "class_id": 4,
+      "feat_id": 49
+    },
+    {
+      "class_id": 4,
+      "feat_id": 7
+    },
+    {
+      "class_id": 4,
+      "feat_id": 119
+    },
+    {
+      "class_id": 4,
+      "feat_id": 120
+    },
+    {
+      "class_id": 5,
+      "feat_id": 49
+    },
+    {
+      "class_id": 5,
+      "feat_id": 7
+    },
+    {
+      "class_id": 5,
+      "feat_id": 2
+    },
+    {
+      "class_id": 5,
+      "feat_id": 119
+    },
+    {
+      "class_id": 6,
+      "feat_id": 49
+    },
+    {
+      "class_id": 6,
+      "feat_id": 33
+    },
+    {
+      "class_id": 6,
+      "feat_id": 7
+    },
+    {
+      "class_id": 6,
+      "feat_id": 2
+    },
+    {
+      "class_id": 6,
+      "feat_id": 119
+    },
+    {
+      "class_id": 6,
+      "feat_id": 51
+    },
+    {
+      "class_id": 6,
+      "feat_id": 34
+    },
+    {
+      "class_id": 6,
+      "feat_id": 120
+    },
+    {
+      "class_id": 6,
+      "feat_id": 31
+    },
+    {
+      "class_id": 7,
+      "feat_id": 49
+    },
+    {
+      "class_id": 7,
+      "feat_id": 7
+    },
+    {
+      "class_id": 7,
+      "feat_id": 119
+    }
+  ]
+}
