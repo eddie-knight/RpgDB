@@ -11,10 +11,6 @@ namespace RpgDB
         public string Name { get; set; }
         public int Level { get; set; }
 
-        // These may be functions that look for the class value or
-        // the highest value from multiple classes
-        public int Hit_Points;
-        public int Resolve_Points;
         public int Base_Save;
         public int BAB;
 
@@ -44,8 +40,69 @@ namespace RpgDB
         // In order to use "professions", we need function to specify the ability,
         // and create a reference to the value of the appropriate variable.
 
+
+        public int Key_Ability_Score()
+        {
+            int value = 0;
+            if (Class.Level > 0)
+            {
+                if (Class.Name == "Soldier")
+                    value = soldierKAC();
+                else
+                {
+                    var field = Abilities.GetType().GetField("DEX");
+                    Debug.Log(field);
+                    value = (int)field.GetValue(Abilities);
+                }
+            }
+            else
+                foreach (CharacterClass characterClass in Multiclass)
+                {
+                    int value_check = 0;
+                    if (characterClass.Name == "Soldier")
+                        value_check = soldierKAC();
+                    else
+                    {
+                        var field = Abilities.GetType().GetProperty(characterClass.Key_Ability_Score);
+                        value_check = (int)field.GetValue(Abilities, null);
+
+                    }
+                    if (value < value_check)
+                        value = value_check;
+                }
+            return value;
+        }
+
+        // These may be functions that look for the class value or
+        // the highest value from multiple classes
+        public int Hit_Points()
+        {
+            int class_hp = 0;
+
+            if (Class.Level > 0)
+                class_hp = Class.Hit_Points;
+            else
+                foreach (CharacterClass characterClass in Multiclass)
+                {
+                    if (characterClass.Hit_Points > class_hp)
+                        class_hp = characterClass.Hit_Points;
+                }
+            return class_hp * Level;// TODO: + race.Hit_Points
+        }
+
+        public int Resolve_Points()
+        {
+            return (int)Math.Ceiling((double)Level / 2);
+        }
+
         //
         // Helper function(s)
+
+        public int soldierKAC()
+        {
+            // Return the higher value of STR or DEX
+            return Abilities.STR > Abilities.DEX ? Abilities.STR : Abilities.DEX;
+        }
 
         public int mod(int abilty)
         {
@@ -100,7 +157,37 @@ namespace RpgDB
             {
                 // TODO:
                 // Copy all values
+                Name = Name,
+                Level = Level,
+                Base_Save = Base_Save
+
             };
+        //            public int Resolve_Points;
+        //public int Base_Save;
+        //public int BAB;
+
+        //// Anywhere Character.Class is used, it should check whether
+        //// Class = "Multiclass" and subsequently handle Character.Multiclass
+        //public CharacterClass Class;
+        //public List<CharacterClass> Multiclass = new List<CharacterClass>();
+
+        //// Provide roll functionality within this class
+        //private Roll Roll = new Roll();
+
+        //// This requires functions that look for modifiers
+        //// in appropriate places and return the highest modifier value
+        //// Check for modifiers on levelling and equip/unequip
+        //public CharacterModifiers Modifiers = new CharacterModifiers();
+
+        //public List<Feat> Feats = new List<Feat>();
+
+        //public Abilities Abilities = new Abilities();
+        //public Skills SkillRanks = new Skills();
+
+        //public Armor Armor { get; set; }
+        //public Weapon Right_Hand { get; set; }
+        //public Weapon Left_Hand { get; set; }
+
             return character;
         }
 
@@ -110,16 +197,6 @@ namespace RpgDB
             // 1. Apply Ability Scores
             return character;
         }
-
-
-        public void LevelUp(CharacterClass characterClass)
-        {
-            // 1. Apply Ability Scores
-            // 2. Add New Class Features
-            // 3. Add New Feats or Theme Benefits
-            // 4. Invest Skill Ranks
-        }
-
 
         //
         // Display Calculated Character Stats

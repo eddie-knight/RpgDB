@@ -6,6 +6,4 @@ namespace RpgDB
         public string Effected_Stat { get; set; }
         public string Modification { get; set; }
     }
-
-
 }

@@ -13,7 +13,7 @@ namespace RpgDB
         public string Description { get; set; }
         public string Key_Ability_Score_Text { get; set; }
         public string Key_Ability_Score { get; set; }
-        public int Level { get; set; }
+        public int Level = 1;
         public int Hit_Points { get; set; }
         public int Stamina_Points { get; set; }
         public int Skill_Ranks_per_Level { get; set; }
