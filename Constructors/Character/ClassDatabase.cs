@@ -59,11 +59,18 @@ namespace RpgDB
             }
         }
 
-        public CharacterClass GetByName(string text)
+        public static CharacterClass GetByName(string text)
         {
             CharacterClass retrievedClass = All.Find(x => x.Name.Equals(text));
             retrievedClass.Awake();
             return retrievedClass;
+        }
+
+
+        public Character CreateCharacter(List<CharacterClass> characterClasses, ExtensionsDatabase extensions)
+        {
+            Character character = new Character(characterClasses, extensions);
+            return character;
         }
 
         public Character CreateCharacter(string characterClass, ExtensionsDatabase extensions)

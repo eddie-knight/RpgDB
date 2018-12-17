@@ -8,7 +8,7 @@
       "Hit_Points": 6,
       "Stamina_Points": 6,
       "Key_Ability_Score_Text": "Your Charisma helps you succeed in many social situations and makes a number of your improvisations more effective, so Charisma is your key ability score. A high Dexterity score can make you a better ranged combatant, while a high Intelligence score improves all of your skills.",
-      "Key_Ability_Score": "Charisma",
+      "Key_Ability_Score": "CHR",
       "Skill_Ranks_per_Level": 8
     },
     {
@@ -18,7 +18,7 @@
       "Hit_Points": 6,
       "Stamina_Points": 6,
       "Key_Ability_Score_Text": "You rely on your Intelligence for your knowledge, skills, and technical know-how, so Intelligence is your key ability score. A high Dexterity score makes your ranged attacks more accurate, should you engage in combat.",
-      "Key_Ability_Score": "Intelligence",
+      "Key_Ability_Score": "INT",
       "Skill_Ranks_per_Level": 4
     },
     {
@@ -28,7 +28,7 @@
       "Hit_Points": 6,
       "Stamina_Points": 6,
       "Key_Ability_Score_Text": "Your Wisdom determines your spellcasting ability, the saving throw DCs of your spells, and the number of bonus spells you can cast per day, so Wisdom is your key ability score. A high Charisma score can also help you in social situations.",
-      "Key_Ability_Score": "Wisdom",
+      "Key_Ability_Score": "WIS",
       "Skill_Ranks_per_Level": 6
     },
     {
@@ -38,7 +38,7 @@
       "Hit_Points": 6,
       "Stamina_Points": 6,
       "Key_Ability_Score_Text": "Your Dexterity helps you to infiltrate, get into position, escape danger, and make decisive shots with your weapon, so Dexterity is your key ability score. High Intelligence boosts your skills, and Charisma aids in your interactions with other characters.",
-      "Key_Ability_Score": "Dexterity",
+      "Key_Ability_Score": "DEX",
       "Skill_Ranks_per_Level": 8
     },
     {
@@ -48,7 +48,7 @@
       "Hit_Points": 7,
       "Stamina_Points": 7,
       "Key_Ability_Score_Text": "Your Charisma lets you channel your connection to the cosmos, so Charisma is your key ability score. A high Strength score can make you better at melee attacks.",
-      "Key_Ability_Score": "Charisma",
+      "Key_Ability_Score": "CHR",
       "Skill_Ranks_per_Level": 4
     },
     {
@@ -58,7 +58,7 @@
       "Hit_Points": 7,
       "Stamina_Points": 7,
       "Key_Ability_Score_Text": "Your Strength helps you attack up close in melee and carry heavier weapons and armor, while your Dexterity helps you fire weapons from a distance and dodge returning fire, so you should choose either Strength or Dexterity as your key ability score. Once made, this choice cannot be changed. A high Constitution score allows you to soak up more damage.",
-      "Key_Ability_Score": "Strength or Dexterity",
+      "Key_Ability_Score": "STR or DEX",
       "Skill_Ranks_per_Level": 4
     },
     {
@@ -68,7 +68,7 @@
       "Hit_Points": 5,
       "Stamina_Points": 5,
       "Key_Ability_Score_Text": "Your Intelligence determines your spellcasting ability, the saving throw DCs of your spells, and the number of bonus spells you can cast per day, so Intelligence is your key ability score. Also, a high Dexterity score can help you fire your weapons more accurately and dodge incoming attacks.",
-      "Key_Ability_Score": "Intelligence",
+      "Key_Ability_Score": "INT",
       "Skill_Ranks_per_Level": 4
     }
   ]

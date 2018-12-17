@@ -23,5 +23,14 @@
         public int Slight_of_Hand;
         public int Stealth;
         public int Survival;
+
+        public int Allocated()
+        {
+            return Acrobatics + Athletics + Bluff + Computers + Culture + 
+                Diplomacy + Disguise + Engineering + Intimidate + Life_Science + 
+                Medicine + Mysticism + Perception + Physical_Science + 
+                Piloting + Profession_1 + Profession_2 + Sense_Motive + 
+                Slight_of_Hand + Stealth + Survival;
+        }
     }
 }

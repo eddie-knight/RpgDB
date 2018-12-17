@@ -53,7 +53,6 @@ namespace RpgDB
         public void LoadData(string category, List<IRpgDBEntry> list)
         {
             LoadDataFromJson(category, list);
-            Debug.Log("Loading Data for " + category + ".");
         }
 
     }

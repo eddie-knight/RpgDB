@@ -44,14 +44,13 @@ namespace RpgDB
         public int Key_Ability_Score()
         {
             int value = 0;
-            if (Class.Level > 0)
+            if (Class != null)
             {
                 if (Class.Name == "Soldier")
                     value = soldierKAC();
                 else
                 {
                     var field = Abilities.GetType().GetField("DEX");
-                    Debug.Log(field);
                     value = (int)field.GetValue(Abilities);
                 }
             }
@@ -63,9 +62,8 @@ namespace RpgDB
                         value_check = soldierKAC();
                     else
                     {
-                        var field = Abilities.GetType().GetProperty(characterClass.Key_Ability_Score);
-                        value_check = (int)field.GetValue(Abilities, null);
-
+                        var field = Abilities.GetType().GetField(characterClass.Key_Ability_Score);
+                        value_check = (int)field.GetValue(Abilities);
                     }
                     if (value < value_check)
                         value = value_check;
@@ -79,13 +77,13 @@ namespace RpgDB
         {
             int class_hp = 0;
 
-            if (Class.Level > 0)
+            if (Class != null)
                 class_hp = Class.Hit_Points;
             else
                 foreach (CharacterClass characterClass in Multiclass)
                 {
-                    if (characterClass.Hit_Points > class_hp)
-                        class_hp = characterClass.Hit_Points;
+                    // Store value if HP is greater than previous highest
+                    class_hp = class_hp > characterClass.Hit_Points ? class_hp : characterClass.Hit_Points;
                 }
             return class_hp * Level;// TODO: + race.Hit_Points
         }
@@ -107,6 +105,21 @@ namespace RpgDB
         public int mod(int abilty)
         {
             return (int)Math.Floor((double)(abilty - 10) / 2);
+        }
+
+        public int Skill_Points_Available()
+        {
+            if (Class.Level > 0)
+                return (Class.Skill_Ranks_per_Level * Level) - SkillRanks.Allocated();
+            else
+            {
+                int ranks = 0;
+                foreach(CharacterClass characterClass in Multiclass)
+                {
+                    ranks = ranks > characterClass.Skill_Ranks_per_Level ? ranks : characterClass.Skill_Ranks_per_Level;
+                }
+            }
+            return 0;
         }
 
         public Character()
