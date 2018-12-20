@@ -47,7 +47,7 @@ namespace RpgDB
             if (Class != null)
             {
                 if (Class.Name == "Soldier")
-                    value = soldierKAC();
+                    value = soldierHighestScore();
                 else
                 {
                     var field = Abilities.GetType().GetField("DEX");
@@ -59,7 +59,7 @@ namespace RpgDB
                 {
                     int value_check = 0;
                     if (characterClass.Name == "Soldier")
-                        value_check = soldierKAC();
+                        value_check = soldierHighestScore();
                     else
                     {
                         var field = Abilities.GetType().GetField(characterClass.Key_Ability_Score);
@@ -71,8 +71,7 @@ namespace RpgDB
             return value;
         }
 
-        // These may be functions that look for the class value or
-        // the highest value from multiple classes
+
         public int Hit_Points()
         {
             int class_hp = 0;
@@ -88,44 +87,53 @@ namespace RpgDB
             return class_hp * Level;// TODO: + race.Hit_Points
         }
 
+
         public int Resolve_Points()
         {
-            return (int)Math.Ceiling((double)Level / 2);
+            return (int)Math.Ceiling((double)Level / 2) + mod(Key_Ability_Score());
         }
 
-        //
-        // Helper function(s)
 
-        public int soldierKAC()
+        public int Skill_Points_Available()
+        {
+            if (Class != null)
+                return (Class.Skill_Ranks_per_Level * Level) - SkillRanks.Allocated();
+
+            int ranks = 0;
+            foreach (CharacterClass characterClass in Multiclass)
+            {
+                ranks = ranks > characterClass.Skill_Ranks_per_Level ? ranks : characterClass.Skill_Ranks_per_Level;
+            }
+            return 0;
+        }
+
+
+        //
+        //
+        // Helper functions
+
+        public int soldierHighestScore()
         {
             // Return the higher value of STR or DEX
             return Abilities.STR > Abilities.DEX ? Abilities.STR : Abilities.DEX;
         }
+
 
         public int mod(int abilty)
         {
             return (int)Math.Floor((double)(abilty - 10) / 2);
         }
 
-        public int Skill_Points_Available()
-        {
-            if (Class.Level > 0)
-                return (Class.Skill_Ranks_per_Level * Level) - SkillRanks.Allocated();
-            else
-            {
-                int ranks = 0;
-                foreach(CharacterClass characterClass in Multiclass)
-                {
-                    ranks = ranks > characterClass.Skill_Ranks_per_Level ? ranks : characterClass.Skill_Ranks_per_Level;
-                }
-            }
-            return 0;
-        }
+
+        //
+        //
+        // Character Builders
 
         public Character()
         {
             // This is for instantiating a Character without providing class.
         }
+
 
         public Character(CharacterClass characterClass, ExtensionsDatabase extensions)
         {
@@ -138,7 +146,8 @@ namespace RpgDB
             }
         }
 
-        // Creates Multiclass Character
+
+        // Multiclass Character
         public Character(List<CharacterClass> characterClasses, ExtensionsDatabase extensions)
         {
             List<int> unique_proficiency_ids = new List<int>();
@@ -158,61 +167,36 @@ namespace RpgDB
                     Feat proficiency = extensions.GetFeatById(id);
                     Feats.Add(proficiency);
                 }
-
-                // TODO:
-                // Find and store highest modifiers
             }
         }
 
+
         public Character Clone()
         {
+            // TODO: Test this functionality
             Character character = new Character
             {
-                // TODO:
-                // Copy all values
                 Name = Name,
                 Level = Level,
-                Base_Save = Base_Save
-
+                Base_Save = Base_Save,
+                Class = Class,
+                Multiclass = Multiclass,
+                BAB = BAB,
+                Feats = Feats,
+                SkillRanks = SkillRanks,
+                Armor = Armor,
+                Right_Hand = Right_Hand,
+                Left_Hand = Left_Hand,
+                Abilities = Abilities,
+                Modifiers = Modifiers
             };
-        //            public int Resolve_Points;
-        //public int Base_Save;
-        //public int BAB;
-
-        //// Anywhere Character.Class is used, it should check whether
-        //// Class = "Multiclass" and subsequently handle Character.Multiclass
-        //public CharacterClass Class;
-        //public List<CharacterClass> Multiclass = new List<CharacterClass>();
-
-        //// Provide roll functionality within this class
-        //private Roll Roll = new Roll();
-
-        //// This requires functions that look for modifiers
-        //// in appropriate places and return the highest modifier value
-        //// Check for modifiers on levelling and equip/unequip
-        //public CharacterModifiers Modifiers = new CharacterModifiers();
-
-        //public List<Feat> Feats = new List<Feat>();
-
-        //public Abilities Abilities = new Abilities();
-        //public Skills SkillRanks = new Skills();
-
-        //public Armor Armor { get; set; }
-        //public Weapon Right_Hand { get; set; }
-        //public Weapon Left_Hand { get; set; }
-
             return character;
         }
 
-        // need single class and multiclass
-        public Character ApplyAbilityScores(Character character)
-        {
-            // 1. Apply Ability Scores
-            return character;
-        }
 
         //
-        // Display Calculated Character Stats
+        //
+        // Calculated Character Stats
 
         public int Initiative()
         {
@@ -266,7 +250,8 @@ namespace RpgDB
 
 
         //
-        // Display Total Ability Scores
+        //
+        // Calculated Ability Scores
 
         public int Acrobatics()
         {
@@ -365,6 +350,7 @@ namespace RpgDB
 
 
         //
+        //
         // Combat Functions
 
         bool AttackCheck(Weapon weapon, int defense)
@@ -381,6 +367,7 @@ namespace RpgDB
             // TODO: Add proficiency modifiers (helper class?)
             return (roll + modifier) > defense;
         }
+
 
         public int Attack(Weapon weapon, int targetKAC)
         {
@@ -401,6 +388,5 @@ namespace RpgDB
             }
             return damage;
         }
-
     }
 }
