@@ -11,8 +11,20 @@ namespace RpgDB
         public string Name { get; set; }
         public int Level { get; set; }
 
+        public string Gender { get; set; }
+        public string Size = "Unsupported";
+        public string Race = "Unsupported";
+        public string Theme = "Unsupported";
+        public string Home_World = "Unsupported";
+        public string Speed = "Unsupported";
+        public string Alignment = "Unsupported";
+        public string Diety = "Unsupported";
+        public string Description = "Unsupported";
+
         public int Base_Save;
         public int BAB;
+        public int Temporary_Hit_Points;
+        public int Damage_Taken;
 
         // Anywhere Character.Class is used, it should check whether
         // Class = "Multiclass" and subsequently handle Character.Multiclass
@@ -32,9 +44,9 @@ namespace RpgDB
         public Abilities Abilities = new Abilities();
         public Skills SkillRanks = new Skills();
 
-        public Armor Armor { get; set; }
-        public Weapon Right_Hand { get; set; }
-        public Weapon Left_Hand { get; set; }
+        public Armor Armor = new Armor { Name = "None" };
+        public Weapon Right_Hand = new Weapon { Name = "None" };
+        public Weapon Left_Hand = new Weapon { Name = "None" };
 
         // TODO:
         // In order to use "professions", we need function to specify the ability,
@@ -84,7 +96,25 @@ namespace RpgDB
                     // Store value if HP is greater than previous highest
                     class_hp = class_hp > characterClass.Hit_Points ? class_hp : characterClass.Hit_Points;
                 }
-            return class_hp * Level;// TODO: + race.Hit_Points
+            return class_hp * Level + Temporary_Hit_Points;// TODO: + race.Hit_Points
+        }
+
+
+        public int Stamina_Points()
+        {
+            int class_stamina = 0;
+
+            if (Class != null)
+                class_stamina = Class.Hit_Points;
+            else
+                foreach (CharacterClass characterClass in Multiclass)
+                {
+                    // Store value if HP is greater than previous highest
+                    class_stamina = class_stamina > characterClass.Stamina_Points ? class_stamina : characterClass.Stamina_Points;
+                }
+            // TODO: This should be applied at each level-up, or gaining CON will retroactively grant more SP
+            return (class_stamina + mod(Abilities.CON)) * Level;// TODO: + race.Hit_Points
+
         }
 
 
@@ -385,8 +415,25 @@ namespace RpgDB
                 {
                     damage += Roll.rollDie(damageDie);
                 }
+                // TODO: If melee or thrown, add mod(STR) to damage
             }
             return damage;
         }
+
+        public void ApplyDamage(int damage)
+        {
+            Damage_Taken = Damage_Taken + damage;
+            // TODO: Check for <= 0
+        }
+
+        public void ApplyHealing(int healing)
+        {
+            int health = Damage_Taken - healing;
+            if (health > 0)
+                Damage_Taken = health;
+            else
+                Damage_Taken = 0;
+        }
+
     }
 }

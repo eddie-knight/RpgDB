@@ -45,7 +45,6 @@ namespace RpgDB
             foreach (string category in categories)
             {
                 LoadDataFromJson(category, list);
-                Debug.Log("Loading Data for " + category + ".");
             }
         }
 

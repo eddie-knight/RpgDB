@@ -60,8 +60,5 @@ namespace RpgDB
                 AddObject(data);
             }
         }
-
-        // Load data from "{{name}}.json"
-        // Create List of ClassStats
     }
 }
