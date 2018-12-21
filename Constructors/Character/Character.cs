@@ -19,10 +19,9 @@ namespace RpgDB
         public string Speed = "Unsupported";
         public string Alignment = "Unsupported";
         public string Diety = "Unsupported";
-        public string Description = "Unsupported";
+        public string Description = "";
 
         public int Base_Save;
-        public int BAB;
         public int Temporary_Hit_Points;
         public int Damage_Taken;
 
@@ -52,6 +51,9 @@ namespace RpgDB
         // In order to use "professions", we need function to specify the ability,
         // and create a reference to the value of the appropriate variable.
 
+        //
+        //
+        // Base Stats
 
         public int Key_Ability_Score()
         {
@@ -138,6 +140,22 @@ namespace RpgDB
         }
 
 
+        public int BAB()
+        {
+            if (Class != null)
+                return Class.ClassSkills.Find(x => x.Level.Equals(Level)).Base_Attack_Bonus;
+            int class_BAB;
+            int highest_BAB = 0;
+            foreach (CharacterClass characterClass in Multiclass)
+            {
+                // Store value if HP is greater than previous highest
+                class_BAB = Class.ClassSkills.Find(x => x.Level.Equals(Level)).Base_Attack_Bonus;
+                highest_BAB = highest_BAB > class_BAB ? class_BAB : highest_BAB;
+            }
+            return highest_BAB;
+        }
+
+
         //
         //
         // Helper functions
@@ -211,7 +229,6 @@ namespace RpgDB
                 Base_Save = Base_Save,
                 Class = Class,
                 Multiclass = Multiclass,
-                BAB = BAB,
                 Feats = Feats,
                 SkillRanks = SkillRanks,
                 Armor = Armor,
@@ -265,17 +282,17 @@ namespace RpgDB
 
         public int MeleeAttack()
         {
-            return BAB + mod(Abilities.STR) + Modifiers.Melee;
+            return BAB() + mod(Abilities.STR) + Modifiers.Melee;
         }
 
         public int RangedAttack()
         {
-            return BAB + mod(Abilities.DEX) + Modifiers.Ranged;
+            return BAB() + mod(Abilities.DEX) + Modifiers.Ranged;
         }
 
         public int ThrownAttack()
         {
-            return BAB + mod(Abilities.STR) + Modifiers.Thrown;
+            return BAB() + mod(Abilities.STR) + Modifiers.Thrown;
         }
 
 
