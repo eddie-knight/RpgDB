@@ -16,6 +16,26 @@ https://assetstore.unity.com/packages/tools/input-management/json-net-for-unity-
 
 ## Overview
 
+
+### Search
+
+There is currently one primary search function that can be used in the code: 
+
+`RpgDB.XXXDatabase.GetByName()`
+
+This returns an object of the type that is specific to the database, such as `class Weapon`
+
+**Example Search:**
+```
+Weapon debugWeapon = allWeapons.GetByName("Bow");
+PropertyInfo[] properties = typeof(Weapon).GetProperties();
+foreach (PropertyInfo property in properties)
+{
+Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
+}
+```
+
+
 ### GameDatabase.cs
 `public class GameDatabase : MonoBehaviour`
 
@@ -35,6 +55,12 @@ The components are:
 `public abstract class Database : MonoBehaviour`
 
 This MonoBehaviour is the base class for the components that are built by `RpgDB.GameDatabase`, and provides all common functionality for parsing the JSON data. 
+
+The following section of notes is intended to support case-by-case customization of RpgDB. 
+
+When using RpgDB for alternate datasources, most of the work will be done in the `Constructors`, and the requirements should be intuitive: change the constructor class fields and methods to match the data you're providing.
+
+However, there may some situations where your solution will require cautiously modifying the `RpgDB.Database` constructor. Hopefully these notes you in that process:
 
 - **RpgDB.Database.JsonHome**
 
@@ -84,28 +110,35 @@ This MonoBehaviour is the base class for the components that are built by `RpgDB
 ### Constructors/IRpgDBEntry.cs
 `public interface IRpgDBEntry`
 
-This interface does more than create a contract for it's adherants to follow- and the contract it does require is simply a `name` and `id`. The true value of this interface is that it allows dynamic functionality for helper functions that are not benefitted by static typing.
+This interface allows dynamic functionality for helper functions that are not benefitted by static typing.
 
-This is used most frequently by the children of the `RpgDB.Database` class, in order to allow common functionality to be passed up to the parent. Without this interface, all of the `RpgDB.Database` functions would need to be repeated across child classes with almost no change.
+This is used most frequently by the children of the `RpgDB.Database` class, in order to allow common functionality to be passed up to the parent. We are also able to use this interface to create an inventory system that is simply a `List<IRpgDBEntry>`.
 
-The greatest value of this interface, however, comes in the inventory. By using this interface, we are able to create an inventory system that is simply a `List<IRpgDBEntry>`. Without this, the inventory system would require a high degree of specificity and customization to fit every type of object that it holds.
+_Development Note: This item needs be upgraded to not rely on an interface._
 
 
 ## Constructors/Character
 
-### Constructors/Character/CharacterClass.cs
-`public class CharacterClass : IRpgDBEntry`
+The following constructors are used to parse JSON data related to character class, skills, abilities, proficiencies, feats, and modifiers. 
+
+Character Race is scheduled but not yet featured.
 
 ### Constructors/Character/ClassDatabase.cs
 `public class ClassDatabase : Database`
 
-Use `ClassDatabase.CreateCharacter` to convert a character class string into a Character object. This is the recommended method for creating a Character. After creating the Character, it should promptly be given necessary values such as Abilities.
+Use `ClassDatabase.CreateCharacter` to convert a character class string into a Character object. This is the recommended method for creating a Character.
 
-### Constructors/Character/ClassSkills.cs
-`[System.Serializable] public class ClassSkills`
+Overloaded options for CreateCharacter:
 
+    - public Character CreateCharacter(List<CharacterClass> characterClasses, ExtensionsDatabase extensions){}
+    - public Character CreateCharacter(string characterClass, ExtensionsDatabase extensions){}
+    - public Character CreateCharacter(string characterClass, int level, ExtensionsDatabase extensions){}
 
 ## Constructors/Equipment
+
+The following constructors are used to parse JSON data for weapons, ammunition, armor, and upgrades.
+
+_Note: Applying upgrades to weapons and armor is not currently featured._
 
 ### Constructors/Equipment/Ammunition.cs
 `[System.Serializable] public class Ammunition : RpgDBObject, IRpgDBEntry`
@@ -162,30 +195,12 @@ If the JSON file names are modified, or if additional files are added, be sure t
 
 #### JSON
 
-The `/json` directory is used for housing data files. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `RpgDB.Database.JsonHome` accordingly.
+The `/json` directory is used for housing all data files. The JSON files are handled by `JSON.net`. Should you choose to modify the location of the JSON files, simply modify `RpgDB.Database.JsonHome` accordingly.
 
 > **Debugging Tip:**
 > If an error occurs due to a JSON entry, run the script
 > and look at which item is the last entered to the db.
 > The _next_ item on the list caused the error.
-
-### Search
-
-There is currently one primary search function that can be used in the code: 
-
-`RpgDB.XXXDatabase.GetByName()`
-
-This returns an object of the type that is specific to the database, such as `class Weapon`
-
-**Example Search:**
-```
-Weapon debugWeapon = allWeapons.GetByName("Bow");
-PropertyInfo[] properties = typeof(Weapon).GetProperties();
-foreach (PropertyInfo property in properties)
-{
-Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
-}
-```
 
 
 ## TODO
@@ -194,3 +209,6 @@ Debug.Log(property.Name + ": " + property.GetValue(debugWeapon, null));
 Search functionality will need dramatic improvement. Currently, the only reliable search function across all categories is `RpgDB.Database.GetByName()`. WeaponDatabase has starters for other search types that should be refined before being implemented elsewhere. 
 
 Also, **the search functions are all currently case-sensitive**.
+
+### Race
+Similar to classes, races have influential modifiers for a character. This is an important next step for completing the character creation process.
