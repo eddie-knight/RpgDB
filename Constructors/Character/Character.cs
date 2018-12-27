@@ -18,13 +18,15 @@ namespace RpgDB
         public string Home_World = "Unsupported";
         public string Speed = "Unsupported";
         public string Alignment = "Unsupported";
-        public string Diety = "Unsupported";
+        // --- Its Deity :)
+        public string Diety = "Unsupported";        
         public string Description = "";
 
         public int Base_Save;
         public int Temporary_Hit_Points;
         public int Damage_Taken;
-
+        
+        // --- As noted bellow, I would suggest to make all classes multiclass by default, might save you lots of headache later
         // Anywhere Character.Class is used, it should check whether
         // Class = "Multiclass" and subsequently handle Character.Multiclass
         public CharacterClass Class;
@@ -54,7 +56,8 @@ namespace RpgDB
         //
         //
         // Base Stats
-
+        
+        // --- Method name dosnt say what it do, same as other methods in this section
         public int Key_Ability_Score()
         {
             int value = 0;
@@ -139,7 +142,7 @@ namespace RpgDB
             return 0;
         }
 
-
+        // --- suggesting changing name to something readable :)
         public int BAB()
         {
             if (Class != null)
@@ -160,13 +163,17 @@ namespace RpgDB
         //
         // Helper functions
 
+        // --- Dangerous name of an method, name dosnt say what it do
         public int soldierHighestScore()
         {
             // Return the higher value of STR or DEX
             return Abilities.STR > Abilities.DEX ? Abilities.STR : Abilities.DEX;
         }
 
-
+        
+        // --- shuld it work like %? 
+        // --- Hardcoded stuff is always bad idea, in this case I understand, that need to change these numbers wont happen, but its good
+        // --- also for security reasons, to use constants than raw numbers
         public int mod(int abilty)
         {
             return (int)Math.Floor((double)(abilty - 10) / 2);
@@ -176,7 +183,8 @@ namespace RpgDB
         //
         //
         // Character Builders
-
+        
+        // --- think if its reallz needed, empty constructors are often just unwanted clutter
         public Character()
         {
             // This is for instantiating a Character without providing class.
@@ -194,7 +202,9 @@ namespace RpgDB
             }
         }
 
-
+        // --- I have feeling, that its better to make this for sibgle class character as well and manage 1 element array,
+        // then use 2 constructors, actualy, Im quite sure it would make API more intuitive to use and maybe one might want to expand by
+        // other class later in development
         // Multiclass Character
         public Character(List<CharacterClass> characterClasses, ExtensionsDatabase extensions)
         {
@@ -218,7 +228,7 @@ namespace RpgDB
             }
         }
 
-
+        // --- I would naje this public Character Clone(Character character) {} 
         public Character Clone()
         {
             // TODO: Test this functionality
@@ -245,6 +255,8 @@ namespace RpgDB
         //
         // Calculated Character Stats
 
+        // --- dont fancy this being only way to determinate rolls, I would rather make return value function as
+        //delegate so user of an API can use any method he wants and make "mod" as default maybe
         public int Initiative()
         {
             return mod(Abilities.DEX) + Modifiers.Initiative;
@@ -399,7 +411,8 @@ namespace RpgDB
         //
         //
         // Combat Functions
-
+        
+        // --- too much hardcoded stuff for my taste in this section
         bool AttackCheck(Weapon weapon, int defense)
         {
             // TODO: Move roll result out to somewhere accessible to display
