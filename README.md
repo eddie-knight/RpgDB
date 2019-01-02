@@ -1,10 +1,8 @@
 # RPG Database for Unity
 
-This is a simple database builder for use in RPG style games. The goal of this asset is to provide a simple solution for translating information from a human-readable spreadsheet into programmable game data.
+This is a simple database builder for use in RPG style games. The goal of this asset is to provide a simple solution for translating information from a human-readable spreadsheet into programmable game data. In thirty seconds a spreadsheet of data from your favorite pen and paper RPG can be converted to JSON and saved in a directory that can be parsed by this asset.
 
-While JSON may have "Javascript" in its name, it is an easily accessible and widely recognized format. In thirty seconds a spreadsheet can be converted to JSON and saved in a directory that can be parsed by this asset.
-
-That being said, this asset may require some customization to be useful in specific situations. It was built using a D&D derivative as inspiration, but with a few small tweaks the data format can be massively changed to fit any situation.
+That being said, this asset may require some customization to be useful in specific situations. It was built using Starfinder (a D&D derivative) as inspiration, but with a few small tweaks the data format can be massively changed to fit any situation.
 
 The following README contains development notes to make customizations painless.
 
