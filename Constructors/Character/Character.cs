@@ -4,9 +4,8 @@ using System.Collections.Generic;
 
 namespace RpgDB
 {
-    // Characters are built from their selected associated class
-    // This does not currently allow for multiclassing
-    public class Character
+    [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
+    public class Character : ScriptableObject
     {
         public string Name { get; set; }
         public int Level { get; set; }
@@ -25,7 +24,7 @@ namespace RpgDB
         public int Temporary_Hit_Points;
         public int Damage_Taken;
 
-        // Anywhere Character.Class is used, it should check whether
+        // Anywhere Character.Class is used here, it should check whether
         // Class = "Multiclass" and subsequently handle Character.Multiclass
         public CharacterClass Class;
         public List<CharacterClass> Multiclass = new List<CharacterClass>();
@@ -156,6 +155,7 @@ namespace RpgDB
         }
 
 
+
         //
         //
         // Helper functions
@@ -166,11 +166,11 @@ namespace RpgDB
             return Abilities.STR > Abilities.DEX ? Abilities.STR : Abilities.DEX;
         }
 
-
         public int mod(int abilty)
         {
             return (int)Math.Floor((double)(abilty - 10) / 2);
         }
+
 
 
         //
@@ -241,6 +241,7 @@ namespace RpgDB
         }
 
 
+
         //
         //
         // Calculated Character Stats
@@ -294,6 +295,7 @@ namespace RpgDB
         {
             return BAB() + mod(Abilities.STR) + Modifiers.Thrown;
         }
+
 
 
         //
@@ -396,6 +398,7 @@ namespace RpgDB
         }
 
 
+
         //
         //
         // Combat Functions
@@ -414,7 +417,6 @@ namespace RpgDB
             // TODO: Add proficiency modifiers (helper class?)
             return (roll + modifier) > defense;
         }
-
 
         public int Attack(Weapon weapon, int targetKAC)
         {
