@@ -22,6 +22,11 @@ namespace RpgDB
             stream.Close();
         }
 
+        public void SaveCurrent()
+        {
+            Save(character);
+        }
+
         public void Load()
         {
             if (File.Exists(Application.dataPath + "/player.sav"))
