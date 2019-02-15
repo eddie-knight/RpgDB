@@ -68,7 +68,7 @@ namespace RpgDB
             Abilities[1] = abilities.DEX;
             Abilities[2] = abilities.CON;
             Abilities[3] = abilities.INT;
-            Abilities[5] = abilities.WIS;
+            Abilities[4] = abilities.WIS;
             Abilities[5] = abilities.CHA;
         }
 
@@ -129,7 +129,7 @@ namespace RpgDB
                 DEX = Abilities[1],
                 CON = Abilities[2],
                 INT = Abilities[3],
-                WIS = Abilities[5],
+                WIS = Abilities[4],
                 CHA = Abilities[5]
             };
         }
