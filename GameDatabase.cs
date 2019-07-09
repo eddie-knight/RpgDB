@@ -5,12 +5,12 @@ namespace RpgDB
 {
     public sealed class GameDatabase : MonoBehaviour
     {
-        public WeaponDatabase Weapons;
-        public AmmunitionDatabase Ammunition;
-        public ArmorDatabase Armor;
-        public UpgradeDatabase Upgrades;
-        public ClassDatabase Classes;
-        public ExtensionsDatabase Extensions;
+        [HideInInspector] public WeaponDatabase Weapons;
+        [HideInInspector] public AmmunitionDatabase Ammunition;
+        [HideInInspector] public ArmorDatabase Armor;
+        [HideInInspector] public UpgradeDatabase Upgrades;
+        [HideInInspector] public ClassDatabase Classes;
+        [HideInInspector] public ExtensionsDatabase Extensions;
 
         void Awake()
         {

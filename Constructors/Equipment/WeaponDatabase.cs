@@ -7,9 +7,9 @@ namespace RpgDB
 {
     public class WeaponDatabase : Database
     {
-        public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
-        public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
-        public string ThrownCategory = "thrown";
+        [HideInInspector] public string[] MeleeCategories = { "1h_melee", "2h_melee", "solarian_crystals" };
+        [HideInInspector] public string[] RangedCategories = { "small_arms", "longarms", "snipers", "heavy_weapons" };
+        [HideInInspector] public string ThrownCategory = "thrown";
 
         // TODO: Prove that this is able to hold data in a prefab
         public static List<Weapon> All = new List<Weapon>();

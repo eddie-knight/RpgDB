@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
@@ -6,7 +7,7 @@ namespace RpgDB
 {
     public class ArmorDatabase : Database
     {
-        public string[] ArmorCategories = { "light_armor", "heavy_armor" };
+        [HideInInspector] public string[] ArmorCategories = { "light_armor", "heavy_armor" };
 
         public static List<IRpgDBEntry> ArmorList = new List<IRpgDBEntry>();
         public static List<Armor> All = new List<Armor>();

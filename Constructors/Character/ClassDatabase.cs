@@ -7,8 +7,8 @@ namespace RpgDB
 {
     public sealed class ClassDatabase : Database
     {
-        public string classCategory = "character_classes";
-        public string proficienciesCategory = "class_proficiencies";
+        [HideInInspector] public string classCategory = "character_classes";
+        [HideInInspector] public string proficienciesCategory = "class_proficiencies";
 
         public static List<CharacterClass> All = new List<CharacterClass>();
         public static List<IRpgDBEntry> ClassList = new List<IRpgDBEntry>();

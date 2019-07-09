@@ -7,8 +7,8 @@ namespace RpgDB
 {
     public sealed class ExtensionsDatabase : Database
     {
-        public string modifierCategory = "modifiers";
-        public string featsCategory = "feats";
+        [HideInInspector] public string modifierCategory = "modifiers";
+        [HideInInspector] public string featsCategory = "feats";
 
         public static List<Modifier> Modifiers = new List<Modifier>();
         public static List<Feat> Feats = new List<Feat>();

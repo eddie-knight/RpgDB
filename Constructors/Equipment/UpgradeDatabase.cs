@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using UnityEngine;
+using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 
@@ -6,7 +7,7 @@ namespace RpgDB
 {
     public class UpgradeDatabase : Database
     {
-        public string UpgradesCategory = "upgrades";
+        [HideInInspector] public string UpgradesCategory = "upgrades";
 
         public static List<IRpgDBEntry> UpgradesList = new List<IRpgDBEntry>();
         public static List<Upgrade> All = new List<Upgrade>();
