@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace RpgDB
 {
     [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
-    public class Character : ScriptableObject
+    public class Character
     {
         public string Name { get; set; }
         public int Level { get; set; }
