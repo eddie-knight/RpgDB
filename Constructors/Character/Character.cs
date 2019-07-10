@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace RpgDB
 {
-    public class Character
+    public class Character : MonoBehaviour
     {
         public string Name { get; set; }
         public int Level { get; set; }
