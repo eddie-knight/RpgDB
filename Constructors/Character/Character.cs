@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 namespace RpgDB
 {
-    [CreateAssetMenu(fileName = "New Character", menuName = "Character")]
     public class Character
     {
         public string Name { get; set; }
@@ -63,7 +62,7 @@ namespace RpgDB
                     value = soldierHighestScore();
                 else
                 {
-                    var field = Abilities.GetType().GetField("DEX");
+                    var field = Abilities.GetType().GetField(Class.Key_Ability_Score);
                     value = (int)field.GetValue(Abilities);
                 }
             }
