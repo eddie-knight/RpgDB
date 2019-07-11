@@ -73,18 +73,14 @@ namespace RpgDB
             return character;
         }
 
-        public Character CreateCharacter(string characterClass, ExtensionsDatabase extensions)
-        {
-            CharacterClass classObject = GetByName(characterClass);
-            Character character = new Character(classObject, extensions);
-            return character;
-        }
-
-        public Character CreateCharacter(string characterClass, int level, ExtensionsDatabase extensions)
+        public Character CreateCharacter(GameObject characterObject, string characterClass, int level, ExtensionsDatabase extensions)
         {
             CharacterClass classObject = GetByName(characterClass);
             classObject.Level = level;
-            Character character = new Character(classObject, extensions);
+            Character temporaryCharacter = new Character(classObject, extensions);
+
+            Character character = characterObject.AddComponent<Character>();
+            character.Clone(temporaryCharacter);
             return character;
         }
     }
