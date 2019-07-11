@@ -218,25 +218,20 @@ namespace RpgDB
         }
 
 
-        public Character Clone()
+        public void Clone(Character original)
         {
-            // TODO: Test this functionality
-            Character character = new Character
-            {
-                Name = Name,
-                Level = Level,
-                Base_Save = Base_Save,
-                Class = Class,
-                Multiclass = Multiclass,
-                Feats = Feats,
-                SkillRanks = SkillRanks,
-                Armor = Armor,
-                Right_Hand = Right_Hand,
-                Left_Hand = Left_Hand,
-                Abilities = Abilities,
-                Modifiers = Modifiers
-            };
-            return character;
+            Name = original.Name;
+            Level = original.Level;
+            Base_Save = original.Base_Save;
+            Class = original.Class;
+            Multiclass = original.Multiclass;
+            Feats = original.Feats;
+            SkillRanks = original.SkillRanks;
+            Armor = original.Armor;
+            Right_Hand = original.Right_Hand;
+            Left_Hand = original.Left_Hand;
+            Abilities = original.Abilities;
+            Modifiers = original.Modifiers;
         }
 
 
@@ -407,27 +402,36 @@ namespace RpgDB
             // TODO: Move roll result out to somewhere accessible to display
             int modifier = 0;
             int roll = Roll.d20();
-
-            if (weapon.Melee || weapon.Thrown)
+            if (weapon.Melee || weapon.Thrown || weapon.Name == "None")
                 modifier = mod(Abilities.STR);
             else if (weapon.Ranged)
                 modifier = mod(Abilities.DEX);
-
             // TODO: Add proficiency modifiers (helper class?)
+
+            // Return T/F Successful Hit
             return (roll + modifier) > defense;
         }
 
         public int Attack(Weapon weapon, int targetKAC)
         {
             int damage = 0;
+            Debug.Log(weapon);
 
             if (AttackCheck(weapon, targetKAC))
             {
-                // Parse strings such as "2d8" and "1d10"
-                string[] damageString = weapon.Damage.Split('d');
+                int rollCount = 1;
+                int damageDie = 3;
+                if (weapon.Damage != null)
+                {
+                    // Parse strings such as "2d8" and "1d10"
+                    string[] damageString = weapon.Damage.Split('d');
+                    // Saftey check for strings such as "2d8 S" or "1d10 XYZ"
+                    string dieString = damageString[1].Split(' ')[0];
 
-                int rollCount = Int32.Parse(damageString[0]);
-                int damageDie = Int32.Parse(damageString[1]);
+                    // Set number of rolls and which die to roll
+                    rollCount = Int32.Parse(damageString[0]);
+                    damageDie = Int32.Parse(dieString);
+                }
 
                 for (int i = 0; i < rollCount; i++)
                 {
@@ -435,13 +439,19 @@ namespace RpgDB
                 }
                 // TODO: If melee or thrown, add mod(STR) to damage
             }
-            return damage;
+
+            // If damage is above zero, return it's value. Otherwise return zero.
+            return ApplyDamage(damage);
         }
 
-        public void ApplyDamage(int damage)
+        public int ApplyDamage(int damage)
         {
-            Damage_Taken = Damage_Taken + damage;
-            // TODO: Check for <= 0
+            if (damage > 0)
+            {
+                Damage_Taken = Damage_Taken + damage;
+                return damage;
+            }
+            return 0;
         }
 
         public void ApplyHealing(int healing)
