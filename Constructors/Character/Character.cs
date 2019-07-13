@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System;
 using System.Collections.Generic;
 
@@ -415,33 +415,28 @@ namespace RpgDB
         public int Attack(Weapon weapon, int targetKAC)
         {
             int damage = 0;
-            Debug.Log(weapon);
 
-            if (AttackCheck(weapon, targetKAC))
+            int rollCount = 1;
+            int damageDie = 3;
+            if (weapon.Damage != null)
             {
-                int rollCount = 1;
-                int damageDie = 3;
-                if (weapon.Damage != null)
-                {
-                    // Parse strings such as "2d8" and "1d10"
-                    string[] damageString = weapon.Damage.Split('d');
-                    // Saftey check for strings such as "2d8 S" or "1d10 XYZ"
-                    string dieString = damageString[1].Split(' ')[0];
+                // Parse strings such as "2d8" and "1d10"
+                string[] damageString = weapon.Damage.Split('d');
+                // Saftey check for strings such as "2d8 S" or "1d10 XYZ"
+                string dieString = damageString[1].Split(' ')[0];
 
-                    // Set number of rolls and which die to roll
-                    rollCount = Int32.Parse(damageString[0]);
-                    damageDie = Int32.Parse(dieString);
-                }
+                // Set number of rolls and which die to roll
+                rollCount = Int32.Parse(damageString[0]);
+                damageDie = Int32.Parse(dieString);
+            }
 
-                for (int i = 0; i < rollCount; i++)
-                {
-                    damage += Roll.rollDie(damageDie);
-                }
-                // TODO: If melee or thrown, add mod(STR) to damage
+            for (int i = 0; i < rollCount; i++)
+            {
+                damage += Roll.rollDie(damageDie);
             }
 
             // If damage is above zero, return it's value. Otherwise return zero.
-            return ApplyDamage(damage);
+            return damage > 0 ? damage : 0;
         }
 
         public int ApplyDamage(int damage)
