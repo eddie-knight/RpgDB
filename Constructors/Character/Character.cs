@@ -397,7 +397,7 @@ namespace RpgDB
         //
         // Combat Functions
 
-        bool AttackCheck(Weapon weapon, int defense)
+        public bool AttackCheck(Weapon weapon, int defense)
         {
             // TODO: Move roll result out to somewhere accessible to display
             int modifier = 0;
