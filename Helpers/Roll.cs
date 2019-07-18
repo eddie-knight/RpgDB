@@ -7,7 +7,7 @@ namespace RpgDB
 
         public int rollDie(int die)
         {
-            return Random.Next(1, (die - 1));
+            return Random.Next(1, (die + 1));
         }
 
         public int d20()
