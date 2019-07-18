@@ -4,15 +4,16 @@ using System.Collections.Generic;
 
 namespace RpgDB
 {
-    [System.Serializable]
     public class RpgDBObject : ScriptableObject
     {
-        public string Name { get; set; }
-        public int id { get; set; } // Primary Key
-        public string Category { get; set; }
-        public int Level { get; set; }
-        public int Price { get; set; }
-        public string Bulk { get; set; }
+        [Header("--Base--")]
+        public string Name;
+        public int id; // Primary Key
+        public string Category;
+        public int Level;
+        public int Price;
+        public string Bulk;
+        public Sprite sprite;
 
         public override string ToString ()
         {
