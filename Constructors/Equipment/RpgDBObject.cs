@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace RpgDB
 {
     [System.Serializable]
-    public class RpgDBObject : IRpgDBEntry
+    public class RpgDBObject : ScriptableObject
     {
         public string Name { get; set; }
         public int id { get; set; } // Primary Key
