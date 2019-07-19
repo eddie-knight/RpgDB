@@ -94,24 +94,6 @@ namespace RpgDB
         {
             return a.Entry.Equals(b.Entry);//do references point to same object?
         }
-
-        /// <summary>
-        /// Set entry to a reference to the given object in filepath.
-        /// </summary>
-        /// <param name="filePath"></param>
-        public void LoadObjectReferenceFromFile(string filePath)
-        {
-            var asset = AssetBundle.LoadFromFile(filePath);
-            if(asset == null)
-            {
-                Debug.LogError("ERROR! no object at specified file path: " + filePath);
-            }
-            else
-            {
-                this.entry = asset;
-            }
-
-        }
-
+        
     }
 }
