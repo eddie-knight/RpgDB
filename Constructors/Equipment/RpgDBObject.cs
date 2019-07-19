@@ -4,16 +4,14 @@ using System.Collections.Generic;
 
 namespace RpgDB
 {
-    public class RpgDBObject : ScriptableObject
+    public class RpgDBObject : IRpgDBEntry
     {
-        [Header("--Base--")]
         public string Name;
         public int id; // Primary Key
         public string Category;
         public int Level;
         public int Price;
         public string Bulk;
-        public Sprite sprite;
 
         public override string ToString ()
         {
